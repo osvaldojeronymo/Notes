@@ -1,0 +1,16 @@
+.pdf-export-source.html
+
+# VS Code and local build helpers
+.vscode/*.log
+
+# Optional HTML previews generated only for inspection
+*.preview.html
+pdf/*.preview.html
+
+# Temporary inspection helper
+pdf/relatorio-sustentabilidade-2024-wrapper.html
+pdf/relatorio-sustentabilidade-2024.pdf
+
+# One-off debug exports
+pdf/*_debug.pdf
+pdf/*_header.pdf

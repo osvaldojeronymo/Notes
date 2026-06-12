@@ -1,0 +1,9 @@
+{
+  "markdown-pdf.styles": [
+    "styles/a4.css"
+  ],
+  "markdown-pdf.stylesRelativePathFile": true,
+  "markdown-pdf.includeDefaultStyles": false,
+  "markdown-pdf.outputDirectory": "pdf",
+  "markdown-pdf.outputDirectoryRelativePathFile": true
+}
