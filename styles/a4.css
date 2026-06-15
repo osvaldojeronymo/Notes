@@ -1,5 +1,6 @@
 @page {
-    margin: 2.8cm 1.7cm 2.7cm;
+    size: A4;
+    margin: 0;
 }
 
 body {
@@ -12,9 +13,123 @@ body {
     color: #24374a;
 }
 
+#pdf-source {
+    display: none;
+}
+
+#pdf-pages {
+    margin: 0;
+    padding: 0;
+}
+
+.print-page {
+    box-sizing: border-box;
+    width: 210mm;
+    height: 297mm;
+    padding: 0.6cm 1.7cm 0.9cm;
+    page-break-after: always;
+    break-after: page;
+}
+
+.print-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+}
+
+.print-page-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.print-page-header {
+    flex: 0 0 auto;
+    margin-bottom: 0.45cm;
+}
+
+.print-page-header--cover .pdf-header {
+    position: relative;
+}
+
+.print-page-cover-title {
+    position: absolute;
+    left: 0.42cm;
+    top: 0.68cm;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #ffffff;
+    font-size: 21.5pt;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+}
+
+.print-page-cover-date {
+    position: absolute;
+    left: 0.58cm;
+    bottom: 0.06cm;
+    margin: 0;
+    display: block;
+    color: #0f4f86;
+    font-size: 9.2pt;
+    font-weight: 700;
+    line-height: 1.1;
+    width: 5.6cm;
+    padding-top: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+.print-page-cover-rule {
+    position: absolute;
+    left: 0.58cm;
+    bottom: 0.48cm;
+    width: 5.6cm;
+    height: 0;
+    border-top: 3px solid #ffffff;
+}
+
+.print-page-content--cover > h1.title:first-child {
+    display: none;
+}
+
+.print-page-content--cover > p:first-of-type {
+    text-align: justify;
+    text-indent: 1.25cm;
+}
+
+.print-page-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    padding-top: 0.18cm;
+}
+
+.print-page-footer {
+    flex: 0 0 auto;
+    position: relative;
+    margin-top: 0.45cm;
+}
+
+.print-page-footer img {
+    width: 100%;
+    display: block;
+}
+
+.print-page-number {
+    position: absolute;
+    right: 0.35cm;
+    bottom: 0.12cm;
+    color: #ffffff;
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
 .pdf-header,
 .pdf-footer {
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
 }
@@ -26,7 +141,7 @@ body {
 }
 
 .pdf-header {
-    margin-bottom: 0.45cm;
+    margin-bottom: 0;
 }
 
 .pdf-header-meta,
@@ -197,6 +312,22 @@ blockquote {
     margin: 0.18cm 0 0.38cm;
 }
 
+.abnt-table-title,
+.abnt-table-source {
+    font-size: 10pt;
+    line-height: 1.35;
+}
+
+.abnt-table-title {
+    margin: 0.42cm 0 0.1cm;
+    color: #24374a;
+}
+
+.abnt-table-source {
+    margin: 0.08cm 0 0.48cm;
+    color: #24374a;
+}
+
 ol,
 ul {
     padding-left: 0.7cm;
@@ -209,38 +340,39 @@ li {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0.34cm 0 0.68cm;
-    font-size: 10.1pt;
+    margin: 0.1cm 0 0.08cm;
+    font-size: 10pt;
 }
 
 th,
 td {
-    border: 1px solid #cfd8e3;
-    padding: 8px 10px;
+    border: 0;
+    border-bottom: 1px solid #aebccc;
+    padding: 6px 8px;
     vertical-align: top;
     text-align: left;
 }
 
 th {
-    background-color: #eaf0f6;
-    color: #14375a;
-    font-size: 9pt;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    background-color: transparent;
+    color: #24374a;
+    font-size: 10pt;
+    letter-spacing: 0;
+    text-transform: none;
     font-weight: 700;
 }
 
-tbody tr:first-child td {
-    border-top-color: #bcc9d6;
+thead th {
+    border-top: 1.5px solid #7f91a5;
+    border-bottom: 1px solid #7f91a5;
 }
 
-td:first-child {
-    font-weight: 700;
-    color: #284766;
+tbody tr:last-child td {
+    border-bottom: 1.5px solid #7f91a5;
 }
 
-tr:nth-child(even) td {
-    background-color: #f8fafc;
+tbody tr:last-child td {
+    padding-bottom: 7px;
 }
 
 blockquote {
@@ -293,5 +425,13 @@ table + p,
 ol + table,
 table + ol {
     margin-top: 0.3cm;
+}
+
+.abnt-table-title + table {
+    margin-top: 0;
+}
+
+table + .abnt-table-source {
+    margin-top: 0.08cm;
 }
 
