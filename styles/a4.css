@@ -3,7 +3,7 @@
    ========================================================= */
 @page {
     size: A4;
-    margin: 2.8cm 2cm 2cm 2cm;
+    margin: 0;
 }
 
 /* =========================================================
@@ -23,38 +23,30 @@
    ========================================================= */
 html, body {
     margin: 0;
-    padding: 0;
-    font-family: Calibri, Arial, sans-serif;
-    font-size: 11pt;
-    color: var(--caixa-texto);
-    line-height: 1.5;
-    background: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #24374a;
 }
 
-/* Melhor renderização no Chrome headless */
-body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    text-rendering: optimizeLegibility;
+.pdf-header,
+.pdf-footer {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 
-/* =========================================================
-   LAYOUT PRINCIPAL (CONTROLADO PELO JS)
-   ========================================================= */
-.print-page {
-    overflow: visible;;
+.pdf-header img,
+.pdf-footer img {
+    width: 100%;
+    display: block;
 }
 
-.print-page-inner {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.pdf-header {
+    margin-bottom: 0.45cm;
 }
 
-/* Header e footer NÃO usam position fixed */
-.print-page-header {
-    height: 2.5cm;
-    border-bottom: 2px solid var(--caixa-azul);
+.pdf-header-meta,
+.pdf-footer-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -201,6 +193,22 @@ em {
     font-style: italic;
 }
 
+.abnt-table-title,
+.abnt-table-source {
+    font-size: 10pt;
+    line-height: 1.35;
+}
+
+.abnt-table-title {
+    margin: 0.42cm 0 0.1cm;
+    color: #24374a;
+}
+
+.abnt-table-source {
+    margin: 0.08cm 0 0.48cm;
+    color: #24374a;
+}
+
 /* =========================================================
    LISTAS
    ========================================================= */
@@ -229,8 +237,69 @@ blockquote {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 16px 0;
-    font-size: 10pt;
+    margin: 0.34cm 0 0.68cm;
+    font-size: 10.1pt;
+}
+
+th,
+td {
+    border: 1px solid #cfd8e3;
+    padding: 8px 10px;
+    vertical-align: top;
+    text-align: left;
+}
+
+th {
+    background-color: #eaf0f6;
+    color: #14375a;
+    font-size: 9pt;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+tbody tr:first-child td {
+    border-top-color: #bcc9d6;
+}
+
+td:first-child {
+    font-weight: 700;
+    color: #284766;
+}
+
+tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+blockquote {
+    margin-left: 0;
+    padding: 0.36cm 0.48cm;
+    border-left: 3px solid #f39200;
+    background-color: #f8fafc;
+    color: #30465d;
+    font-style: normal;
+}
+
+blockquote p {
+    margin: 0;
+    font-weight: 700;
+}
+
+strong {
+    color: #14375a;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #d7dee8;
+    margin: 0.8cm 0;
+}
+
+code {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3f8;
+    padding: 0.02cm 0.08cm;
+    border-radius: 2px;
 }
 
 thead {
@@ -301,3 +370,11 @@ h2 + p,
 h3 + p {
     page-break-inside: avoid;
 }
+
+p + table,
+table + p,
+ol + table,
+table + ol {
+    margin-top: 0.3cm;
+}
+
