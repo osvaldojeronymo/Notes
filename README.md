@@ -29,6 +29,12 @@ No terminal:
 .\export-pdf.ps1 -OutputFile "pdf\matriz_produto_unb_gelos_corrigido.pdf"
 ```
 
+No Linux, uma alternativa validada localmente e sem depender do script PowerShell e gerar o HTML intermediario com titulo explicito para evitar avisos do `pandoc`:
+
+```bash
+mkdir -p pdf && pandoc "informe_12_de_junho_de_2026.md" -f gfm -t html5 -s --css "styles/a4.css" --include-before-body="styles/pdf-before-body.html" --include-after-body="styles/pdf-after-body.html" -o ".pdf-export-source.html" && google-chrome --headless --disable-gpu --allow-file-access-from-files --no-pdf-header-footer --print-to-pdf="$PWD/pdf/informe_12_de_junho_de_2026.pdf" "file://$PWD/.pdf-export-source.html"
+```
+
 Para gerar também uma prévia HTML:
 
 ```powershell

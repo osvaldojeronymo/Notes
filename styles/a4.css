@@ -1,297 +1,303 @@
+/* =========================================================
+   CONFIGURAÇÃO GLOBAL (PÁGINA A4)
+   ========================================================= */
 @page {
-    margin: 2.8cm 1.7cm 2.7cm;
+    size: A4;
+    margin: 2.8cm 2cm 2cm 2cm;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10.8pt;
-    line-height: 1.6;
+/* =========================================================
+   VARIÁVEIS INSTITUCIONAIS (CAIXA)
+   ========================================================= */
+:root {
+    --caixa-azul: #005CA8;
+    --caixa-laranja: #F39200;
+    --caixa-texto: #1f1f1f;
+    --caixa-subtexto: #555;
+    --caixa-borda: #d0d7e2;
+    --caixa-fundo-alternado: #f7fbff;
+}
+
+/* =========================================================
+   BASE TIPOGRÁFICA
+   ========================================================= */
+html, body {
     margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    color: #24374a;
+    padding: 0;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 11pt;
+    color: var(--caixa-texto);
+    line-height: 1.5;
+    background: white;
 }
 
-.pdf-header,
-.pdf-footer {
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+/* Melhor renderização no Chrome headless */
+body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    text-rendering: optimizeLegibility;
 }
 
-.pdf-header img,
-.pdf-footer img {
-    width: 100%;
-    display: block;
+/* =========================================================
+   LAYOUT PRINCIPAL (CONTROLADO PELO JS)
+   ========================================================= */
+.print-page {
+    overflow: visible;;
+}
+
+.print-page-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header e footer NÃO usam position fixed */
+.print-page-header {
+    height: 2.5cm;
+    border-bottom: 2px solid var(--caixa-azul);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.print-page-footer {
+    height: 1.2cm;
+    border-top: 1px solid var(--caixa-borda);
+    font-size: 9pt;
+    color: var(--caixa-subtexto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Página (conteúdo) */
+.print-page-content {
+    flex: 1;
+    overflow: hidden;
+    padding: 0.5cm 0;
+}
+
+/* Número da página */
+.print-page-number {
+    font-size: 9pt;
+    color: var(--caixa-subtexto);
+}
+
+/* =========================================================
+   CAPA (PRIMEIRA PÁGINA)
+   ========================================================= */
+.print-page-content--cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.print-page-cover-title {
+    font-size: 20pt;
+    color: var(--caixa-azul);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.print-page-cover-rule {
+    width: 60px;
+    height: 4px;
+    background: var(--caixa-laranja);
+    margin: 8px 0;
+}
+
+.print-page-cover-date {
+    font-size: 10pt;
+    color: var(--caixa-subtexto);
+}
+
+/* =========================================================
+   CABEÇALHO / RODAPÉ COMPONENTES
+   ========================================================= */
+.print-page-header {
+    height: 2.5cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pdf-header {
-    margin-bottom: 0.45cm;
-}
-
-.pdf-header-meta,
-.pdf-footer-meta {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.pdf-header-context,
-.pdf-footer-context {
-    font-size: 8.4pt;
-    color: #5d6c7d;
-    text-align: right;
-}
-
-.pdf-footer-meta {
-    border-top: 1px solid #d8e0ea;
-    padding-top: 0.12cm;
-    margin-bottom: 0.12cm;
-    margin-top: 0.9cm;
     align-items: center;
-    color: #506173;
-    font-size: 8.6pt;
+    height: 100%;
 }
 
-.pdf-body {
-    page-break-before: auto;
+.pdf-header img {
+    max-height: 2.2cm;
+    width: auto;
+
 }
 
-.pdf-cover {
-    min-height: 24cm;
-    box-sizing: border-box;
-    page-break-after: always;
-    break-after: page;
-    padding: 1cm 0 0.8cm;
+.print-page-footer {
+    height: 1.2cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.pdf-cover-inner {
-    position: relative;
-    min-height: 22cm;
+.pdf-footer {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.pdf-cover-header-image,
-.pdf-cover-footer-image {
+.pdf-footer img {
+    max-height: 100%;
+    width: auto;
     display: block;
-    width: 100%;
 }
 
-.pdf-cover-header-image {
-    margin-bottom: 0.55cm;
-}
-
-.pdf-cover-kicker {
-    font-size: 10pt;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #5a6b7d;
-}
-
-.pdf-cover-title {
-    margin: 0.18cm 0 0;
-    border: 0;
-    padding: 0;
-    font-size: 24pt;
-    line-height: 1.2;
-    font-weight: 700;
-    color: #14375a;
-    max-width: 14cm;
-}
-
-.pdf-cover-subtitle {
-    margin-top: 0.35cm;
-    font-size: 12pt;
-    line-height: 1.45;
-    color: #4c5d70;
-    max-width: 12.5cm;
-}
-
-.pdf-cover-summary {
-    margin-top: 2.2cm;
-    border: 1px solid #d7dee8;
-    background: #f7f9fc;
-    padding: 0.55cm 0.65cm;
-    max-width: 12.8cm;
-}
-
-.pdf-cover-summary-title {
-    font-size: 9pt;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #6a7a8b;
-    margin-bottom: 0.28cm;
-}
-
-.pdf-cover-summary table {
-    margin: 0;
-    font-size: 10.5pt;
-    color: #23384f;
-}
-
-.pdf-cover-summary td {
-    border: 0;
-    padding: 0.14cm 0;
-    background: transparent;
-}
-
-.pdf-cover-summary td:first-child {
-    width: 3.8cm;
-    font-weight: 700;
-}
-
-.pdf-cover-footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 1cm;
-    font-size: 9.5pt;
-    color: #5f6f81;
-}
-
-.pdf-cover-footer-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0.28cm;
-    margin-bottom: 0.16cm;
-    border-top: 1px solid #d7dee8;
-}
-
-.pdf-cover-footer-meta div:last-child {
-    font-weight: 700;
-    color: #005ca9;
-}
-
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
 h1, h2, h3 {
-    color: #14375a;
-    font-weight: 700;
-    line-height: 1.2;
+    break-after: avoid-page;
+    page-break-after: avoid;
+    margin-bottom: 8px;
 }
 
 h1 {
-    margin: 0 0 0.9cm;
-    padding-bottom: 0.34cm;
-    border-bottom: 1px solid #cfd8e3;
     font-size: 18pt;
-    letter-spacing: -0.01em;
+    color: var(--caixa-azul);
+    border-bottom: 3px solid var(--caixa-laranja);
+    padding-bottom: 4px;
+    margin-top: 0;
 }
 
 h2 {
-    margin: 1cm 0 0.28cm;
-    font-size: 13.2pt;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    font-size: 14pt;
+    color: var(--caixa-azul);
+    margin-top: 18px;
+    border-left: 4px solid var(--caixa-laranja);
+    padding-left: 8px;
 }
 
 h3 {
-    margin: 0.6cm 0 0.25cm;
-    font-size: 11.5pt;
+    font-size: 12pt;
+    color: #333;
+    margin-top: 14px;
 }
 
-p,
-ol,
-ul,
-blockquote {
-    margin: 0.18cm 0 0.38cm;
-}
-
-ol,
-ul {
-    padding-left: 0.7cm;
-}
-
-li {
-    margin-bottom: 0.14cm;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0.34cm 0 0.68cm;
-    font-size: 10.1pt;
-}
-
-th,
-td {
-    border: 1px solid #cfd8e3;
-    padding: 8px 10px;
-    vertical-align: top;
-    text-align: left;
-}
-
-th {
-    background-color: #eaf0f6;
-    color: #14375a;
-    font-size: 9pt;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-tbody tr:first-child td {
-    border-top-color: #bcc9d6;
-}
-
-td:first-child {
-    font-weight: 700;
-    color: #284766;
-}
-
-tr:nth-child(even) td {
-    background-color: #f8fafc;
-}
-
-blockquote {
-    margin-left: 0;
-    padding: 0.36cm 0.48cm;
-    border-left: 3px solid #f39200;
-    background-color: #f8fafc;
-    color: #30465d;
-    font-style: normal;
-}
-
-blockquote p {
-    margin: 0;
-    font-weight: 700;
+/* =========================================================
+   TEXTO
+   ========================================================= */
+p {
+    text-align: justify;
+    margin: 8px 0;
+    orphans: 3;
+    widows: 3;
 }
 
 strong {
-    color: #14375a;
+    color: var(--caixa-azul);
 }
 
-hr {
-    border: 0;
-    border-top: 1px solid #d7dee8;
-    margin: 0.8cm 0;
+em {
+    font-style: italic;
 }
 
-code {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #eef3f8;
-    padding: 0.02cm 0.08cm;
-    border-radius: 2px;
+/* =========================================================
+   LISTAS
+   ========================================================= */
+ol, ul {
+    margin-left: 22px;
+    padding-left: 14px;
+}
+
+li {
+    margin: 4px 0;
+}
+
+/* =========================================================
+   BLOCKQUOTE
+   ========================================================= */
+blockquote {
+    border-left: 4px solid var(--caixa-azul);
+    background: #f5f9fd;
+    padding: 8px 12px;
+    margin: 10px 0;
+}
+
+/* =========================================================
+   TABELAS (PADRÃO INSTITUCIONAL)
+   ========================================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 10pt;
 }
 
 thead {
     display: table-header-group;
 }
 
-tr,
+tbody {
+    display: table-row-group;
+}
+
+tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+th {
+    background: var(--caixa-azul);
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid var(--caixa-borda);
+    vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--caixa-fundo-alternado);
+}
+
+/* =========================================================
+   LEGENDAS ABNT
+   ========================================================= */
+.abnt-table-title {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.abnt-table-source {
+    font-size: 9pt;
+    font-style: italic;
+    margin-top: 3px;
+    color: var(--caixa-subtexto);
+}
+
+/* =========================================================
+   IMAGENS
+   ========================================================= */
 img {
+    max-width: 100%;
+}
+
+/* =========================================================
+   AJUSTES DE QUEBRA
+   ========================================================= */
+section, table, blockquote {
     page-break-inside: avoid;
 }
 
-blockquote,
-table {
+h1 + p,
+h2 + p,
+h3 + p {
     page-break-inside: avoid;
 }
-
-p + table,
-table + p,
-ol + table,
-table + ol {
-    margin-top: 0.3cm;
-}
-
