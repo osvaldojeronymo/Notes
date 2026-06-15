@@ -15,3 +15,13 @@ pdf/relatorio-sustentabilidade-2024.pdf
 pdf/*_debug.pdf
 pdf/*_header.pdf
 pdf/
+
+# Artefatos locais
+.pdf-export-source.html
+teste.html
+
+# PDFs gerados
+pdf/*.pdf
+
+# Arquivos temporários
+*.tmp

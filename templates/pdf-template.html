@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Informe</title>
+    <title>$if(title)$$title$$else$Informe Executivo$endif$</title>
 
     <!-- CSS institucional -->
     <link rel="stylesheet" href="styles/a4.css">
@@ -14,30 +14,60 @@
      CONTEÚDO MARCADO PELO PANDOC / MARKDOWN
      ========================================================= -->
 <main id="pdf-source" class="pdf-body">
-    <!-- O conteúdo Markdown renderizado entra aqui -->
+$body$
 </main>
 
 <!-- =========================================================
-     TEMPLATE DE HEADER
+     TEMPLATE DE HEADER EXECUTIVO
      ========================================================= -->
 <template id="pdf-header-template">
-    <div class="pdf-header">
-        <img src="assets/cabecalho-caixa.png" alt="Cabeçalho CAIXA">
+    <div class="pdf-header pdf-header-executive">
+        <img
+            class="pdf-header-bg"
+            src="assets/cabecalho-caixa.png"
+            alt="Cabeçalho CAIXA"
+        >
+
+        <div class="pdf-header-overlay">
+                <div class="pdf-header-kicker">
+                    <span>$report_date$</span>                    
+                </div>
+
+            <div class="pdf-header-title">
+                $if(title)$$title$$else$Informe Executivo$endif$
+            </div>
+
+            <div class="pdf-header-subtitle">
+                $if(subtitle)$$subtitle$$else$Produtos da Meta 2$endif$
+            </div>
+        </div>
     </div>
 </template>
 
 <!-- =========================================================
-     TEMPLATE DE FOOTER
+     TEMPLATE DE FOOTER EXECUTIVO
      ========================================================= -->
 <template id="pdf-footer-template">
-    <div class="pdf-footer">
-        <div class="pdf-footer-meta">
-            <div>#INTERNO.TODOS | META 2</div>
-            <div class="pdf-footer-context">
-                Informe sobre o convênio CAIXA | UnB
+    <div class="pdf-footer pdf-footer-executive">
+        <img
+            class="pdf-footer-bg"
+            src="assets/rodape-caixa.png"
+            alt="Rodapé CAIXA"
+        >
+
+        <div class="pdf-footer-overlay">
+            <div class="pdf-footer-left">
+                $if(classification)$$classification$$else$#INTERNO.TODOS$endif$
+                |
+                $if(meta)$$meta$$else$META 2 - DIAGNÓSTICO$endif$
+            </div>
+
+            <div class="pdf-footer-center">
+                $if(title)$$title$$else$Informe Executivo$endif$
+                -
+                $if(subtitle)$$subtitle$$else$Produtos da Meta 2$endif$
             </div>
         </div>
-        <img src="assets/rodape-caixa.png" alt="Rodapé CAIXA">
     </div>
 </template>
 
@@ -45,11 +75,8 @@
      PAGINAÇÃO INTELIGENTE (JS)
      ========================================================= -->
 <script>
-(() => {
+(function () {
     const source = document.getElementById("pdf-source");
-    const pagesRoot = document.createElement("div");
-    pagesRoot.id = "pdf-pages";
-
     const headerTemplate = document.getElementById("pdf-header-template");
     const footerTemplate = document.getElementById("pdf-footer-template");
 
@@ -57,11 +84,17 @@
         return;
     }
 
-    document.body.appendChild(pagesRoot);
-    
-    source.style.display = "none";
-
     const sourceNodes = Array.from(source.children);
+
+    if (sourceNodes.length === 0) {
+        source.style.display = "block";
+        return;
+    }
+
+    const pagesRoot = document.createElement("div");
+    pagesRoot.id = "pdf-pages";
+    document.body.appendChild(pagesRoot);
+    source.style.display = "none";
 
     function createPage() {
         const page = document.createElement("section");
@@ -78,36 +111,10 @@
 
         if (pageNumber === 1) {
             header.classList.add("print-page-header--cover");
-
-            const coverTitle = document.createElement("h1");
-            coverTitle.className = "print-page-cover-title";
-            coverTitle.textContent = document.title || "Informe";
-
-            const coverRule = document.createElement("div");
-            coverRule.className = "print-page-cover-rule";
-
-            const coverDate = document.createElement("p");
-            coverDate.className = "print-page-cover-date";
-
-            const formattedDate = new Intl.DateTimeFormat("pt-BR", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric"
-            }).format(new Date());
-
-            coverDate.textContent = formattedDate;
-
-            header.firstElementChild.appendChild(coverTitle);
-            header.firstElementChild.appendChild(coverRule);
-            header.firstElementChild.appendChild(coverDate);
         }
 
         const content = document.createElement("div");
         content.className = "print-page-content";
-
-        if (pageNumber === 1) {
-            content.classList.add("print-page-content--cover");
-        }
 
         const footer = document.createElement("div");
         footer.className = "print-page-footer";
@@ -135,8 +142,13 @@
 
     function cloneTableShell(table) {
         const clone = table.cloneNode(false);
-
+        const colgroup = table.querySelector("colgroup");
         const thead = table.querySelector("thead");
+
+        if (colgroup) {
+            clone.appendChild(colgroup.cloneNode(true));
+        }
+
         if (thead) {
             clone.appendChild(thead.cloneNode(true));
         }
@@ -144,7 +156,7 @@
         const tbody = document.createElement("tbody");
         clone.appendChild(tbody);
 
-        return { table: clone, tbody };
+        return { table: clone, tbody: tbody };
     }
 
     function placeBlock(node, content) {
@@ -202,7 +214,7 @@
         content.appendChild(followerClone);
 
         if (!overflows(content)) {
-            return { content, consumedFollower: true };
+            return { content: content, consumedFollower: true };
         }
 
         content.removeChild(headingClone);
@@ -212,43 +224,78 @@
         content.appendChild(headingClone);
         content.appendChild(followerClone);
 
-        return { content, consumedFollower: true };
+        return { content: content, consumedFollower: true };
+    }
+
+    function isHeading(node) {
+        return node && /^H[1-6]/.test(node.tagName || "") && (node.tagName || "").length === 2;
     }
 
     let content = createPage();
 
+if (pagesRoot.children.length === 1) {
+    const grid = document.createElement("div");
+    grid.className = "executive-grid";
+
+    const left = document.createElement("div");
+    left.className = "executive-left";
+
+    const right = document.createElement("div");
+    right.className = "executive-right";
+
+    grid.appendChild(left);
+    grid.appendChild(right);
+    content.appendChild(grid);
+
+    let currentSide = left;
+
     for (let i = 0; i < sourceNodes.length; i++) {
         const node = sourceNodes[i];
 
-        if (/^H[1-6]$/.test(node.tagName || "")) {
-            const followerNode = sourceNodes[i + 1];
-
-            if (followerNode && ["P", "UL", "OL", "BLOCKQUOTE"].includes(followerNode.tagName)) {
-                const result = placeHeadingWithFollower(node, followerNode, content);
-                content = result.content;
-
-                if (result.consumedFollower) {
-                    i++;
-                }
-                continue;
-            }
-        }
-
-        if (node.tagName === "TABLE") {
-            content = placeTable(node.cloneNode(true), content);
+    /* ==========================================
+       QUEBRA MANUAL DE PÁGINA
+       ========================================== */
+        if (
+            node.classList &&
+            node.classList.contains("newpage")
+        ) {
+            content = createPage();
             continue;
         }
 
-        content = placeBlock(node.cloneNode(true), content);
+        if (
+            node.classList &&
+            node.classList.contains("abnt-table-title")
+        ) {
+            currentSide = right;
+            right.appendChild(node.cloneNode(true));
+            continue;
+        }
+
+        if (node.tagName === "TABLE") {
+            right.appendChild(node.cloneNode(true));
+            continue;
+        }
+
+        if (
+            node.classList &&
+            node.classList.contains("abnt-table-source")
+        ) {
+            right.appendChild(node.cloneNode(true));
+            currentSide = left;
+            continue;
+        }
+
+        currentSide.appendChild(node.cloneNode(true));
     }
+}
 
     const totalPages = pagesRoot.children.length;
 
-    pagesRoot.querySelectorAll(".print-page-number").forEach((label, index) => {
-        label.textContent = `Página ${index + 1} de ${totalPages}`;
+    pagesRoot.querySelectorAll(".print-page-number").forEach(function (label, index) {
+        label.textContent = "Página " + (index + 1) + " de " + totalPages;
     });
-
-})();
+}());
 </script>
 
 </body>

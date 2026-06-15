@@ -1,16 +1,12 @@
 ---
 title: Informe Executivo
 subtitle: Produtos da Meta 2
-classification: #INTERNO.TODOS
-meta: Meta 2 - Diagnóstico
-author: GELOS
-organization: Caixa Econômica Federal
-date: 2026-06-15
+report_date: 15 de junho de 2026
 ---
 
 ## Produtos entregues na Meta 2
 
-O _Plano Metodológico do Diagnóstico Integrado dos Sistemas de Negócio_ (entrega em R2) é o instrumento que permitirá à CAIXA organizar, priorizar e controlar os sistemas de negócio produtores de documentos arquivísticos. Este produto estabelece o método para identificar esses sistemas, avaliar sua criticidade e seu risco documental, verificar sua aderência ao e-ARQ/SIGAD/RDC-Arq e definir prioridades para ações de modernização, preservação, integração e controle.
+O _Plano Metodológico do Diagnóstico Integrado dos Sistemas de Negócio_ (entrega em R2) estabelece o método para identificar esses sistemas, avaliar sua criticidade e seu risco documental, verificar sua aderência ao e-ARQ/SIGAD/RDC-Arq e definir prioridades para ações de modernização, preservação, integração e controle.
 
 O _Inventário Institucional dos Sistemas de Negócio da CAIXA_ (entrega em R3) tem o objetivo de mapear o universo completo de sistemas de negócio da CAIXA. Este produto permitirá a identificação e classificação dos sistemas produtores de documentos arquivísticos.
 
@@ -47,15 +43,10 @@ A _Nota Técnica à respeito do Inventário Institucional dos Sistemas de Negóc
 | Documentação de sistemas legados inexistente ou desatualizada | Baixa confiabilidade do inventário       | Classificar nível de confiança dos dados e priorizar sistemas críticos |
 | Escopo de 900 sistemas inviabilizar análise profunda          | Atraso ou perda de foco                  | Aplicar matriz de criticidade e trabalhar em ondas                     |
 | Mudanças no parque tecnológico durante o diagnóstico          | Resultado fica rapidamente desatualizado | Definir data-base e processo de atualização incremental                |
-| Desalinhamento com Meta 3 e Meta 7                            | Retrabalho e requisitos incompletos      | Criar reunião quinzenal de integração entre metas                      |
 
 <p class="abnt-table-source">Fonte: Elaboração própria.</p>
 
-## Avaliação
-
-> Sem patrocínio formal, há risco de a área de tecnologia da CAIXA não disponibilizar as informações necessárias, o que pode comprometer o diagnóstico.
-
-## Próximos passos recomendados
+## Próximos passos sugeridos
 
 1. Solicitar interlocução com a área de tecnologia da CAIXA para viabilizar o inventário de sistemas.
-2. Estruturar painel de acompanhamento com os indicadores do produto: sistemas mapeados, maturidade avaliada, completude de metadados, sistemas críticos priorizados, validações realizadas e riscos documentais identificados.
+2. Solicitar a UnB que estruture um painel de acompanhamento com os indicadores do produto: sistemas mapeados, maturidade avaliada, completude de metadados, sistemas críticos priorizados, validações realizadas e riscos documentais identificados.

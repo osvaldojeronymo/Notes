@@ -620,20 +620,16 @@ try {
         $browserArgs = @(
             '--headless'
             '--disable-gpu'
+            '--virtual-time-budget=8000'
             '--default-encoding=utf-8'
             '--run-all-compositor-stages-before-draw'
             '--no-first-run'
             '--no-default-browser-check'
             '--allow-file-access-from-files'
+            '--disable-web-security'
             '--enable-local-file-accesses'
-            '--disable-features=msEdgeMouseNav'
-            '--no-pdf-header-footer'
-            "--user-data-dir=$tempProfileDir"
-            "--print-to-pdf=$outputPath"
-            $htmlUri
-        )
 
-        & $browser @browserArgs
+            & $browser @browserArgs
 
         $pdfReady = Wait-ForPdfReady -Path $outputPath -TimeoutSeconds 30 -PollMilliseconds 500
 
