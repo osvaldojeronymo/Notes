@@ -130,8 +130,11 @@ function Test-MarkdownTableSeparator {
     return $true
 }
 
-function Get-DocumentTitleFromFrontMatter {
-    param([string[]]$Lines)
+function Get-FrontMatterValue {
+    param(
+        [string[]]$Lines,
+        [string]$Key
+    )
 
     if ($Lines.Count -lt 3) {
         return $null
@@ -148,8 +151,8 @@ function Get-DocumentTitleFromFrontMatter {
             break
         }
 
-        if ($line -match '^title\s*:\s*(.+)$') {
-            return $matches[1].Trim()
+        if ($line -match "^$Key\s*:\s*(.+)$") {
+            return $matches[1].Trim().Trim('"').Trim("'")
         }
     }
 
@@ -594,14 +597,29 @@ function Wait-ForPdfReady {
 }
 
 function Resolve-BrowserPath {
-    $browserCandidates = @(
-        'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
-        'C:\Program Files\Microsoft\Edge\Application\msedge.exe',
-        'C:\Program Files\Google\Chrome\Application\chrome.exe',
-        'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
-    )
+    $browserCandidates = @()
 
-    return $browserCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+    if ($IsLinux) {
+        $browserCandidates += @(
+            '/usr/bin/google-chrome',
+            '/usr/bin/chromium',
+            '/usr/bin/chromium-browser',
+            '/snap/bin/chromium',
+            '/usr/bin/microsoft-edge'
+        )
+    }
+    else {
+        $browserCandidates += @(
+            'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
+            'C:\Program Files\Microsoft\Edge\Application\msedge.exe',
+            'C:\Program Files\Google\Chrome\Application\chrome.exe',
+            'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+        )
+    }
+
+    return $browserCandidates |
+        Where-Object { Test-Path $_ } |
+        Select-Object -First 1
 }
 
 # =========================================================
@@ -687,11 +705,32 @@ try {
     $markdownText = Read-TextFileRobust -Path $inputPath
     $markdownLines = Split-Lines -Text $markdownText
 
-    $titleFromFrontMatter = Get-DocumentTitleFromFrontMatter -Lines $markdownLines
+    $titleFromFrontMatter = Get-FrontMatterValue -Lines $markdownLines -Key 'title'
+    $subtitleFromFrontMatter = Get-FrontMatterValue -Lines $markdownLines -Key 'subtitle'
+    $reportDateFromFrontMatter = Get-FrontMatterValue -Lines $markdownLines -Key 'report_date'
+    $footerLeftFromFrontMatter = Get-FrontMatterValue -Lines $markdownLines -Key 'footer_left'
+    $footerCenterFromFrontMatter = Get-FrontMatterValue -Lines $markdownLines -Key 'footer_center'
+
     if (-not [string]::IsNullOrWhiteSpace($titleFromFrontMatter)) {
         $DocumentTitle = $titleFromFrontMatter
     }
 
+    if (-not [string]::IsNullOrWhiteSpace($subtitleFromFrontMatter)) {
+        $Subtitle = $subtitleFromFrontMatter
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($reportDateFromFrontMatter)) {
+        $ReportDate = $reportDateFromFrontMatter
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($footerLeftFromFrontMatter)) {
+        $FooterLeft = $footerLeftFromFrontMatter
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($footerCenterFromFrontMatter)) {
+        $FooterCenter = $footerCenterFromFrontMatter
+    }
+ 
     # Conversão markdown -> HTML
     $documentHtml = Convert-MarkdownToHtml -Lines $markdownLines
 

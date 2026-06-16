@@ -2,6 +2,8 @@
 title: Informe Executivo
 subtitle: Produtos da Meta 2
 report_date: 15 de junho de 2026
+footer_left: "#INTERNO.TODOS | META 2 - DIAGNÓSTICO"
+footer_center: "Informe Executivo - Produtos da Meta 2"
 ---
 
 ## Produtos entregues na Meta 2

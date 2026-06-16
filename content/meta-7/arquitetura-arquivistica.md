@@ -2,6 +2,8 @@
 title: Informe Executivo
 subtitle: Produtos da Meta 7
 report_date: 16 de junho de 2026
+footer_left: "#INTERNO.TODOS | META 7 - Sistemas"
+footer_center: "Informe Executivo - Produtos da Meta 7"
 ---
 
 # Governança Arquivística Digital, Interoperabilidade e Preservação Digital
