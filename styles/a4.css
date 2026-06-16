@@ -656,23 +656,40 @@ table + ul {
     margin-top: 0.10cm;
 }
 
-/* Ícones por linha - Tabela 1 */
-.executive-right table:first-of-type tbody tr:nth-child(1) td:first-child::before { content: "☷"; color: var(--caixa-azul); }
-.executive-right table:first-of-type tbody tr:nth-child(2) td:first-child::before { content: "☑"; color: var(--caixa-azul); }
-.executive-right table:first-of-type tbody tr:nth-child(3) td:first-child::before { content: "▥"; color: var(--caixa-azul); }
-.executive-right table:first-of-type tbody tr:nth-child(4) td:first-child::before { content: "◎"; color: var(--caixa-azul); }
-.executive-right table:first-of-type tbody tr:nth-child(5) td:first-child::before { content: "⚠"; color: var(--caixa-azul); }
-.executive-right table:first-of-type tbody tr:nth-child(6) td:first-child::before { content: "↔"; color: var(--caixa-azul); }
-.executive-right table:first-of-type tbody tr:nth-child(7) td:first-child::before { content: "◇"; color: var(--caixa-azul); }
-.executive-right table:first-of-type tbody tr:nth-child(8) td:first-child::before { content: "↗"; color: var(--caixa-azul); }
+//* =========================================================
+   ÍCONES POR LINHA - TABELA 1
+   ========================================================= */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(1) td:first-child::before { content: "\f19c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* universidade / arquitetura */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(2) td:first-child::before { content: "\f279"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* mapa */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(3) td:first-child::before { content: "\f46c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* diagnóstico */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(4) td:first-child::before { content: "\f140"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* alvo */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(5) td:first-child::before { content: "\f071"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* alerta */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(6) td:first-child::before { content: "\f0c1"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* link */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(7) td:first-child::before { content: "\f3ed"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* escudo */
+.executive-right table:nth-of-type(1) tbody tr:nth-child(8) td:first-child::before { content: "\f201"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* gráfico */
 
-/* Ícones por linha - Tabela 2 */
-.executive-right table:nth-of-type(2) tbody tr:nth-child(1) td:first-child::before { content: "●"; color: var(--caixa-laranja); }
-.executive-right table:nth-of-type(2) tbody tr:nth-child(2) td:first-child::before { content: "▣"; color: var(--caixa-laranja); }
-.executive-right table:nth-of-type(2) tbody tr:nth-child(3) td:first-child::before { content: "▽"; color: var(--caixa-laranja); }
-.executive-right table:nth-of-type(2) tbody tr:nth-child(4) td:first-child::before { content: "↻"; color: var(--caixa-laranja); }
-.executive-right table:nth-of-type(2) tbody tr:nth-child(5) td:first-child::before { content: "◆"; color: var(--caixa-laranja); }
+/* =========================================================
+   ÍCONES POR LINHA - TABELA 2
+   ========================================================= */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(1) td:first-child::before { content: "\f0c0"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* governança */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(2) td:first-child::before { content: "\f15c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* documento */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(3) td:first-child::before { content: "\f002"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* rastreabilidade */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(4) td:first-child::before { content: "\f2f1"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* ciclo */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(5) td:first-child::before { content: "\f0c1"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* interoperabilidade */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(6) td:first-child::before { content: "\f187"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* arquivo */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(7) td:first-child::before { content: "\f24e"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* balança */
+.executive-right table:nth-of-type(2) tbody tr:nth-child(8) td:first-child::before { content: "\f3ed"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-laranja); } /* escudo */
 
+/* =========================================================
+   ÍCONES POR LINHA - TABELA 3
+   ========================================================= */
+.executive-right table:nth-of-type(3) tbody tr:nth-child(1) td:first-child::before { content: "\f02c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* classificação */
+.executive-right table:nth-of-type(3) tbody tr:nth-child(2) td:first-child::before { content: "\f15b"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* metadados */
+.executive-right table:nth-of-type(3) tbody tr:nth-child(3) td:first-child::before { content: "\f15b"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* metadados */
+.executive-right table:nth-of-type(3) tbody tr:nth-child(4) td:first-child::before { content: "\f1e6"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* integração */
+.executive-right table:nth-of-type(3) tbody tr:nth-child(5) td:first-child::before { content: "\f187"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* preservação */
+.executive-right table:nth-of-type(3) tbody tr:nth-child(6) td:first-child::before { content: "\f085"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* processos */
+.executive-right table:nth-of-type(3) tbody tr:nth-child(7) td:first-child::before { content: "\f080"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--caixa-azul); } /* indicadores */
 /* =========================================================
    AJUSTE FINAL - DISTRIBUIR MELHOR AS TABELAS NA COLUNA DIREITA
    ========================================================= */
