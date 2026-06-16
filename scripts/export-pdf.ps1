@@ -1,11 +1,22 @@
 param(
     [string]$InputFile,
     [string]$OutputFile,
-    [string]$HtmlOutputFile = "",
-    [string]$DocumentTitle = "Informe"
+    [string]$HtmlOutputFile = '',
+    [string]$DocumentTitle = 'Informe Executivo',
+    [string]$Subtitle = 'Produtos da Meta 2',
+    [string]$ReportDate = (Get-Date).ToString(
+        "dd 'de' MMMM 'de' yyyy",
+        [System.Globalization.CultureInfo]::GetCultureInfo('pt-BR')
+    ),
+    [string]$FooterLeft = '#INTERNO.TODOS | META 2 - DIAGNÓSTICO',
+    [string]$FooterCenter = 'Informe Executivo - Produtos da Meta 2',
+    [AllowEmptyString()]
+    [string]$FooterRight = '',
+    [int]$RenderWaitMs = 8000
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
 
 function Read-TextFileRobust {
     param(
@@ -16,7 +27,7 @@ function Read-TextFileRobust {
     $bytes = [System.IO.File]::ReadAllBytes($Path)
 
     if ($bytes.Length -eq 0) {
-        return ""
+        return ''
     }
 
     # BOM UTF-8
@@ -34,13 +45,11 @@ function Read-TextFileRobust {
         return [System.Text.Encoding]::BigEndianUnicode.GetString($bytes, 2, $bytes.Length - 2)
     }
 
-    # Tenta UTF-8 estrito
     try {
         $utf8Strict = New-Object System.Text.UTF8Encoding($false, $true)
         return $utf8Strict.GetString($bytes)
     }
     catch {
-        # Fallback para Windows-1252
         $cp1252 = [System.Text.Encoding]::GetEncoding(1252)
         return $cp1252.GetString($bytes)
     }
@@ -60,7 +69,7 @@ function Convert-InlineMarkdown {
     param([string]$Text)
 
     if ([string]::IsNullOrWhiteSpace($Text)) {
-        return ""
+        return ''
     }
 
     $encoded = [System.Net.WebUtility]::HtmlEncode($Text)
@@ -242,7 +251,7 @@ function Convert-MarkdownToHtml {
             $bodyRows.Add("<tr>$tds</tr>")
         }
 
-        $tbodyHtml = ""
+        $tbodyHtml = ''
         if ($bodyRows.Count -gt 0) {
             $tbodyHtml = "<tbody>$($bodyRows -join '')</tbody>"
         }
@@ -393,15 +402,43 @@ function Convert-AssetPathsToFileUris {
             $attr = $match.Groups[1].Value
             $source = $match.Groups[2].Value
 
-            if ($source -match '^(https?:|file:|data:|#)') {
+            if ($source -match '^(https?:|file:|data:|#|mailto:|tel:|javascript:)') {
                 return $match.Value
             }
 
-            $absolutePath = Join-Path $RootPath ($source.Replace('/', '\'))
+            $absolutePath = Join-Path $RootPath ($source.Replace('/', '\\'))
             $fileUri = [System.Uri]::new($absolutePath).AbsoluteUri
             return "$attr=`"$fileUri`""
         }
     )
+}
+
+function Resolve-PandocConditional {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Template,
+
+        [Parameter(Mandatory = $true)]
+        [string]$VariableName,
+
+        [string]$Value = ''
+    )
+
+    $escapedVar = [System.Text.RegularExpressions.Regex]::Escape($VariableName)
+
+    $patternWithElse = '(?s)\$if\(' + $escapedVar + '\)\$(.*?)\$else\$(.*?)\$endif\$'
+    $patternWithoutElse = '(?s)\$if\(' + $escapedVar + '\)\$(.*?)\$endif\$'
+
+    if ([string]::IsNullOrWhiteSpace($Value)) {
+        $Template = [System.Text.RegularExpressions.Regex]::Replace($Template, $patternWithElse, '$2')
+        $Template = [System.Text.RegularExpressions.Regex]::Replace($Template, $patternWithoutElse, '')
+    }
+    else {
+        $Template = [System.Text.RegularExpressions.Regex]::Replace($Template, $patternWithElse, '$1')
+        $Template = [System.Text.RegularExpressions.Regex]::Replace($Template, $patternWithoutElse, '$1')
+    }
+
+    return $Template
 }
 
 function Build-HtmlFromTemplate {
@@ -411,6 +448,22 @@ function Build-HtmlFromTemplate {
 
         [Parameter(Mandatory = $true)]
         [string]$DocumentTitle,
+
+        [Parameter(Mandatory = $true)]
+        [string]$Subtitle,
+
+        [Parameter(Mandatory = $true)]
+        [string]$ReportDate,
+
+        [Parameter(Mandatory = $true)]
+        [string]$FooterLeft,
+
+        [Parameter(Mandatory = $true)]
+        [string]$FooterCenter,
+
+        [Parameter(Mandatory = $false)]
+        [AllowEmptyString()]
+        [string]$FooterRight = '',
 
         [Parameter(Mandatory = $true)]
         [string]$DocumentHtml,
@@ -425,22 +478,72 @@ function Build-HtmlFromTemplate {
 
     $templateHtml = Read-TextFileRobust -Path $TemplatePath
 
-    # injeta o título
     $safeTitle = [System.Net.WebUtility]::HtmlEncode($DocumentTitle)
+    $safeSubtitle = [System.Net.WebUtility]::HtmlEncode($Subtitle)
+    $safeReportDate = [System.Net.WebUtility]::HtmlEncode($ReportDate)
+    $safeFooterLeft = [System.Net.WebUtility]::HtmlEncode($FooterLeft)
+    $safeFooterCenter = [System.Net.WebUtility]::HtmlEncode($FooterCenter)
+    $safeFooterRight = [System.Net.WebUtility]::HtmlEncode($FooterRight)
+
+    # 1) Resolve condicionais estilo Pandoc
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'title' -Value $DocumentTitle
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'subtitle' -Value $Subtitle
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'REPORT_DATE' -Value $ReportDate
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'report_date' -Value $ReportDate
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'date' -Value $ReportDate
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'FOOTER_LEFT' -Value $FooterLeft
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'footer_left' -Value $FooterLeft
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'FOOTER_CENTER' -Value $FooterCenter
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'footer_center' -Value $FooterCenter
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'FOOTER_RIGHT' -Value $FooterRight
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'footer_right' -Value $FooterRight
+    $templateHtml = Resolve-PandocConditional -Template $templateHtml -VariableName 'body' -Value 'x'
+
+    # 2) Resolve placeholders simples
+    $replacements = @(
+        @{ k = '$title$';         v = $safeTitle },
+        @{ k = '$subtitle$';      v = $safeSubtitle },
+        @{ k = '$REPORT_DATE$';   v = $safeReportDate },
+        @{ k = '$report_date$';   v = $safeReportDate },
+        @{ k = '$date$';          v = $safeReportDate },
+        @{ k = '$FOOTER_LEFT$';   v = $safeFooterLeft },
+        @{ k = '$footer_left$';   v = $safeFooterLeft },
+        @{ k = '$FOOTER_CENTER$'; v = $safeFooterCenter },
+        @{ k = '$footer_center$'; v = $safeFooterCenter },
+        @{ k = '$FOOTER_RIGHT$';  v = $safeFooterRight },
+        @{ k = '$footer_right$';  v = $safeFooterRight },
+        @{ k = '$body$';          v = $DocumentHtml }
+    )
+
+    foreach ($item in $replacements) {
+        $templateHtml = $templateHtml.Replace([string]$item.k, [string]$item.v)
+    }
+
+    # 3) Fallback para <title>
     $templateHtml = [System.Text.RegularExpressions.Regex]::Replace(
         $templateHtml,
         '(?is)<title>.*?</title>',
-        "<title>$safeTitle</title>"
+        ('<title>{0}</title>' -f $safeTitle)
     )
 
-    # injeta o conteúdo no main principal
+    # 4) Fallback para <main id="pdf-source" class="pdf-body"></main>
     $templateHtml = [System.Text.RegularExpressions.Regex]::Replace(
         $templateHtml,
         '(?is)<main\s+id="pdf-source"\s+class="pdf-body">\s*</main>',
-        "<main id=`"pdf-source`" class=`"pdf-body`">$DocumentHtml</main>"
+        ('<main id="pdf-source" class="pdf-body">{0}</main>' -f $DocumentHtml)
     )
 
-    # converte href/src relativos para file:///
+    # 5) Limpeza residual de marcadores Pandoc
+    $templateHtml = [System.Text.RegularExpressions.Regex]::Replace($templateHtml, '\$if\([^)]+\)\$', '')
+    $templateHtml = $templateHtml.Replace('$else$', '')
+    $templateHtml = $templateHtml.Replace('$endif$', '')
+    $templateHtml = [System.Text.RegularExpressions.Regex]::Replace(
+        $templateHtml,
+        '\$(title|subtitle|REPORT_DATE|report_date|date|FOOTER_LEFT|footer_left|FOOTER_CENTER|footer_center|FOOTER_RIGHT|footer_right|body)\$',
+        ''
+    )
+
+    # 6) Converte caminhos relativos para file:///
     $templateHtml = Convert-AssetPathsToFileUris -Html $templateHtml -RootPath $RootPath
 
     return $templateHtml
@@ -483,32 +586,30 @@ function Wait-ForPdfReady {
         Start-Sleep -Milliseconds $PollMilliseconds
     }
 
-    return (Test-Path $Path)
+    if (Test-Path $Path) {
+        return ((Get-Item $Path).Length -gt 0)
+    }
+
+    return $false
 }
 
 function Resolve-BrowserPath {
     $browserCandidates = @(
-        "C:\Program Files\Google\Chrome\Application\chrome.exe",
-        "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-        "C:\Program Files\Microsoft\Edge\Application\msedge.exe",
-        "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+        'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
+        'C:\Program Files\Microsoft\Edge\Application\msedge.exe',
+        'C:\Program Files\Google\Chrome\Application\chrome.exe',
+        'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
     )
 
-    $browser = $browserCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
-
-    if ($browser -and $browser -notmatch 'chrome') {
-        Write-Warning "Edge detectado. Pode falhar em ambiente corporativo. Recomenda-se usar Chrome."
-    }
-
-    return $browser
+    return $browserCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
 }
 
 # =========================================================
 # RESOLUÇÃO DE CAMINHOS DO PROJETO
 # =========================================================
-$root = Resolve-Path (Join-Path $PSScriptRoot "..")
-$contentDir = Join-Path $root "content"
-$templatePath = Join-Path $root "templates\pdf-template.html"
+$root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+$contentDir = Join-Path $root 'content'
+$templatePath = Join-Path $root 'templates\pdf-template.html'
 
 if (-not (Test-Path $contentDir)) {
     throw "Pasta de conteúdo não encontrada: $contentDir"
@@ -522,8 +623,7 @@ if (-not (Test-Path $templatePath)) {
 # SELEÇÃO AUTOMÁTICA DO .MD MAIS RECENTE
 # =========================================================
 if (-not $InputFile) {
-    $mdFiles = Get-ChildItem -Path $contentDir -Filter *.md -File |
-               Sort-Object LastWriteTime -Descending
+    $mdFiles = @(Get-ChildItem -Path $contentDir -Filter *.md -File | Sort-Object LastWriteTime -Descending)
 
     if ($mdFiles.Count -eq 0) {
         throw "Nenhum arquivo .md encontrado na pasta: $contentDir"
@@ -553,7 +653,7 @@ else {
     $htmlOutputPath = Join-Path $root $HtmlOutputFile
 }
 
-$internalHtmlPath = Join-Path $root ".pdf-export-source.html"
+$internalHtmlPath = Join-Path $root '.pdf-export-source.html'
 
 $outputDir = Split-Path -Parent $outputPath
 if (-not (Test-Path $outputDir)) {
@@ -578,7 +678,7 @@ if (Test-Path $outputPath) {
 
 $browser = Resolve-BrowserPath
 if (-not $browser) {
-    throw "Nenhum navegador compatível (Chrome/Edge) encontrado para gerar o PDF."
+    throw 'Nenhum navegador compatível (Edge/Chrome) encontrado para gerar o PDF.'
 }
 
 Push-Location $root
@@ -599,6 +699,11 @@ try {
     $fullHtml = Build-HtmlFromTemplate `
         -TemplatePath $templatePath `
         -DocumentTitle $DocumentTitle `
+        -Subtitle $Subtitle `
+        -ReportDate $ReportDate `
+        -FooterLeft $FooterLeft `
+        -FooterCenter $FooterCenter `
+        -FooterRight $FooterRight `
         -DocumentHtml $documentHtml `
         -RootPath $root
 
@@ -613,37 +718,68 @@ try {
     $htmlUri = [System.Uri]::new($internalHtmlPath).AbsoluteUri
 
     # Perfil temporário do navegador
-    $tempProfileDir = Join-Path ([System.IO.Path]::GetTempPath()) ("pdf-headless-" + [guid]::NewGuid().ToString())
+    $tempProfileDir = Join-Path ([System.IO.Path]::GetTempPath()) ('pdf-headless-' + [guid]::NewGuid().ToString())
     New-Item -ItemType Directory -Path $tempProfileDir -Force | Out-Null
+
+    # Gera primeiro em TEMP e depois move (mais robusto em OneDrive corporativo)
+    $tempPdfPath = Join-Path ([System.IO.Path]::GetTempPath()) ([System.IO.Path]::GetFileName($outputPath))
+    if (Test-Path $tempPdfPath) {
+        Remove-Item $tempPdfPath -Force -ErrorAction SilentlyContinue
+    }
 
     try {
         $browserArgs = @(
-            '--headless'
-            '--disable-gpu'
-            '--virtual-time-budget=8000'
-            '--default-encoding=utf-8'
-            '--run-all-compositor-stages-before-draw'
-            '--no-first-run'
-            '--no-default-browser-check'
-            '--allow-file-access-from-files'
-            '--disable-web-security'
-            '--enable-local-file-accesses'
+            '--headless',
+            '--disable-gpu',
+            '--no-sandbox',
+            "--virtual-time-budget=$RenderWaitMs",
+            '--default-encoding=utf-8',
+            '--run-all-compositor-stages-before-draw',
+            '--no-first-run',
+            '--no-default-browser-check',
+            '--allow-file-access-from-files',
+            '--disable-web-security',
+            '--disable-extensions',
+            '--no-pdf-header-footer',
+            "--user-data-dir=$tempProfileDir",
+            "--print-to-pdf=$tempPdfPath",
+            $htmlUri
+        )
 
-            & $browser @browserArgs
+        Write-Output "Navegador: $browser"
+        Write-Output "HTML fonte: $htmlUri"
+        Write-Output "PDF temporário: $tempPdfPath"
+        Write-Output "PDF destino: $outputPath"
 
-        $pdfReady = Wait-ForPdfReady -Path $outputPath -TimeoutSeconds 30 -PollMilliseconds 500
+        & $browser @browserArgs
+
+        $pdfReady = Wait-ForPdfReady -Path $tempPdfPath -TimeoutSeconds 30 -PollMilliseconds 500
 
         if (-not $pdfReady) {
-            throw "O navegador não gerou o PDF esperado em: $outputPath"
+            throw "O navegador não gerou o PDF esperado em: $tempPdfPath"
         }
-        else {
-            Write-Output "PDF gerado com sucesso: $outputPath"
+
+        Move-Item -Path $tempPdfPath -Destination $outputPath -Force
+
+        if (-not (Test-Path $outputPath)) {
+            throw "O PDF foi gerado em TEMP, mas não foi possível movê-lo para: $outputPath"
         }
+
+        Write-Output "PDF gerado com sucesso: $outputPath"
     }
     finally {
         if (Test-Path $tempProfileDir) {
             try {
                 Remove-Item -Path $tempProfileDir -Recurse -Force -ErrorAction SilentlyContinue
+            }
+            catch {
+                # ignora limpeza
+            }
+        }
+
+        if (Test-Path $tempPdfPath) {
+            try {
+                Remove-Item -Path $tempPdfPath -Force -ErrorAction SilentlyContinue
             }
             catch {
                 # ignora limpeza

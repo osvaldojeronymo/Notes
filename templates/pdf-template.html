@@ -34,11 +34,11 @@ $body$
                 </div>
 
             <div class="pdf-header-title">
-                $if(title)$$title$$else$Informe Executivo$endif$
+                    Informe Executivo
             </div>
 
             <div class="pdf-header-subtitle">
-                $if(subtitle)$$subtitle$$else$Produtos da Meta 2$endif$
+                    Produtos da Meta 7
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@ $body$
 <!-- =========================================================
      TEMPLATE DE FOOTER EXECUTIVO
      ========================================================= -->
-<template id="pdf-footer-template">
+ <template id="pdf-footer-template">
     <div class="pdf-footer pdf-footer-executive">
         <img
             class="pdf-footer-bg"
@@ -57,15 +57,15 @@ $body$
 
         <div class="pdf-footer-overlay">
             <div class="pdf-footer-left">
-                $if(classification)$$classification$$else$#INTERNO.TODOS$endif$
+                #INTERNO.TODOS
                 |
-                $if(meta)$$meta$$else$META 2 - DIAGNÓSTICO$endif$
+                META 7 - SISTEMAS
             </div>
 
             <div class="pdf-footer-center">
-                $if(title)$$title$$else$Informe Executivo$endif$
+                Informe Executivo
                 -
-                $if(subtitle)$$subtitle$$else$Produtos da Meta 2$endif$
+                Produtos da Meta 7
             </div>
         </div>
     </div>
