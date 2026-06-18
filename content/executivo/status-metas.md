@@ -1,28 +1,26 @@
 ---
-title: Status das Metas 2 e 7
+title: Status das Metas 2, 6, 7 e 10
 subtitle: Acompanhamento Executivo do Convênio CAIXA–UnB
-report_date: 16 de junho de 2026
+report_date: 18 de junho de 2026
 footer_left: "#INTERNO.TODOS | STATUS DAS METAS"
-footer_center: "Acompanhamento Executivo das Metas 2 e 7"
+footer_center: "Acompanhamento Executivo das Metas 2, 6, 7 e 10"
 ---
 
----
+# Status das Metas 2, 6, 7 e 10
 
-# Status das Metas 2 e 7
-
-Este informe apresenta a situação consolidada das Metas 2 e 7 do Convênio CAIXA–UnB, destacando o andamento dos produtos, os principais marcos alcançados, os riscos identificados e os próximos passos previstos.
+Este informe apresenta a situação consolidada das Metas 2, 6, 7 e 10 do Convênio CAIXA–UnB, destacando o andamento dos produtos, os principais marcos alcançados, os riscos identificados e os próximos passos previstos.
 
 ## Painel Executivo
 
 <p class="abnt-table-title">Tabela 1 - Visão consolidada do portfólio</p>
 
-| Indicador              | Meta 2 | Meta 7 |
-| ---------------------- | ------ | ------ |
-| Quantidade de produtos | 5      | 5      |
-| Produtos concluídos    | 1      | 1      |
-| Produtos em execução   | 1      | 3      |
-| Produtos planejados    | 3      | 1      |
-| Produtos críticos      | 3      | 5      |
+| Indicador              | Meta 2 | Meta 6 | Meta 7 | Meta 10 |
+| ---------------------- | ------ | ------ | ------ | ------- |
+| Quantidade de produtos | 5      | 5      | 5      | 5       |
+| Produtos concluídos    | 1      | 5      | 1      | 5       |
+| Produtos em execução   | 1      | 5      | 3      | 5       |
+| Produtos planejados    | 3      | 5      | 1      | 5       |
+| Produtos críticos      | 3      | 5      | 5      | 5       |
 
 <p class="abnt-table-source">Fonte: Elaboração própria a partir das informações do portal do projeto.</p>
 
@@ -52,6 +50,12 @@ A Meta 2 encontra-se em estágio avançado de execução, tendo concluído os pr
 - Definição dos critérios de criticidade documental.
 - Estruturação da matriz de priorização dos sistemas.
 
+## Meta 6 — Diagnóstico dos Sistemas de Negócio
+
+### Situação Geral
+
+### Principais resultados alcançados
+
 ## Meta 7 — Governança Arquivística Digital, SIGAD e RDC-Arq
 
 ### Situação Geral
@@ -77,6 +81,12 @@ A Meta 7 concentra os esforços relacionados à arquitetura arquivística digita
 - Avaliação da aderência aos requisitos arquivísticos.
 - Definição da arquitetura de referência para interoperabilidade.
 - Estruturação da estratégia de preservação digital.
+
+## Meta 10 — Governança Arquivística Digital, SIGAD e RDC-Arq
+
+### Situação Geral
+
+### Principais resultados alcançados
 
 ## Próximos Marcos
 

@@ -1,11 +1,9 @@
 ---
 title: Logbook
-subtitle: Reunião 001 – Alinhamento Inicial sobre as Metas 2 e 7
-report_date: 17 de junho de 2026
+subtitle: Alinhamento Inicial
+report_date: 18 de junho de 2026
 footer_left: "#INTERNO.TODOS | LOGBOOK"
-footer_center: "Histórico de reuniões com a Gerência Executiva"
----
-
+footer_center: "Histórico de reuniões"
 ---
 
 # Logbook

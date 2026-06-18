@@ -1,9 +1,9 @@
 ---
 title: Lições Aprendidas
-subtitle: Síntese Executiva das Metas 2 e 7
-report_date: 16 de junho de 2026
+subtitle: Síntese Executiva das Metas 2, 6, 7 e 10
+report_date: 18 de junho de 2026
 footer_left: "#INTERNO.TODOS | LIÇÕES APRENDIDAS"
-footer_center: "Síntese Executiva - Metas 2 e 7"
+footer_center: "Síntese Executiva - Metas 2, 6, 7 e 10"
 ---
 
 # Lições Aprendidas das Metas 2 e 7
