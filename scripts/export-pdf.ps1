@@ -18,6 +18,44 @@ param(
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
+function Test-IsLinuxRuntime {
+    if (Get-Variable -Name IsLinux -Scope Global -ErrorAction SilentlyContinue) {
+        return [bool]$global:IsLinux
+    }
+
+    if ($PSVersionTable.PSEdition -eq 'Core' -and $env:OS -ne 'Windows_NT') {
+        return $true
+    }
+
+    return $false
+}
+
+function Resolve-BrowserPath {
+    $browserCandidates = @()
+
+    if (Test-IsLinuxRuntime) {
+        $browserCandidates += @(
+            '/usr/bin/google-chrome',
+            '/usr/bin/chromium',
+            '/usr/bin/chromium-browser',
+            '/snap/bin/chromium',
+            '/usr/bin/microsoft-edge'
+        )
+    }
+    else {
+        $browserCandidates += @(
+            'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
+            'C:\Program Files\Microsoft\Edge\Application\msedge.exe',
+            'C:\Program Files\Google\Chrome\Application\chrome.exe',
+            'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+        )
+    }
+
+    return $browserCandidates |
+        Where-Object { Test-Path $_ } |
+        Select-Object -First 1
+}
+
 function Read-TextFileRobust {
     param(
         [Parameter(Mandatory = $true)]
@@ -596,32 +634,6 @@ function Wait-ForPdfReady {
     return $false
 }
 
-function Resolve-BrowserPath {
-    $browserCandidates = @()
-
-    if ($IsLinux) {
-        $browserCandidates += @(
-            '/usr/bin/google-chrome',
-            '/usr/bin/chromium',
-            '/usr/bin/chromium-browser',
-            '/snap/bin/chromium',
-            '/usr/bin/microsoft-edge'
-        )
-    }
-    else {
-        $browserCandidates += @(
-            'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
-            'C:\Program Files\Microsoft\Edge\Application\msedge.exe',
-            'C:\Program Files\Google\Chrome\Application\chrome.exe',
-            'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
-        )
-    }
-
-    return $browserCandidates |
-        Where-Object { Test-Path $_ } |
-        Select-Object -First 1
-}
-
 # =========================================================
 # RESOLUÇÃO DE CAMINHOS DO PROJETO
 # =========================================================
@@ -641,24 +653,69 @@ if (-not (Test-Path $templatePath)) {
 # SELEÇÃO AUTOMÁTICA DO .MD MAIS RECENTE
 # =========================================================
 if (-not $InputFile) {
-    $mdFiles = @(Get-ChildItem -Path $contentDir -Filter *.md -File | Sort-Object LastWriteTime -Descending)
+    $mdFiles = @(
+        Get-ChildItem -Path $contentDir -Filter *.md -File -Recurse |
+        Sort-Object LastWriteTime -Descending
+    )
 
     if ($mdFiles.Count -eq 0) {
-        throw "Nenhum arquivo .md encontrado na pasta: $contentDir"
+        throw "Nenhum arquivo .md encontrado na pasta ou subpastas: $contentDir"
     }
 
-    $InputFile = $mdFiles[0].Name
-    Write-Output "Arquivo selecionado automaticamente: $InputFile"
+    $selectedFile = $mdFiles[0]
+
+    $InputFile = $selectedFile.FullName
+
+    $relativeInputFile = $selectedFile.FullName.Substring($contentDir.Length).TrimStart('\', '/')
+
+    Write-Output "Arquivo selecionado automaticamente: $relativeInputFile"
+}
+else {
+    if ([System.IO.Path]::IsPathRooted($InputFile)) {
+        $selectedFile = Get-Item -Path $InputFile -ErrorAction Stop
+        $InputFile = $selectedFile.FullName
+        $relativeInputFile = $selectedFile.FullName.Substring($contentDir.Length).TrimStart('\', '/')
+    }
+    else {
+        $inputCandidate = Join-Path $contentDir $InputFile
+
+        if (Test-Path $inputCandidate) {
+            $selectedFile = Get-Item -Path $inputCandidate -ErrorAction Stop
+            $InputFile = $selectedFile.FullName
+            $relativeInputFile = $selectedFile.FullName.Substring($contentDir.Length).TrimStart('\', '/')
+        }
+        else {
+            $matches = @(
+                Get-ChildItem -Path $contentDir -Filter ([System.IO.Path]::GetFileName($InputFile)) -File -Recurse
+            )
+
+            if ($matches.Count -eq 0) {
+                throw "Arquivo de entrada não encontrado em content ou subpastas: $InputFile"
+            }
+
+            if ($matches.Count -gt 1) {
+                $lista = ($matches | ForEach-Object {
+                    $_.FullName.Substring($contentDir.Length).TrimStart('\', '/')
+                }) -join [Environment]::NewLine
+
+                throw "Mais de um arquivo com o nome '$InputFile' foi encontrado. Informe o caminho relativo completo. Opções encontradas:$([Environment]::NewLine)$lista"
+            }
+
+            $selectedFile = $matches[0]
+            $InputFile = $selectedFile.FullName
+            $relativeInputFile = $selectedFile.FullName.Substring($contentDir.Length).TrimStart('\', '/')
+        }
+    }
 }
 
-$inputPath = Join-Path $contentDir $InputFile
+$inputPath = $InputFile
 
 if (-not (Test-Path $inputPath)) {
     throw "Arquivo de entrada não encontrado: $inputPath"
 }
 
 if (-not $OutputFile) {
-    $baseName = [System.IO.Path]::GetFileNameWithoutExtension($InputFile)
+    $baseName = [System.IO.Path]::GetFileNameWithoutExtension($inputPath)
     $OutputFile = "pdf\$baseName.pdf"
 }
 
