@@ -1,0 +1,93 @@
+# Registro de Aprendizados — AD 238.013
+
+## Sistemas Identificados
+
+| Sistema                           | Finalidade                                                                                      | Norma Relacionada |
+| --------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------- |
+| ECM/GED Corporativo               | Produção, captura, tramitação, armazenamento e recuperação de documentos arquivísticos digitais | AD 238.013        |
+| OCR                               | Reconhecimento óptico de caracteres e indexação textual dos documentos                          | AD 238.013        |
+| Plataforma de Preservação Digital | Garantia de autenticidade, integridade, acessibilidade e preservação de longo prazo             | AD 238.013        |
+| Sistema de Auditoria              | Registro de acessos, operações e rastreabilidade documental                                     | AD 238.013        |
+| Sistema de Backup                 | Proteção e recuperação dos documentos digitais e metadados                                      | AD 238.013        |
+
+---
+
+## Documentos Produzidos
+
+| Documento                      | Processo                                          | Norma Relacionada |
+| ------------------------------ | ------------------------------------------------- | ----------------- |
+| Documento Arquivístico Digital | Produção documental corporativa                   | AD 238.013        |
+| Metadados Arquivísticos        | Classificação, indexação e recuperação documental | AD 238.013        |
+| Trilhas de Auditoria           | Controle e rastreabilidade das operações          | AD 238.013        |
+| Cópias de Segurança            | Preservação e continuidade operacional            | AD 238.013        |
+| Documentos Digitalizados       | Conversão de documentos físicos para meio digital | AD 238.013        |
+
+---
+
+## Integrações Identificadas
+
+| Sistema Origem            | Sistema Destino           | Finalidade                             |
+| ------------------------- | ------------------------- | -------------------------------------- |
+| Sistemas Corporativos     | ECM/GED                   | Arquivamento e gestão documental       |
+| Processo de Digitalização | ECM/GED                   | Captura e indexação de documentos      |
+| ECM/GED                   | Plataforma de Preservação | Preservação digital de longo prazo     |
+| ECM/GED                   | Sistema de Auditoria      | Registro de eventos e acessos          |
+| ECM/GED                   | Sistema de Backup         | Recuperação e continuidade operacional |
+
+---
+
+## Oportunidades
+
+| Oportunidade                                           | Norma      | Benefício Esperado                            |
+| ------------------------------------------------------ | ---------- | --------------------------------------------- |
+| Classificação documental automatizada                  | AD 238.013 | Redução de erros e aumento da padronização    |
+| Extração automática de metadados                       | AD 238.013 | Maior qualidade das informações arquivísticas |
+| Auditoria automatizada de conformidade documental      | AD 238.013 | Identificação preventiva de desvios           |
+| Monitoramento de documentos sem classificação adequada | AD 238.013 | Melhoria da governança documental             |
+| Avaliação da qualidade dos metadados                   | AD 238.013 | Aprimoramento da recuperação da informação    |
+| Integração entre sistemas produtores e GED             | AD 238.013 | Fortalecimento da cadeia de custódia digital  |
+| Uso de IA para indexação documental                    | AD 238.013 | Ganho de produtividade e precisão             |
+
+---
+
+## Observações
+
+### Principais conclusões
+
+- A AD 238 estabelece o modelo corporativo de gestão documental digital da CAIXA.
+- A norma trata explicitamente dos requisitos de autenticidade, integridade, confiabilidade, acessibilidade e rastreabilidade.
+- Os metadados arquivísticos são considerados elementos essenciais do documento digital.
+- A trilha de auditoria integra o patrimônio informacional a ser preservado.
+- A preservação digital é tratada como processo contínuo e permanente.
+
+### Riscos observados
+
+- Dependência da correta classificação documental na origem.
+- Possíveis inconsistências de metadados entre sistemas produtores.
+- Necessidade de integração adequada entre sistemas corporativos e plataforma ECM/GED.
+- Risco de perda de contexto arquivístico em processos de migração tecnológica.
+
+### Relação com outras normas
+
+- AD 226 – Regras Arquivísticas de Classificação.
+- AD 015 – Arquivar e Recuperar Documentos.
+- AD 055 – Eliminação de Documentos.
+- OR 138 – Estrutura organizacional e competências.
+
+### Questões para investigação futura
+
+- Qual solução tecnológica implementa atualmente o ECM/GED corporativo?
+- Como ocorre a integração entre sistemas de negócio e o repositório documental?
+- Como são administrados os metadados arquivísticos corporativos?
+- Como são executadas as políticas de preservação digital de longo prazo?
+- Existe monitoramento corporativo da qualidade dos metadados?
+
+### Perguntas que a norma gerou
+
+No caso da AD 238, as perguntas mais relevantes:
+
+- O ECM/GED citado é integralmente implementado pelo FileNet?
+- Onde entra o IBM Enterprise Records (IER)?
+- Como a classificação da AD 226 é aplicada tecnicamente no GED?
+- Os sistemas corporativos enviam metadados completos ou apenas documentos?
+- Como é garantida a cadeia de custódia digital entre sistema produtor → GED → preservação?

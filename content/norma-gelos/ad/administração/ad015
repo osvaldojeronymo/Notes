@@ -1,0 +1,106 @@
+# Registro de Aprendizados — AD 015.087
+
+## Sistemas Identificados
+
+| Sistema         | Finalidade                                                    | Norma Relacionada   |
+| --------------- | ------------------------------------------------------------- | ------------------- |
+| SUPRIR          | Gestão do Quadro de Arquivamento e instrumentos arquivísticos | AD 015.087          |
+| SIHEX           | Consulta e recuperação de documentos arquivados               | AD 015.087          |
+| SIRED           | Controle de remessas documentais para Bases de Arquivo        | AD 015.087          |
+| ECM/GED         | Gestão de documentos digitais e arquivísticos                 | AD 015.087 / AD 238 |
+| Base de Arquivo | Custódia e recuperação documental                             | AD 015.087          |
+
+---
+
+## Documentos Produzidos
+
+| Documento                   | Processo                           | Norma Relacionada |
+| --------------------------- | ---------------------------------- | ----------------- |
+| Relação de Remessa          | Transferência para Base de Arquivo | AD 015.087        |
+| Solicitação de Recuperação  | Consulta de documentos arquivados  | AD 015.087        |
+| Documentos Tipo A, B e C    | Arquivamento operacional           | AD 015.087        |
+| Relatórios de Processamento | Arquivamento e recuperação         | AD 015.087        |
+| Registros de Indexação      | Recuperação documental             | AD 015.087        |
+
+---
+
+## Integrações Identificadas
+
+| Sistema Origem    | Sistema Destino     | Finalidade                                 |
+| ----------------- | ------------------- | ------------------------------------------ |
+| Unidade Produtora | SIRED               | Controle de remessas documentais           |
+| SIRED             | Base de Arquivo     | Transferência de custódia                  |
+| Base de Arquivo   | SIHEX               | Recuperação documental                     |
+| SUPRIR            | Gestão Arquivística | Aplicação dos instrumentos arquivísticos   |
+| AD 226            | AD 015              | Aplicação da classificação e temporalidade |
+| AD 238            | AD 015              | Gestão de documentos digitais              |
+
+---
+
+## Oportunidades
+
+| Oportunidade                                            | Norma      | Benefício Esperado              |
+| ------------------------------------------------------- | ---------- | ------------------------------- |
+| Monitoramento automático de remessas em atraso          | AD 015.087 | Redução de passivos documentais |
+| Dashboard de documentos em arquivo corrente             | AD 015.087 | Maior governança documental     |
+| Auditoria de cumprimento dos prazos de remessa          | AD 015.087 | Conformidade arquivística       |
+| Integração automática entre sistemas produtores e SIRED | AD 015.087 | Menor intervenção manual        |
+| Monitoramento da recuperação documental                 | AD 015.087 | Indicadores de uso e eficiência |
+| Inventário corporativo de documentos arquivados         | AD 015.087 | Visibilidade institucional      |
+
+---
+
+## Observações
+
+### Principais conclusões
+
+- A gestão documental inicia no momento da geração do documento.
+- A responsabilidade pela organização do arquivo corrente é da unidade produtora.
+- A responsabilidade pela custódia intermediária é das Bases de Arquivo.
+- O prazo de guarda é independente do suporte documental.
+- Os instrumentos arquivísticos definidos pela AD 226 sustentam todo o processo.
+
+### Governança
+
+- GELOS é responsável pelos padrões corporativos de gestão documental.
+- As unidades são responsáveis pela organização e remessa adequada dos documentos.
+- O descumprimento dos procedimentos pode gerar responsabilização disciplinar.
+
+### Riscos observados
+
+- Permanência excessiva de documentos nas unidades.
+- Remessas fora dos padrões arquivísticos.
+- Falhas de indexação dificultando recuperação documental.
+- Dependência de correta classificação na origem.
+
+### Relação com outras normas
+
+- AD 226 – Regras Arquivísticas.
+- AD 238 – Documentos Arquivísticos Digitais.
+- AD 055 – Eliminação de Documentos.
+- OR 138 – CPAD.
+
+### Questões para investigação futura
+
+- SIHEX e SIRED permanecem sistemas ativos ou foram parcialmente substituídos?
+- Como o ECM/GED se integra às Bases de Arquivo?
+- O processo de recuperação documental já é totalmente digital?
+- Existe integração automática entre SUPRIR, ECM/GED e instrumentos arquivísticos?
+
+### Insight
+
+A AD 015 revela a cadeia de custódia da CAIXA:
+
+Produção
+↓
+Classificação (AD 226)
+↓
+Arquivo Corrente
+↓
+Remessa
+↓
+Base de Arquivo
+↓
+Recuperação
+↓
+Eliminação ou Guarda Permanente

@@ -1,0 +1,102 @@
+# Registro de Aprendizados — AD 226.014
+
+## Sistemas Identificados
+
+| Sistema                            | Finalidade                                                            | Norma Relacionada |
+| ---------------------------------- | --------------------------------------------------------------------- | ----------------- |
+| SUPRIR – Quadro de Arquivamento    | Registro dos tipos documentais, classificação e temporalidade         | AD 226.014        |
+| Sistema de Gestão Documental CAIXA | Aplicação dos instrumentos arquivísticos corporativos                 | AD 226.014        |
+| ECM/GED Corporativo                | Execução da gestão documental digital conforme classificação definida | AD 226.014        |
+| Sistema de Gestão da Informação    | Aplicação dos níveis de acesso e segurança da informação              | AD 226.014        |
+
+---
+
+## Documentos Produzidos
+
+| Documento                                                 | Processo                                                      | Norma Relacionada |
+| --------------------------------------------------------- | ------------------------------------------------------------- | ----------------- |
+| Código de Classificação de Documentos (CCD)               | Classificação documental das atividades-fim                   | AD 226.014        |
+| Tabela de Temporalidade e Destinação de Documentos (TTDD) | Definição dos prazos de guarda e destinação                   | AD 226.014        |
+| Quadro de Arquivamento                                    | Registro dos documentos vinculados aos processos corporativos | AD 226.014        |
+| Instrumentos Arquivísticos                                | Gestão do ciclo de vida documental                            | AD 226.014        |
+| Pareceres e Deliberações da CPAD                          | Avaliação documental                                          | AD 226.014        |
+
+---
+
+## Integrações Identificadas
+
+| Sistema Origem     | Sistema Destino                 | Finalidade                                       |
+| ------------------ | ------------------------------- | ------------------------------------------------ |
+| Gestor do Processo | SUPRIR – Quadro de Arquivamento | Cadastro dos documentos produzidos               |
+| SUPRIR             | Gestão Documental Corporativa   | Aplicação das regras arquivísticas               |
+| AD 226             | AD 015                          | Definição dos critérios de arquivamento          |
+| AD 226             | AD 238                          | Definição dos critérios de preservação digital   |
+| AD 226             | AD 055                          | Definição dos critérios de eliminação documental |
+| CPAD               | Arquivo Nacional                | Homologação dos instrumentos arquivísticos       |
+
+---
+
+## Oportunidades
+
+| Oportunidade                                                  | Norma      | Benefício Esperado                          |
+| ------------------------------------------------------------- | ---------- | ------------------------------------------- |
+| Automatização da classificação documental                     | AD 226.014 | Redução de erros de classificação           |
+| Monitoramento de documentos sem enquadramento arquivístico    | AD 226.014 | Maior conformidade documental               |
+| Auditoria automática da temporalidade documental              | AD 226.014 | Redução de riscos regulatórios              |
+| Integração entre sistemas produtores e Quadro de Arquivamento | AD 226.014 | Melhor governança da informação             |
+| Catálogo corporativo de tipos documentais                     | AD 226.014 | Padronização institucional                  |
+| Inteligência Artificial para sugestão de classificação        | AD 226.014 | Ganho operacional e qualidade dos metadados |
+| Dashboard corporativo de temporalidade documental             | AD 226.014 | Gestão ativa do ciclo de vida documental    |
+
+---
+
+## Observações
+
+### Principais conclusões
+
+- A classificação documental é obrigatória para todos os documentos produzidos ou recebidos pela CAIXA.
+- A classificação independe do suporte utilizado (papel, microforma, digitalizado ou nato digital).
+- O CCD e a TTDD possuem aprovação formal do Arquivo Nacional.
+- Os instrumentos arquivísticos possuem força normativa e sustentam todo o ciclo de vida documental.
+- Nenhum documento pode ser eliminado sem classificação e avaliação prévia.
+
+### Governança
+
+- A CPAD é a instância responsável pela definição dos critérios de avaliação documental.
+- A GELOS é responsável pelos modelos corporativos de gestão arquivística.
+- Os gestores dos processos são responsáveis por identificar os documentos produzidos e mantê-los registrados no Quadro de Arquivamento.
+
+### Riscos observados
+
+- Classificação incorreta na origem compromete todo o ciclo documental.
+- Sistemas produtores podem gerar documentos sem vínculo adequado ao CCD e à TTDD.
+- Falhas no cadastramento do Quadro de Arquivamento podem comprometer a rastreabilidade documental.
+
+### Relação com outras normas
+
+- AD 015 – Arquivar e Recuperar Documentos.
+- AD 055 – Eliminação de Documentos.
+- AD 238 – Documentos Arquivísticos Digitais.
+- OR 138 – Comissão Permanente de Avaliação Documental.
+
+### Questões para investigação futura
+
+- Como ocorre a integração entre SUPRIR e os sistemas corporativos?
+- O Quadro de Arquivamento é atualizado manualmente ou existe integração automática?
+- Os sistemas corporativos herdam automaticamente a classificação documental?
+- Existe monitoramento corporativo de documentos sem classificação?
+- Como a TTDD é aplicada tecnicamente dentro do FileNet e do IBM Enterprise Records?
+
+### Insight
+
+> A CAIXA adotou oficialmente uma gestão documental baseada em instrumentos arquivísticos homologados pelo Arquivo Nacional.
+
+"A CAIXA possui instrumentos arquivísticos?"
+
+Agora a resposta é:
+
+"Sim. CCD e TTDD corporativos homologados pelo Arquivo Nacional em 2024."
+
+A pergunta passa a ser outra:
+
+"Como esses instrumentos são implementados tecnicamente nos sistemas corporativos?"

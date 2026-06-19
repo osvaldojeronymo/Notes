@@ -1,0 +1,94 @@
+# Registro de Aprendizados — AD 044.016
+
+## Sistemas Identificados
+
+| Sistema                        | Finalidade                                                       | Norma Relacionada |
+| ------------------------------ | ---------------------------------------------------------------- | ----------------- |
+| Arquivo de Segurança           | Preservação de suportes especiais e recuperação de informações   | AD 044.016        |
+| SharePoint Corporativo         | Compartilhamento e acompanhamento das evidências de fiscalização | AD 044.016        |
+| Sistema de Gestão Documental   | Arquivamento dos documentos produzidos durante a fiscalização    | AD 044.016        |
+| Sistema de Controle Contratual | Gestão da prestação de serviços do Arquivo de Segurança          | AD 044.016        |
+
+---
+
+## Documentos Produzidos
+
+| Documento                  | Processo                               | Norma Relacionada |
+| -------------------------- | -------------------------------------- | ----------------- |
+| Relatório de Vistoria      | Fiscalização contratual                | AD 044.016        |
+| Ofício de Notificação      | Tratamento de inconformidades          | AD 044.016        |
+| Solicitação de Penalidade  | Descumprimento contratual              | AD 044.016        |
+| Ordem de Serviço           | Designação de fiscal do contrato       | AD 044.016        |
+| Registros de Duplicação    | Recuperação e preservação dos suportes | AD 044.016        |
+| Evidências de Fiscalização | Controle da execução contratual        | AD 044.016        |
+
+---
+
+## Integrações Identificadas
+
+| Sistema Origem          | Sistema Destino        | Finalidade                            |
+| ----------------------- | ---------------------- | ------------------------------------- |
+| Arquivo Operacional     | Arquivo de Segurança   | Preservação e contingência            |
+| Prestadora de Serviços  | CESAQ                  | Armazenamento especializado           |
+| CESAQ                   | SharePoint Corporativo | Disponibilização das evidências       |
+| Fiscalização Contratual | Gestão Documental      | Arquivamento dos registros produzidos |
+| AD 015                  | AD 044                 | Arquivamento das evidências geradas   |
+| AD 238                  | AD 044                 | Preservação de suportes digitais      |
+
+---
+
+## Oportunidades
+
+| Oportunidade                                      | Norma      | Benefício Esperado                    |
+| ------------------------------------------------- | ---------- | ------------------------------------- |
+| Dashboard corporativo de vistorias                | AD 044.016 | Monitoramento centralizado            |
+| Monitoramento automático das condições ambientais | AD 044.016 | Redução de riscos de perda documental |
+| Digitalização das evidências de fiscalização      | AD 044.016 | Maior rastreabilidade                 |
+| Indicadores de conformidade contratual            | AD 044.016 | Apoio à gestão contratual             |
+| Integração entre Arquivo de Segurança e ECM/GED   | AD 044.016 | Maior governança da informação        |
+| Monitoramento da duplicação de mídias             | AD 044.016 | Continuidade operacional              |
+
+---
+
+## Observações
+
+### Principais conclusões
+
+- O Arquivo de Segurança é uma estrutura especializada de preservação e recuperação da informação.
+- A norma possui forte relação com continuidade operacional e mitigação de riscos.
+- A preservação envolve tanto suportes analógicos quanto digitais.
+- O acesso é restrito e controlado.
+- Existe fiscalização contratual contínua sobre o prestador do serviço.
+
+### Governança
+
+- GELOS define os padrões corporativos.
+- CESUP executa o acompanhamento operacional.
+- A contratada realiza o armazenamento especializado.
+- A fiscalização ocorre semestralmente.
+
+### Riscos observados
+
+- Perda de mídias críticas.
+- Falhas ambientais (temperatura e umidade).
+- Descumprimento contratual.
+- Recuperação inadequada de documentos estratégicos.
+
+### Relação com outras normas
+
+- AD 015 – Arquivar e Recuperar Documentos.
+- AD 226 – Regras Arquivísticas.
+- AD 238 – Documentos Arquivísticos Digitais.
+- AD 055 – Eliminação de Documentos.
+- AD 242 – Gestão de Contratos.
+
+### Questões para investigação futura
+
+- O Arquivo de Segurança já contempla documentos nativamente digitais?
+- Existe integração com FileNet ou IBM Enterprise Records?
+- Como ocorre a duplicação de mídias digitais modernas?
+- Existe política corporativa de recuperação de desastres integrada ao Arquivo de Segurança?
+
+### Conclusão do bloco documental da GELOS
+
+> A CAIXA possui um modelo normativo completo de gestão documental, abrangendo classificação, temporalidade, arquivamento, preservação digital, arquivo de segurança, recuperação de informações e eliminação documental, sustentado por governança formal (CPAD, GELOS e CESUP), instrumentos arquivísticos homologados e mecanismos de continuidade operacional para proteção do patrimônio informacional institucional.

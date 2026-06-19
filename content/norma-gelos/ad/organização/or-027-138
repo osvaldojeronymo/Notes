@@ -1,0 +1,132 @@
+# Análise Organizacional Inicial – GELOS
+
+Normas analisadas:
+
+- OR 138.010 – Gestão Documental – Comissão Permanente de Avaliação Documental (CPAD)
+- OR 027.070 – Em análise (anexos recebidos)
+
+## Objetivo da Leitura
+
+Compreender a estrutura organizacional da GELOS, suas competências, responsabilidades, interfaces e posicionamento dentro da governança corporativa da CAIXA.
+
+### O que é a GELOS?
+
+A GELOS (Gerência Nacional de Logística e Suprimentos) é a unidade da SULOG responsável pela formulação, normatização, coordenação e supervisão de processos corporativos relacionados a:
+
+- gestão documental;
+- arquivo corporativo;
+- suprimentos;
+- distribuição;
+- logística;
+- modelos corporativos sob sua gestão.
+
+No contexto da OR 138, a GELOS atua no Arquivo, Distribuição e Suprimentos.
+
+### O que a GELOS faz?
+
+Com base na OR 138, a GELOS:
+
+#### Governança documental
+
+- Coordena a gestão documental corporativa.
+- Mantém os instrumentos arquivísticos institucionais.
+- Apoia a atuação da CPAD.
+- Define padrões de arquivamento, classificação e eliminação documental.
+
+#### Gestão arquivística
+
+- Recebe e avalia demandas relacionadas à gestão documental.
+- Coordena alterações em instrumentos arquivísticos.
+- Mantém interlocução com o Arquivo Nacional.
+
+#### Conformidade e controle
+
+- Controla informações classificadas.
+- Garante aderência à LGPD.
+- Garante aderência à LAI.
+- Garante aderência às políticas corporativas de segurança da informação.
+
+#### Apoio institucional
+
+- Organiza pautas da CPAD.
+- Coordena processos de avaliação documental.
+- Divulga decisões da CPAD às áreas demandantes.
+
+### O que a GELOS não faz?
+
+Pelos elementos observados na OR 138:
+
+#### Não executa diretamente os processos de negócio das áreas
+
+A responsabilidade pelos documentos produzidos permanece com as áreas gestoras.
+
+#### Não define isoladamente a temporalidade documental
+
+A definição ocorre por meio dos instrumentos arquivísticos homologados e da atuação colegiada da CPAD.
+
+#### Não elimina documentos por iniciativa das áreas
+
+A eliminação segue processo formal definido nos normativos arquivísticos.
+
+#### Não atua como área jurídica
+
+A própria OR 138 prevê consulta jurídica específica quando necessário.
+
+### Quais áreas são clientes da GELOS?
+
+A OR 138 indica que praticamente toda a CAIXA é cliente da GELOS quando o assunto é gestão documental.
+
+#### Clientes diretos
+
+- Vice-Presidências.
+- Diretorias Executivas.
+- Gerências Nacionais.
+- Unidades da Matriz.
+
+#### Clientes especializados
+
+- Áreas que produzem documentos arquivísticos.
+- Áreas que necessitam alterar CCD ou TTDD.
+- Áreas que demandam avaliação documental.
+- Áreas sujeitas à LGPD e LAI.
+
+### Quais áreas são fornecedoras da GELOS?
+
+A OR 138 mostra uma forte dependência de diversas áreas especializadas.
+
+#### Fornecedores internos
+
+##### Segurança da Informação
+
+Participação formal na CPAD.
+
+##### Jurídico
+
+Consultas relacionadas à eliminação documental.
+
+##### Áreas de Negócio
+
+Fornecem conhecimento sobre processos, produtos e documentos.
+
+##### Vice-Presidências Proponentes
+
+Encaminham matérias para análise da CPAD.
+
+### Interfaces Identificadas
+
+| Interface                       | Finalidade                                |
+| ------------------------------- | ----------------------------------------- |
+| GEADS ↔ CPAD                    | Governança arquivística                   |
+| GEADS ↔ Arquivo Nacional        | Homologação de instrumentos arquivísticos |
+| GEADS ↔ Jurídico                | Avaliação de riscos legais                |
+| GEADS ↔ Segurança da Informação | Proteção da informação                    |
+| GEADS ↔ Vice-Presidências       | Alterações documentais                    |
+| GEADS ↔ Áreas Gestoras          | Classificação, temporalidade e eliminação |
+
+### Principais Conclusões
+
+1. A GELOS possui papel estratégico na governança documental corporativa.
+2. A GELOS é um dos principais centros de governança da informação da CAIXA.
+3. A CPAD funciona como mecanismo formal de decisão arquivística.
+4. Existe forte integração entre gestão documental, segurança da informação, LGPD e transparência.
+5. A gestão documental da CAIXA possui estrutura institucional madura e alinhada às exigências do Arquivo Nacional.

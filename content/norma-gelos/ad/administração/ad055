@@ -1,0 +1,89 @@
+# Registro de Aprendizados — AD 055.024
+
+## Sistemas Identificados
+
+| Sistema                             | Finalidade                                                           | Norma Relacionada |
+| ----------------------------------- | -------------------------------------------------------------------- | ----------------- |
+| SUPRIR                              | Identificação dos documentos e aplicação da temporalidade documental | AD 055.024        |
+| Sistema de Gestão Documental        | Controle dos documentos passíveis de eliminação                      | AD 055.024        |
+| Sistema de Arquivamento Corporativo | Custódia documental até a destinação final                           | AD 055.024        |
+| Sistema de Controle da CESAQ        | Gestão operacional da eliminação documental                          | AD 055.024        |
+
+---
+
+## Documentos Produzidos
+
+| Documento                               | Processo                              | Norma Relacionada |
+| --------------------------------------- | ------------------------------------- | ----------------- |
+| Lista de Eliminação de Documentos (LED) | Seleção de documentos para eliminação | AD 055.024        |
+| Termo de Eliminação de Documentos       | Formalização da eliminação            | AD 055.024        |
+| Ata de Expurgo                          | Registro do processo de eliminação    | AD 055.024        |
+| Relatórios de Conferência               | Validação dos documentos selecionados | AD 055.024        |
+| Evidências Fotográficas e Operacionais  | Comprovação da eliminação             | AD 055.024        |
+
+---
+
+## Integrações Identificadas
+
+| Sistema Origem  | Sistema Destino          | Finalidade                             |
+| --------------- | ------------------------ | -------------------------------------- |
+| AD 226          | AD 055                   | Aplicação da temporalidade documental  |
+| SUPRIR          | Processo de Eliminação   | Identificação dos documentos vencidos  |
+| Base de Arquivo | CESAQ                    | Execução da eliminação                 |
+| CESAQ           | Contratada Especializada | Destruição física dos documentos       |
+| CESAQ           | GEADS                    | Autorização e governança da eliminação |
+
+---
+
+## Oportunidades para NRPP / BPGAR
+
+| Oportunidade                                                  | Norma      | Benefício Esperado               |
+| ------------------------------------------------------------- | ---------- | -------------------------------- |
+| Dashboard corporativo de documentos elegíveis para eliminação | AD 055.024 | Redução de passivos documentais  |
+| Monitoramento automático de temporalidade vencida             | AD 055.024 | Maior conformidade arquivística  |
+| Auditoria digital do ciclo de eliminação                      | AD 055.024 | Maior rastreabilidade            |
+| Integração automática entre TTDD e processo de expurgo        | AD 055.024 | Redução de atividades manuais    |
+| Indicadores de volume documental eliminado                    | AD 055.024 | Gestão de custos e espaço físico |
+| Relatórios gerenciais de conformidade documental              | AD 055.024 | Apoio à governança               |
+
+---
+
+## Observações
+
+### Principais conclusões
+
+- A eliminação documental é centralizada e controlada pela GEADS/CESAQ.
+- Nenhuma unidade da CAIXA pode eliminar documentos diretamente.
+- A eliminação somente ocorre após cumprimento dos prazos definidos na TTDD.
+- O processo deve impedir qualquer possibilidade de reconstituição das informações.
+- A eliminação deve observar requisitos de sustentabilidade ambiental e proteção de dados pessoais.
+
+### Governança
+
+- A AD 055 depende diretamente da AD 226.
+- A CESUP é responsável pela operacionalização da eliminação.
+- A GELOS exerce papel de supervisão e autorização.
+- Os instrumentos arquivísticos homologados sustentam juridicamente a eliminação.
+
+### Riscos observados
+
+- Manutenção indevida de documentos com prazo vencido.
+- Custos desnecessários de armazenamento.
+- Eliminação inadequada sem rastreabilidade.
+- Exposição de dados pessoais em descarte inadequado.
+
+### Relação com outras normas
+
+- AD 226 – Regras Arquivísticas.
+- AD 015 – Arquivar e Recuperar Documentos.
+- AD 238 – Documentos Arquivísticos Digitais.
+- OR 138 – Comissão Permanente de Avaliação Documental.
+
+### Questões para investigação futura
+
+- Como a temporalidade documental é aplicada tecnicamente nos sistemas corporativos?
+- Existe integração automática entre SUPRIR e os processos de eliminação?
+- Como o processo é executado para documentos arquivísticos digitais?
+- Qual o papel do IBM Enterprise Records na execução da temporalidade e destinação final?
+
+> A CAIXA possui um modelo normativo completo de gestão arquivística, contemplando classificação, temporalidade, arquivamento, preservação digital e eliminação documental, sustentado por instrumentos arquivísticos homologados, governança formal (CPAD/GELOS/CESUP) e processos estruturados de custódia e destinação documental.
