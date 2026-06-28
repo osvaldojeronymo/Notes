@@ -10,8 +10,12 @@ param(
     ),
     [string]$FooterLeft = '#INTERNO.TODOS | META 2 - DIAGNÓSTICO',
     [string]$FooterCenter = 'Informe Executivo - Produtos da Meta 2',
+
     [AllowEmptyString()]
     [string]$FooterRight = '',
+
+    [string]$TemplateFile = 'pdf-template.html',
+
     [int]$RenderWaitMs = 8000
 )
 
@@ -52,8 +56,8 @@ function Resolve-BrowserPath {
     }
 
     return $browserCandidates |
-        Where-Object { Test-Path $_ } |
-        Select-Object -First 1
+    Where-Object { Test-Path $_ } |
+    Select-Object -First 1
 }
 
 function Read-TextFileRobust {
@@ -542,18 +546,18 @@ function Build-HtmlFromTemplate {
 
     # 2) Resolve placeholders simples
     $replacements = @(
-        @{ k = '$title$';         v = $safeTitle },
-        @{ k = '$subtitle$';      v = $safeSubtitle },
-        @{ k = '$REPORT_DATE$';   v = $safeReportDate },
-        @{ k = '$report_date$';   v = $safeReportDate },
-        @{ k = '$date$';          v = $safeReportDate },
-        @{ k = '$FOOTER_LEFT$';   v = $safeFooterLeft },
-        @{ k = '$footer_left$';   v = $safeFooterLeft },
+        @{ k = '$title$'; v = $safeTitle },
+        @{ k = '$subtitle$'; v = $safeSubtitle },
+        @{ k = '$REPORT_DATE$'; v = $safeReportDate },
+        @{ k = '$report_date$'; v = $safeReportDate },
+        @{ k = '$date$'; v = $safeReportDate },
+        @{ k = '$FOOTER_LEFT$'; v = $safeFooterLeft },
+        @{ k = '$footer_left$'; v = $safeFooterLeft },
         @{ k = '$FOOTER_CENTER$'; v = $safeFooterCenter },
         @{ k = '$footer_center$'; v = $safeFooterCenter },
-        @{ k = '$FOOTER_RIGHT$';  v = $safeFooterRight },
-        @{ k = '$footer_right$';  v = $safeFooterRight },
-        @{ k = '$body$';          v = $DocumentHtml }
+        @{ k = '$FOOTER_RIGHT$'; v = $safeFooterRight },
+        @{ k = '$footer_right$'; v = $safeFooterRight },
+        @{ k = '$body$'; v = $DocumentHtml }
     )
 
     foreach ($item in $replacements) {
@@ -639,7 +643,7 @@ function Wait-ForPdfReady {
 # =========================================================
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $contentDir = Join-Path $root 'content'
-$templatePath = Join-Path $root 'templates\pdf-template.html'
+$templatePath = Join-Path $root (Join-Path 'templates' $TemplateFile)
 
 if (-not (Test-Path $contentDir)) {
     throw "Pasta de conteúdo não encontrada: $contentDir"
@@ -695,8 +699,8 @@ else {
 
             if ($matches.Count -gt 1) {
                 $lista = ($matches | ForEach-Object {
-                    $_.FullName.Substring($contentDir.Length).TrimStart('\', '/')
-                }) -join [Environment]::NewLine
+                        $_.FullName.Substring($contentDir.Length).TrimStart('\', '/')
+                    }) -join [Environment]::NewLine
 
                 throw "Mais de um arquivo com o nome '$InputFile' foi encontrado. Informe o caminho relativo completo. Opções encontradas:$([Environment]::NewLine)$lista"
             }

@@ -214,18 +214,24 @@ body {
     text-overflow: ellipsis;
 }
 
-.print-page-number {
-    position: absolute;
-    z-index: 3;
-    right: 1.15cm;
-    top: 50%;
-    transform: translateY(-50%);
+.pdf-footer-right {
+    justify-self: end;
+    text-align: right;
+    white-space: nowrap;
+    white-space: nowrap;
+    line-height: 1;
     margin: 0;
+    padding: 0;
     color: #fff;
     font-size: 7.8pt;
     font-weight: 700;
-    white-space: nowrap;
-    text-align: right;
+}
+
+.print-page-number {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
 }
 
 /* =========================================================
@@ -378,6 +384,26 @@ tbody tr:first-child td {
 
 tbody tr:nth-child(even) td {
     background-color: var(--caixa-fundo-alternado);
+}
+
+/* =========================================================
+   CADERNO EXECUTIVO - ALINHAMENTO DE COLUNAS
+   ========================================================= */
+
+.caderno-content table th:nth-child(1),
+.caderno-content table td:nth-child(1),
+.caderno-content table th:nth-child(3),
+.caderno-content table td:nth-child(3) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.caderno-content table th:nth-child(2),
+.caderno-content table td:nth-child(2),
+.caderno-content table th:nth-child(4),
+.caderno-content table td:nth-child(4) {
+    text-align: left;
+    vertical-align: middle;
 }
 
 /* =========================================================
