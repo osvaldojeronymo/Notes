@@ -321,9 +321,3 @@ Ao final da reunião, responder:
 > Qual pergunta que a GELOS espera que o Convênio CAIXA–UnB responda?
 
 Resposta:
-
----
-
----
-
----

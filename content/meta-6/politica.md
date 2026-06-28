@@ -27,6 +27,8 @@ A política documental é o marco regulatório que garante a preservação da me
 | Proposta de Revisão de Normativos Existentes                        | Avalia aderência dos normativos atuais                                      | Permite atualização gradual do arcabouço normativo corporativo                  |
 | Estruturação do Plano de Preservação Digital                        | Define modelo operacional para preservação digital                          | Serve de referência para futuras iniciativas de preservação institucional       |
 
+<p class="abnt-table-source">Fonte: Elaboração própria.</p>
+
 ## Pontos de atenção
 
 <p class="abnt-table-title">Tabela 2 - Riscos e ações recomendadas</p>
@@ -38,6 +40,8 @@ A política documental é o marco regulatório que garante a preservação da me
 | Sistemas corporativos sem aderência aos requisitos arquivísticos        | Persistência de riscos de conformidade documental                       | Utilizar o Normativo de Conformidade Arquivística como referência obrigatória |
 | Revisão insuficiente dos normativos corporativos existentes             | Sobreposição ou conflito regulatório                                    | Conduzir análise integrada dos normativos atuais                              |
 | Ausência de estratégia institucional de preservação digital             | Risco de perda de autenticidade e acesso futuro aos documentos digitais | Priorizar conclusão e operacionalização do Plano de Preservação Digital       |
+
+<p class="abnt-table-source">Fonte: Elaboração própria.</p>
 
 ## Próximos passos sugeridos
 

@@ -6,13 +6,11 @@ footer_left: "#INTERNO.TODOS | META 10 - SUSTENTABILIDADE"
 footer_center: "Informe Executivo - Produtos da Meta 10"
 ---
 
-## Produtos entregues na Meta 10
-
 A Meta 10 estrutura uma metodologia para avaliar a sustentabilidade documental da CAIXA, considerando custos, eficiência operacional, impacto ambiental, passivo documental, uso de sistemas e potencial de redução de desperdícios.
 
 ## Próximos passos sugeridos
 
-1. Consolidar o Plano Metodológico e o Documento Metodológico da Meta 10.
+1. Consolidar o Plano Metodológico e o Documento Metodológico da Meta.
 2. Levantar dados de custos, volumetria, formatos, sistemas, passivo documental e esforço de pessoal.
 3. Realizar o Diagnóstico do Impacto Ambiental da Gestão de Documentos.
 4. Construir a Matriz de Sustentabilidade e Eficiência Ambiental.
@@ -26,7 +24,7 @@ A Meta 10 estrutura uma metodologia para avaliar a sustentabilidade documental d
 | Conteúdo em destaque                                     | Capacidade operacional                                                                      | Uso prático                                                                                       |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | Plano Metodológico de Avaliação do Impacto Ambiental     | Define escopo, variáveis, indicadores e fases da avaliação de sustentabilidade documental   | Orienta a mensuração de custos, impactos ambientais e oportunidades de eficiência                 |
-| Documento Metodológico de Sustentabilidade Documental    | Consolida framework econômico, operacional e ambiental para análise da gestão documental    | Apoia decisões institucionais sobre redução de custos, otimização de processos e sustentabilidade |
+| Documento Metodológico de Sustentabilidade Documental    | Consolida _framework_ econômico, operacional e ambiental para análise da gestão documental  | Apoia decisões institucionais sobre redução de custos, otimização de processos e sustentabilidade |
 | Diagnóstico do Impacto Ambiental da Gestão de Documentos | Mede e caracteriza o impacto atual da produção, guarda, recuperação e tramitação documental | Identifica desperdícios, passivos, custos ocultos e pontos de maior impacto                       |
 | Matriz de Sustentabilidade e Eficiência Ambiental        | Traduz o diagnóstico em critérios objetivos de decisão                                      | Permite priorizar ações com base em custo-benefício, risco, eficiência e impacto ambiental        |
 | Plano Institucional de Sustentabilidade Documental       | Define metas, cronograma e governança para implementação das ações                          | Viabiliza redução de custos, otimização de volumetria e sustentabilidade da gestão documental     |

@@ -6,7 +6,7 @@ footer_left: "#INTERNO.TODOS | META 2 - DIAGNÓSTICO"
 footer_center: "Informe Executivo - Produtos da Meta 2"
 ---
 
-## Produtos entregues na Meta 2
+## Produtos entregues
 
 O _Plano Metodológico do Diagnóstico Integrado dos Sistemas de Negócio_ (entrega em R2) estabelece o método para identificar esses sistemas, avaliar sua criticidade e seu risco documental, verificar sua aderência ao e-ARQ/SIGAD/RDC-Arq e definir prioridades para ações de modernização, preservação, integração e controle.
 
