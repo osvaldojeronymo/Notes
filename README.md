@@ -6,11 +6,8 @@ Repositório de documentos em Markdown, estilos de renderização e automação 
 
 Este repositório concentra o conteúdo-fonte e os artefatos de estilo usados para transformar documentos em Markdown em relatórios PDF com identidade visual institucional.
 
-O foco atual é a produção do documento `matriz_produto_unb_gelos_corrigido.md` com exportação automatizada por PowerShell e integração com tarefas do VS Code.
-
 ## Estrutura
 
-- `matriz_produto_unb_gelos_corrigido.md`: documento-fonte principal.
 - `styles/`: CSS e fragmentos HTML usados na composição visual do PDF.
 - `assets/`: imagens institucionais usadas no layout.
 - `export-pdf.ps1`: script de exportação para PDF.

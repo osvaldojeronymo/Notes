@@ -1,7 +1,7 @@
 ---
 title: Logbook
-subtitle: Alinhamento Inicial
-report_date: 18 de junho de 2026
+subtitle: Alinhamento
+report_date: 29 de junho de 2026
 footer_left: "#INTERNO.TODOS | LOGBOOK"
 footer_center: "Histórico de reuniões"
 ---

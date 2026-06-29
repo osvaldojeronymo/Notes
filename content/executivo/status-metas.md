@@ -1,9 +1,9 @@
 ---
-title: Status das Metas 2, 6, 7 e 10
+title: Status das Metas
 subtitle: Acompanhamento Executivo do Convênio CAIXA–UnB
-report_date: 18 de junho de 2026
+report_date: 29 de junho de 2026
 footer_left: "#INTERNO.TODOS | STATUS DAS METAS"
-footer_center: "Acompanhamento Executivo das Metas 2, 6, 7 e 10"
+footer_center: "Acompanhamento Executivo das Metas"
 ---
 
 # Status das Metas 2, 6, 7 e 10

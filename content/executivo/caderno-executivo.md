@@ -8,23 +8,22 @@ footer_center: "Convênio CAIXA-UnB"
 
 # Apresentação
 
-O Convênio CAIXA-UnB apoia a evolução da governança da informação, da gestão documental e da preservação digital da CAIXA por meio de diagnósticos institucionais, políticas, instrumentos técnicos, arquitetura de referência, indicadores, capacitação, sustentabilidade e estrutura organizacional.
+A CAIXA firmou convênio com a Universidade de Brasília (UnB) com o propósito de apoiar o aprimoramento de sua governança da informação, da gestão documental e da preservação digital. Por meio desse acordo, pesquisadores da UnB realizam diagnósticos institucionais destinados a elaborar instrumentos e uma arquitetura que deem suporte à estrutura organizacional da CAIXA na governança arquivística.
 
-Este caderno consolida uma leitura executiva das metas do projeto a partir dos resumos encaminhados pelas equipes, dos informes locais do repositório e da consulta ao painel do convênio em 29 de junho de 2026.
+Este caderno reúne uma leitura executiva das metas do projeto, elaborada a partir dos resumos encaminhados pela equipe.
 
 ## Situação consolidada do painel
 
-| Indicador | Situação observada |
-| --- | --- |
-| Metas previstas no painel | 11 |
-| Produtos planejados | 64 |
-| Produtos entregues / planejados | 17 / 64 |
-| Metas concluídas | 0 / 11 |
-| Produtos em atraso | 0 |
-| Prazos próximos em 30 dias | 1 |
-| Repasses liberados / previstos | 4 / 12 |
-| Execução global exibida no painel | 32% |
-| ROI global estimado | 173,5% |
+| Indicador                         | Situação observada |
+| --------------------------------- | ------------------ |
+| Metas previstas no painel         | 11                 |
+| Produtos planejados               | 64                 |
+| Produtos entregues / planejados   | 17 / 64            |
+| Metas concluídas                  | 0 / 11             |
+| Produtos em atraso                | 0                  |
+| Prazos próximos em 30 dias        | 1                  |
+| Repasses liberados / previstos    | 4 / 12             |
+| Execução global exibida no painel | 32%                |
 
 ## Leitura executiva
 
@@ -50,20 +49,19 @@ As metas devem ser lidas como partes de uma mesma cadeia de valor: diagnosticar 
 
 # Visão Geral das Metas
 
-| Meta | Tema | Situação executiva | Valor institucional |
-| :---: | --- | --- | --- |
-| Meta 1 | Gerenciamento do Projeto | Em execução | Organizar a gestão, os registros, as lições aprendidas e a governança de acompanhamento do convênio. |
-| Meta 2 | Diagnóstico dos Sistemas de Negócio | Em execução | Conhecer o parque de sistemas, priorizar riscos e apoiar decisões de evolução institucional. |
-| Meta 3 | Tipologia Documental | Em execução | Organizar os tipos documentais produzidos pela CAIXA e reduzir redundâncias, variações e inconsistências. |
-| Meta 4 | Conformidade LGPD/LAI | Em execução | Avaliar aderência regulatória e reduzir riscos jurídicos, informacionais e de privacidade. |
-| Meta 5 | Redução do Papel | Em execução | Mapear documentos físicos e apoiar estratégias de desmaterialização, digitalização e racionalização. |
-| Meta 6 | Políticas e Preservação Digital | Em execução | Estabelecer arcabouço normativo para gestão, preservação, acesso, digitalização, descarte e conformidade arquivística. |
-| Meta 7 | SIGAD, RDC-Arq e Interoperabilidade | Em execução | Orientar a arquitetura arquivística digital e a integração entre sistemas, SIGAD e preservação digital. |
-| Meta 8 | Capacitação | Em execução | Preparar pessoas e unidades para adoção dos novos processos, políticas e instrumentos. |
-| Meta 9 | Indicadores e Monitoramento | Em execução | Implantar mecanismos de acompanhamento, gestão de riscos e melhoria contínua. |
-| Meta 10 | Sustentabilidade | Em execução | Demonstrar valor econômico, operacional, ambiental e institucional da governança documental. |
-| Meta 11 | Estruturação Organizacional | Em execução | Propor estrutura, papéis e responsabilidades para sustentar a governança documental no longo prazo. |
-
+|  Meta   | Tema                                | Situação executiva | Valor institucional                                                                                                    |
+| :-----: | ----------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| Meta 1  | Gerenciamento do Projeto            | Em execução        | Organizar a gestão, os registros, as lições aprendidas e a governança de acompanhamento do convênio.                   |
+| Meta 2  | Diagnóstico dos Sistemas de Negócio | Em execução        | Conhecer o parque de sistemas, priorizar riscos e apoiar decisões de evolução institucional.                           |
+| Meta 3  | Tipologia Documental                | Em execução        | Organizar os tipos documentais produzidos pela CAIXA e reduzir redundâncias, variações e inconsistências.              |
+| Meta 4  | Conformidade LGPD/LAI               | Em execução        | Avaliar aderência regulatória e reduzir riscos jurídicos, informacionais e de privacidade.                             |
+| Meta 5  | Redução do Papel                    | Em execução        | Mapear documentos físicos e apoiar estratégias de desmaterialização, digitalização e racionalização.                   |
+| Meta 6  | Políticas e Preservação Digital     | Em execução        | Estabelecer arcabouço normativo para gestão, preservação, acesso, digitalização, descarte e conformidade arquivística. |
+| Meta 7  | SIGAD, RDC-Arq e Interoperabilidade | Em execução        | Orientar a arquitetura arquivística digital e a integração entre sistemas, SIGAD e preservação digital.                |
+| Meta 8  | Capacitação                         | Em execução        | Preparar pessoas e unidades para adoção dos novos processos, políticas e instrumentos.                                 |
+| Meta 9  | Indicadores e Monitoramento         | Em execução        | Implantar mecanismos de acompanhamento, gestão de riscos e melhoria contínua.                                          |
+| Meta 10 | Sustentabilidade                    | Em execução        | Demonstrar valor econômico, operacional, ambiental e institucional da governança documental.                           |
+| Meta 11 | Estruturação Organizacional         | Em execução        | Propor estrutura, papéis e responsabilidades para sustentar a governança documental no longo prazo.                    |
 
 <div class="newpage"></div>
 
@@ -73,14 +71,14 @@ Organizar a governança de execução do convênio, os registros de acompanhamen
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Coordenação | Integra agendas, produtos, responsáveis e decisões do projeto. |
-| Transparência | Mantém histórico de entregas, validações, riscos e aprendizados. |
-| Aprendizado institucional | Registra lições aprendidas para orientar ajustes ao longo da execução. |
-| Controle executivo | Apoia a tomada de decisão com visão consolidada do andamento do convênio. |
+| Destaque                  | Descrição                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| Coordenação               | Integra agendas, produtos, responsáveis e decisões do projeto.            |
+| Transparência             | Mantém histórico de entregas, validações, riscos e aprendizados.          |
+| Aprendizado institucional | Registra lições aprendidas para orientar ajustes ao longo da execução.    |
+| Controle executivo        | Apoia a tomada de decisão com visão consolidada do andamento do convênio. |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Plano e instrumentos de gerenciamento do projeto.
 - Registros de acompanhamento e comunicação executiva.
@@ -102,14 +100,14 @@ Construir um diagnóstico institucional dos sistemas de negócio da CAIXA, ident
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
+| Destaque                           | Descrição                                                                                           |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------- |
 | Visibilidade do parque de sistemas | Permite conhecer os sistemas produtores, consumidores ou armazenadores de documentos arquivísticos. |
-| Priorização por risco | Apoia a seleção de sistemas críticos para diagnóstico aprofundado. |
-| Base para interoperabilidade | Subsidia a arquitetura SIGAD/RDC-Arq e a integração entre sistemas. |
-| Evidência para decisão | Organiza informações técnicas e documentais para decisões de modernização. |
+| Priorização por risco              | Apoia a seleção de sistemas críticos para diagnóstico aprofundado.                                  |
+| Base para interoperabilidade       | Subsidia a arquitetura SIGAD/RDC-Arq e a integração entre sistemas.                                 |
+| Evidência para decisão             | Organiza informações técnicas e documentais para decisões de modernização.                          |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Plano Metodológico do Diagnóstico Integrado dos Sistemas de Negócio.
 - Inventário Institucional dos Sistemas de Negócio da CAIXA.
@@ -132,14 +130,14 @@ Organizar e analisar os tipos documentais produzidos pela CAIXA, identificando r
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Normalização documental | Cria referência comum para identificação e tratamento dos documentos. |
+| Destaque                | Descrição                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| Normalização documental | Cria referência comum para identificação e tratamento dos documentos.          |
 | Redução de redundâncias | Identifica documentos semelhantes, duplicados ou com variações desnecessárias. |
-| Apoio à classificação | Fortalece instrumentos de gestão documental, temporalidade e destinação. |
-| Integração com sistemas | Fornece base para metadados, SIGAD e interoperabilidade. |
+| Apoio à classificação   | Fortalece instrumentos de gestão documental, temporalidade e destinação.       |
+| Integração com sistemas | Fornece base para metadados, SIGAD e interoperabilidade.                       |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Mapeamento Analítico dos Tipos Documentais da CAIXA.
 - Matriz de Redundâncias, Variações e Inconsistências Tipológicas.
@@ -161,14 +159,14 @@ Avaliar a conformidade documental e informacional da CAIXA frente a requisitos l
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Redução de risco regulatório | Identifica lacunas de conformidade e pontos de exposição institucional. |
-| Proteção de dados | Apoia o tratamento adequado de dados pessoais em documentos e sistemas. |
-| Transparência e acesso | Harmoniza requisitos de acesso à informação com restrições legais e arquivísticas. |
-| Evidência de controle | Produz subsídios técnicos para auditoria, governança e responsabilização. |
+| Destaque                     | Descrição                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------- |
+| Redução de risco regulatório | Identifica lacunas de conformidade e pontos de exposição institucional.            |
+| Proteção de dados            | Apoia o tratamento adequado de dados pessoais em documentos e sistemas.            |
+| Transparência e acesso       | Harmoniza requisitos de acesso à informação com restrições legais e arquivísticas. |
+| Evidência de controle        | Produz subsídios técnicos para auditoria, governança e responsabilização.          |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Diagnóstico Técnico de Conformidade e RIPD.
 - Mapeamento de riscos regulatórios relacionados à gestão documental.
@@ -190,14 +188,14 @@ Mapear a produção documental física e propor caminhos para reduzir dependênc
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Visibilidade documental física | Identifica volumes, fluxos, áreas produtoras e pontos críticos de uso do papel. |
-| Desmaterialização | Apoia estratégias de substituição segura de processos físicos por digitais. |
-| Eficiência operacional | Reduz custos de produção, tramitação, guarda e recuperação de documentos físicos. |
-| Sustentabilidade | Contribui para redução de consumo de papel, espaço físico e impacto ambiental. |
+| Destaque                       | Descrição                                                                         |
+| ------------------------------ | --------------------------------------------------------------------------------- |
+| Visibilidade documental física | Identifica volumes, fluxos, áreas produtoras e pontos críticos de uso do papel.   |
+| Desmaterialização              | Apoia estratégias de substituição segura de processos físicos por digitais.       |
+| Eficiência operacional         | Reduz custos de produção, tramitação, guarda e recuperação de documentos físicos. |
+| Sustentabilidade               | Contribui para redução de consumo de papel, espaço físico e impacto ambiental.    |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Mapeamento dos Documentos em Suporte Físico.
 - Diagnóstico Técnico da Produção Documental Física.
@@ -219,14 +217,14 @@ Estabelecer o arcabouço normativo que orienta a gestão, preservação, acesso,
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Marco regulatório | Define princípios, diretrizes, responsabilidades e procedimentos para o ciclo de vida documental. |
-| Preservação digital | Estabelece requisitos para autenticidade, integridade, acesso e preservação de longo prazo. |
-| Conformidade sistêmica | Leva requisitos arquivísticos aos sistemas informatizados. |
-| Padronização institucional | Reduz variações e conflitos entre práticas, normas e áreas. |
+| Destaque                   | Descrição                                                                                         |
+| -------------------------- | ------------------------------------------------------------------------------------------------- |
+| Marco regulatório          | Define princípios, diretrizes, responsabilidades e procedimentos para o ciclo de vida documental. |
+| Preservação digital        | Estabelece requisitos para autenticidade, integridade, acesso e preservação de longo prazo.       |
+| Conformidade sistêmica     | Leva requisitos arquivísticos aos sistemas informatizados.                                        |
+| Padronização institucional | Reduz variações e conflitos entre práticas, normas e áreas.                                       |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Plano Metodológico para Políticas Arquivísticas Digitais.
 - Política de Gestão de Documentos Arquivísticos.
@@ -253,14 +251,14 @@ Definir uma arquitetura de referência para gestão arquivística digital, inter
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Arquitetura de referência | Orienta a evolução integrada do ecossistema documental da CAIXA. |
-| Interoperabilidade | Conecta sistemas de negócio, gestão documental, metadados e preservação. |
-| Aderência arquivística | Identifica lacunas frente a e-ARQ, CONARQ, SIGAD e RDC-Arq. |
+| Destaque                   | Descrição                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------- |
+| Arquitetura de referência  | Orienta a evolução integrada do ecossistema documental da CAIXA.                |
+| Interoperabilidade         | Conecta sistemas de negócio, gestão documental, metadados e preservação.        |
+| Aderência arquivística     | Identifica lacunas frente a e-ARQ, CONARQ, SIGAD e RDC-Arq.                     |
 | Preservação de longo prazo | Prepara a instituição para guarda confiável e acessível de documentos digitais. |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Plano Metodológico de Apoio Técnico SIGAD/RDC-Arq.
 - Diagnóstico Técnico de Aderência e Interoperabilidade.
@@ -283,14 +281,14 @@ Preparar equipes, áreas gestoras e unidades envolvidas para compreender, adotar
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Adoção institucional | Reduz barreiras de implementação das políticas e novos processos. |
-| Alinhamento conceitual | Cria linguagem comum sobre gestão documental, preservação digital e governança. |
-| Desenvolvimento de competências | Identifica lacunas de conhecimento e necessidades de formação. |
-| Sustentabilidade das mudanças | Apoia a continuidade das práticas após o encerramento do convênio. |
+| Destaque                        | Descrição                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------- |
+| Adoção institucional            | Reduz barreiras de implementação das políticas e novos processos.               |
+| Alinhamento conceitual          | Cria linguagem comum sobre gestão documental, preservação digital e governança. |
+| Desenvolvimento de competências | Identifica lacunas de conhecimento e necessidades de formação.                  |
+| Sustentabilidade das mudanças   | Apoia a continuidade das práticas após o encerramento do convênio.              |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Levantamento de Necessidades de Capacitação.
 - Plano de capacitação e trilhas formativas.
@@ -312,14 +310,14 @@ Implantar um sistema institucional de indicadores e monitoramento contínuo da g
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Visibilidade total | Panorama do estado da gestão de documentos nas unidades e processos. |
-| Gestão de riscos | Identificação precoce de vulnerabilidades e não conformidades. |
-| Melhoria contínua | Acompanhamento da evolução e identificação de oportunidades de aprimoramento. |
-| Decisões informadas | Base factual para priorização de ações e alocação de recursos. |
+| Destaque            | Descrição                                                                     |
+| ------------------- | ----------------------------------------------------------------------------- |
+| Visibilidade total  | Panorama do estado da gestão de documentos nas unidades e processos.          |
+| Gestão de riscos    | Identificação precoce de vulnerabilidades e não conformidades.                |
+| Melhoria contínua   | Acompanhamento da evolução e identificação de oportunidades de aprimoramento. |
+| Decisões informadas | Base factual para priorização de ações e alocação de recursos.                |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Plano Metodológico para Desenvolvimento de Indicadores e Monitoramento.
 - Instrumentos Operacionais de Coleta.
@@ -342,14 +340,14 @@ Desenvolver instrumentos para demonstrar o valor econômico, operacional, ambien
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Valor institucional | Demonstra benefícios financeiros, operacionais e ambientais da gestão documental. |
-| Eficiência | Identifica custos, desperdícios, passivos documentais e oportunidades de racionalização. |
-| Sustentabilidade ambiental | Relaciona gestão documental à redução de papel, espaço e recursos. |
-| Continuidade | Cria argumentos e indicadores para sustentar a agenda após o convênio. |
+| Destaque                   | Descrição                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------- |
+| Valor institucional        | Demonstra benefícios financeiros, operacionais e ambientais da gestão documental.        |
+| Eficiência                 | Identifica custos, desperdícios, passivos documentais e oportunidades de racionalização. |
+| Sustentabilidade ambiental | Relaciona gestão documental à redução de papel, espaço e recursos.                       |
+| Continuidade               | Cria argumentos e indicadores para sustentar a agenda após o convênio.                   |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Plano Metodológico de Avaliação do Impacto Ambiental.
 - Documento Metodológico de Sustentabilidade Documental.
@@ -372,14 +370,14 @@ Propor uma estrutura organizacional capaz de sustentar a governança documental,
 
 ## Benefícios
 
-| Destaque | Descrição |
-| --- | --- |
-| Governança documental | Estrutura de governança para gestão efetiva de documentos digitais e físicos. |
-| Papéis e responsabilidades | Definição clara de competências e atribuições nos níveis organizacionais. |
-| Processos integrados | Alinhamento entre estrutura organizacional e fluxos de gestão de documentos. |
-| Métricas e indicadores | Acompanhamento da efetividade da estrutura proposta. |
+| Destaque                   | Descrição                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| Governança documental      | Estrutura de governança para gestão efetiva de documentos digitais e físicos. |
+| Papéis e responsabilidades | Definição clara de competências e atribuições nos níveis organizacionais.     |
+| Processos integrados       | Alinhamento entre estrutura organizacional e fluxos de gestão de documentos.  |
+| Métricas e indicadores     | Acompanhamento da efetividade da estrutura proposta.                          |
 
-## Principais entregas
+## Principais entregas previtas
 
 - Plano Metodológico do Diagnóstico Organizacional.
 - Diagnóstico da Estrutura Organizacional Atual.
@@ -398,16 +396,15 @@ Propor uma estrutura organizacional capaz de sustentar a governança documental,
 
 # Pontos de Atenção
 
-| Tema | Situação | Encaminhamento sugerido |
-| --- | --- | --- |
-| Divergência de execução global | O dashboard exibiu 32%, enquanto arquivo local de roadmap registra 39%. | Confirmar data-base e fonte oficial antes de publicar versão externa. |
-| Metas 3, 4, 5 e 8 | Há evidências de entregas no painel, mas menos material narrativo local do que nas metas 2, 6, 7, 9, 10 e 11. | Solicitar aos responsáveis texto executivo ou validar os resumos aqui consolidados. |
-| Implementação pós-produtos | Várias entregas têm valor condicionado à adoção pelas áreas. | Definir governança de implementação, comunicação e acompanhamento. |
-| Integração entre metas | Diagnósticos, políticas, sistemas, indicadores e estrutura precisam operar de forma articulada. | Usar a Meta 9 como painel de acompanhamento transversal. |
+| Tema                           | Situação                                                                                                      | Encaminhamento sugerido                                                             |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Divergência de execução global | O dashboard exibiu 32%, enquanto arquivo local de roadmap registra 39%.                                       | Confirmar data-base e fonte oficial antes de publicar versão externa.               |
+| Metas 3, 4, 5 e 8              | Há evidências de entregas no painel, mas menos material narrativo local do que nas metas 2, 6, 7, 9, 10 e 11. | Solicitar aos responsáveis texto executivo ou validar os resumos aqui consolidados. |
+| Implementação pós-produtos     | Várias entregas têm valor condicionado à adoção pelas áreas.                                                  | Definir governança de implementação, comunicação e acompanhamento.                  |
+| Integração entre metas         | Diagnósticos, políticas, sistemas, indicadores e estrutura precisam operar de forma articulada.               | Usar a Meta 9 como painel de acompanhamento transversal.                            |
 
 # Mensagem Executiva
 
 O Convênio CAIXA-UnB evoluiu de um conjunto de diagnósticos técnicos para uma estratégia integrada de governança arquivística digital. As entregas já observadas formam uma base consistente para conhecer os sistemas e documentos da CAIXA, estabelecer regras institucionais, orientar a evolução tecnológica, medir resultados, demonstrar valor e propor uma estrutura organizacional permanente.
 
 A prioridade executiva passa a ser integrar os produtos das metas em uma agenda coordenada de implementação, com responsáveis, indicadores, prazos e mecanismos de validação institucional.
-
