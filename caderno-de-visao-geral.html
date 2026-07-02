@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Caderno Executivo</title>
+
+    <link rel="stylesheet" href="styles/a4.css">
+
+    <style>
+        /* =====================================================
+           AJUSTES ESPECÍFICOS DO CADERNO EXECUTIVO
+           ===================================================== */
+
+        .print-page-content {
+            padding: 0.65cm 1.25cm 0.45cm 1.25cm;
+            overflow: hidden;
+        }
+
+        .caderno-content {
+            display: block;
+            width: 100%;
+        }
+
+        .caderno-content h1 {
+            font-size: 18pt;
+            margin: 0 0 0.35cm;
+            color: var(--caixa-azul);
+            border-left: 5px solid var(--caixa-laranja);
+            padding-left: 0.25cm;
+        }
+
+        .caderno-content h2 {
+            font-size: 14pt;
+            margin: 0.35cm 0 0.18cm;
+            color: var(--caixa-azul);
+            border-left: 4px solid var(--caixa-laranja);
+            padding-left: 0.22cm;
+        }
+
+        .caderno-content h3 {
+            font-size: 11.5pt;
+            margin: 0.25cm 0 0.12cm;
+            color: #14375a;
+        }
+
+        .caderno-content p {
+            font-size: 9.4pt;
+            line-height: 1.42;
+            margin: 0 0 0.22cm;
+            text-align: justify;
+        }
+
+        .caderno-content ul,
+        .caderno-content ol {
+            font-size: 9.2pt;
+            line-height: 1.35;
+            margin-top: 0.08cm;
+            margin-bottom: 0.28cm;
+        }
+
+        .caderno-content li {
+            margin-bottom: 0.10cm;
+        }
+
+        .caderno-content table {
+            font-size: 8.2pt;
+            line-height: 1.18;
+            margin: 0.16cm 0 0.35cm;
+            table-layout: fixed;
+        }
+
+        .caderno-content th,
+        .caderno-content td {
+            padding: 0.10cm 0.13cm;
+            vertical-align: top;
+        }
+
+        .caderno-content th {
+            font-size: 7.4pt;
+            text-align: center;
+        }
+
+        .caderno-content blockquote {
+            margin: 0.35cm 0;
+            padding: 0.28cm 0.35cm;
+            background: #f8fafc;
+            border-left: 4px solid var(--caixa-laranja);
+        }
+
+        .caderno-content blockquote p {
+            font-weight: 700;
+            color: #30465d;
+        }
+
+        .caderno-section-break {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        .newpage {
+            display: block;
+            page-break-before: always;
+            break-before: page;
+            height: 0;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<main id="pdf-source" class="pdf-body">
+<section id="apresentação" class="apresentacao-executiva">
+<h1>Apresentação</h1>
+<p>A CAIXA firmou convênio com a Universidade de Brasília (UnB) com o
+propósito de apoiar o aprimoramento de sua governança da informação, da
+gestão documental e da preservação digital. Por meio desse acordo,
+pesquisadores da UnB realizam diagnósticos institucionais destinados a
+elaborar instrumentos e uma arquitetura que deem suporte à estrutura
+organizacional da CAIXA na governança arquivística.</p>
+<p>Este caderno reúne uma leitura executiva das metas do projeto,
+elaborada a partir dos resumos encaminhados pela equipe.</p>
+</section>
+<section id="visão-geral-das-metas" class="tabela-visao-metas">
+<h1>Visão Geral das Metas</h1>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 20%" />
+<col style="width: 6%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Meta</th>
+<th style="text-align: left;">Tema</th>
+<th style="text-align: center;">Situação</th>
+<th style="text-align: left;">Valor institucional</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Meta 1</td>
+<td style="text-align: left;">Gerenciamento do Projeto</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Organizar a gestão, os registros, as
+lições aprendidas e a governança de acompanhamento do convênio.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Meta 2</td>
+<td style="text-align: left;">Diagnóstico dos Sistemas de Negócio</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Conhecer o parque de sistemas, priorizar
+riscos e apoiar decisões de evolução institucional.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Meta 3</td>
+<td style="text-align: left;">Tipologia Documental</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Organizar os tipos documentais produzidos
+pela CAIXA e reduzir redundâncias, variações e inconsistências.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Meta 4</td>
+<td style="text-align: left;">Conformidade LGPD/LAI</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Avaliar aderência regulatória e reduzir
+riscos jurídicos, informacionais e de privacidade.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Meta 5</td>
+<td style="text-align: left;">Redução do Papel</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Mapear documentos físicos e apoiar
+estratégias de desmaterialização, digitalização e racionalização.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Meta 6</td>
+<td style="text-align: left;">Políticas e Preservação Digital</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Estabelecer arcabouço normativo para
+gestão, preservação, acesso, digitalização, descarte e conformidade
+arquivística.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Meta 7</td>
+<td style="text-align: left;">SIGAD, RDC-Arq e Interoperabilidade</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Orientar a arquitetura arquivística
+digital e a integração entre sistemas, SIGAD e preservação digital.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Meta 8</td>
+<td style="text-align: left;">Capacitação</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Preparar pessoas e unidades para adoção
+dos novos processos, políticas e instrumentos.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Meta 9</td>
+<td style="text-align: left;">Indicadores e Monitoramento</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Implantar mecanismos de acompanhamento,
+gestão de riscos e melhoria contínua.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Meta 10</td>
+<td style="text-align: left;">Sustentabilidade</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Demonstrar valor econômico, operacional,
+ambiental e institucional da governança documental.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Meta 11</td>
+<td style="text-align: left;">Estruturação Organizacional</td>
+<td style="text-align: center;">Em execução</td>
+<td style="text-align: left;">Propor estrutura, papéis e
+responsabilidades para sustentar a governança documental no longo
+prazo.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<div class="newpage">
+
+</div>
+<h1 id="progresso-das-metas">Progresso das Metas</h1>
+<div class="progresso-metas">
+<div class="progresso-item">
+<span class="meta-label">M1</span>
+<div class="barra">
+<div class="preenchimento" style="width:85%">
+
+</div>
+<p><span class="percentual">85%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M2</span>
+<div class="barra">
+<div class="preenchimento" style="width:31%">
+
+</div>
+<p><span class="percentual">31%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M3</span>
+<div class="barra">
+<div class="preenchimento" style="width:20%">
+
+</div>
+<p><span class="percentual">20%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M4</span>
+<div class="barra">
+<div class="preenchimento" style="width:33%">
+
+</div>
+<p><span class="percentual">33%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M5</span>
+<div class="barra">
+<div class="preenchimento" style="width:34%">
+
+</div>
+<p><span class="percentual">34%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M6</span>
+<div class="barra">
+<div class="preenchimento" style="width:25%">
+
+</div>
+<p><span class="percentual">25%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M7</span>
+<div class="barra">
+<div class="preenchimento" style="width:35%">
+
+</div>
+<p><span class="percentual">35%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M8</span>
+<div class="barra">
+<div class="preenchimento" style="width:17%">
+
+</div>
+<p><span class="percentual">17%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M9</span>
+<div class="barra">
+<div class="preenchimento" style="width:70%">
+
+</div>
+<p><span class="percentual">70%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M10</span>
+<div class="barra">
+<div class="preenchimento" style="width:39%">
+
+</div>
+<p><span class="percentual">39%</span></p>
+</div>
+</div>
+<div class="progresso-item">
+<span class="meta-label">M11</span>
+<div class="barra">
+<div class="preenchimento" style="width:39%">
+
+</div>
+<p><span class="percentual">39%</span></p>
+</div>
+</div>
+</div>
+<section id="situação-consolidada" class="tabela-indicadores">
+<h1>Situação consolidada</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Indicador</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Metas previstas</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>Produtos planejados</td>
+<td>64</td>
+</tr>
+<tr class="odd">
+<td>Produtos entregues / planejados</td>
+<td>17 / 64</td>
+</tr>
+<tr class="even">
+<td>Metas concluídas</td>
+<td>0 / 11</td>
+</tr>
+<tr class="odd">
+<td>Produtos em atraso</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Prazos próximos em 30/90 dias</td>
+<td>4 / 11</td>
+</tr>
+<tr class="odd">
+<td>Repasses liberados / previstos</td>
+<td>4 / 12</td>
+</tr>
+<tr class="even">
+<td>Execução global</td>
+<td>39%</td>
+</tr>
+<tr class="odd">
+<td>Repassado</td>
+<td>R$ 2.629.500 de R$ 6.922.500</td>
+</tr>
+</tbody>
+</table>
+</section>
+<div class="newpage">
+
+</div>
+<h1 id="principais-entregas">Principais entregas</h1>
+<ul>
+<li>Registro de Lições Aprendidas, vinculado à Meta 1.</li>
+<li>Inventário Institucional dos Sistemas de Negócio da CAIXA (em
+execução com 56% realizado), vinculado à Meta 2.</li>
+<li>Mapeamento Analítico dos Tipos Documentais e Matriz de Redundâncias,
+vinculados à Meta 3.</li>
+<li>Diagnóstico Técnico de Conformidade e RIPD, vinculado à Meta 4.</li>
+<li>Mapeamento dos Documentos em Suporte Físico e Diagnóstico Técnico da
+Produção Documental Física, vinculados à Meta 5.</li>
+<li>Conjunto de normativos da Meta 6, incluindo gestão, preservação,
+acesso, digitalização, descarte e conformidade arquivística para
+sistemas informatizados.</li>
+<li>Diagnóstico de Aderência, Pareceres Técnicos, Arquitetura de
+Referência e Proposta Técnica para Evolução do SIGAD, vinculados à Meta
+7.</li>
+<li>Levantamento de Necessidades de Capacitação, vinculado à Meta
+8.</li>
+<li>Instrumentos de Coleta, Matriz Institucional de Indicadores e
+Plataforma de Governança Arquivística, vinculados à Meta 9.</li>
+<li>Diagnóstico do Impacto Ambiental da Gestão Documental, vinculado à
+Meta 10.</li>
+<li>Diagnóstico da Estrutura Organizacional Atual, vinculado à Meta
+11.</li>
+</ul>
+</main>
+
+<template id="pdf-header-template">
+    <div class="pdf-header pdf-header-executive">
+        <img
+            class="pdf-header-bg"
+            src="assets/cabecalho-caixa.png"
+            alt="Cabeçalho CAIXA"
+        >
+
+        <div class="pdf-header-overlay">
+            <div class="pdf-header-kicker">
+                <span>01 de julho de 2026</span>
+            </div>
+
+            <div class="pdf-header-title">
+                Caderno Executivo
+            </div>
+
+            <div class="pdf-header-subtitle">
+                Visão Geral do Convênio CAIXA-UnB
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="pdf-footer-template">
+    <div class="pdf-footer pdf-footer-executive">
+        <img
+            class="pdf-footer-bg"
+            src="assets/rodape-caixa.png"
+            alt="Rodapé CAIXA"
+        >
+
+        <div class="pdf-footer-overlay">
+            <div class="pdf-footer-left">
+                #INTERNO.TODOS | Convênio CAIXA-UnB
+            </div>
+
+            <div class="pdf-footer-center">
+                Caderno Executivo - Visão Geral
+            </div>
+            <div class="pdf-footer-right print-page-number"> 
+                
+            </div>            
+        </div>
+    </div>
+</template>
+
+<script>
+(function () {
+    const source = document.getElementById("pdf-source");
+    const headerTemplate = document.getElementById("pdf-header-template");
+    const footerTemplate = document.getElementById("pdf-footer-template");
+
+    if (!source || !headerTemplate || !footerTemplate) {
+        return;
+    }
+
+    const sourceNodes = Array.from(source.children);
+
+    const pagesRoot = document.createElement("div");
+    pagesRoot.id = "pdf-pages";
+    document.body.appendChild(pagesRoot);
+    source.style.display = "none";
+
+    function createPage() {
+        const page = document.createElement("section");
+        page.className = "print-page";
+
+        const pageNumber = pagesRoot.children.length + 1;
+
+        const inner = document.createElement("div");
+        inner.className = "print-page-inner";
+
+        const header = document.createElement("div");
+        header.className = "print-page-header";
+        header.appendChild(headerTemplate.content.firstElementChild.cloneNode(true));
+
+        if (pageNumber === 1) {
+            header.classList.add("print-page-header--cover");
+        }
+
+        const content = document.createElement("div");
+        content.className = "print-page-content";
+
+        const cadernoContent = document.createElement("div");
+        cadernoContent.className = "caderno-content";
+        content.appendChild(cadernoContent);
+
+        const footer = document.createElement("div");
+        footer.className = "print-page-footer";
+        footer.appendChild(footerTemplate.content.firstElementChild.cloneNode(true));
+
+        inner.appendChild(header);
+        inner.appendChild(content);
+        inner.appendChild(footer);
+
+        page.appendChild(inner);
+        pagesRoot.appendChild(page);
+
+        return cadernoContent;
+    }
+
+    function overflows(element) {
+        return element.scrollHeight > element.clientHeight + 1;
+    }
+
+    function getContentBox(content) {
+        return content.closest(".print-page-content");
+    }
+
+    function cloneTableShell(table) {
+        const clone = table.cloneNode(false);
+        const thead = table.querySelector("thead");
+
+        if (thead) {
+            clone.appendChild(thead.cloneNode(true));
+        }
+
+        const tbody = document.createElement("tbody");
+        clone.appendChild(tbody);
+
+        return { table: clone, tbody: tbody };
+    }
+
+    function placeBlock(node, content) {
+        const pageBox = getContentBox(content);
+        const clone = node.cloneNode(true);
+
+        content.appendChild(clone);
+
+        if (!overflows(pageBox)) {
+            return content;
+        }
+
+        content.removeChild(clone);
+
+        content = createPage();
+        content.appendChild(clone);
+
+        return content;
+    }
+
+    function placeTable(table, content) {
+        const pageBox = getContentBox(content);
+        const rows = Array.from(table.querySelectorAll("tbody > tr"));
+
+        if (rows.length === 0) {
+            return placeBlock(table, content);
+        }
+
+        let shell = cloneTableShell(table);
+        content.appendChild(shell.table);
+
+        for (const row of rows) {
+            shell.tbody.appendChild(row.cloneNode(true));
+
+            if (!overflows(pageBox)) {
+                continue;
+            }
+
+            if (shell.tbody.children.length === 1) {
+                continue;
+            }
+
+            shell.tbody.removeChild(shell.tbody.lastElementChild);
+
+            content = createPage();
+            shell = cloneTableShell(table);
+            content.appendChild(shell.table);
+            shell.tbody.appendChild(row.cloneNode(true));
+        }
+
+        return content;
+    }
+
+    function isManualPageBreak(node) {
+        return node.classList && node.classList.contains("newpage");
+    }
+
+    let content = createPage();
+
+    for (const node of sourceNodes) {
+        if (isManualPageBreak(node)) {
+            content = createPage();
+            continue;
+        }
+
+        if (node.tagName === "TABLE") {
+            content = placeTable(node, content);
+            continue;
+        }
+
+        content = placeBlock(node, content);
+    }
+
+    const totalPages = pagesRoot.children.length;
+
+    pagesRoot.querySelectorAll(".print-page-number").forEach(function (label, index) {
+        label.textContent = "Página " + (index + 1) + " de " + totalPages;
+    });
+}());
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* =========================================================
+   CONFIGURAÇÃO GLOBAL E VARIÁVEIS
+   ========================================================= */
+
+@page {
+    size: A4 landscape;
+    margin: 0;
+}
+
+:root {
+    --caixa-azul: #005CA8;
+    --caixa-laranja: #F39200;
+    --caixa-texto: #1f1f1f;
+    --caixa-subtexto: #555;
+    --caixa-borda: #d0d7e2;
+    --caixa-fundo-alternado: #f7fbff;
+    --caixa-fundo-citacao: #f8fafc;
+    --font-body: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #24374a;
+    font-family: var(--font-body);
+    font-size: 11pt;
+    line-height: 1.45;
+    background: #fff;
+}
+
+/* =========================================================
+   ESTRUTURA DE PÁGINA
+   ========================================================= */
+
+.print-page {
+    width: 29.7cm;
+    height: 21cm;
+    page-break-after: always;
+    break-after: page;
+    overflow: hidden;
+    background: #fff;
+}
+
+.print-page-inner {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.print-page-content {
+    flex: 1 1 auto;
+    overflow: hidden;
+    padding: 0.42cm 1.15cm 0.36cm 1.15cm;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0.3cm 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+figcaption {
+    font-size: 8pt;
+    color: var(--caixa-subtexto);
+    margin-top: 0.1cm;
+}

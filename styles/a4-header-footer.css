@@ -1,0 +1,168 @@
+/* =========================================================
+   BANNER SUPERIOR EXECUTIVO
+   ========================================================= */
+
+.print-page-header {
+    height: 2.55cm;
+    flex: 0 0 auto;
+}
+
+.print-page-header--cover {
+    height: 2.55cm;
+}
+
+.pdf-header,
+.pdf-header-executive {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-body);
+    display: block;
+    border-bottom: 2px solid var(--caixa-laranja);
+    box-sizing: border-box;
+}
+
+.pdf-header-bg {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.pdf-header-overlay {
+    position: absolute;
+    z-index: 2;
+    left: 1.15cm;
+    top: 0.55cm;
+    width: 15.6cm;
+}
+
+.print-page-header--cover .pdf-header-overlay {
+    top: 0.55cm;
+}
+
+.pdf-header-kicker {
+    display: flex;
+    gap: 0.12cm;
+    flex-wrap: wrap;
+    margin-bottom: 0.14cm;
+    text-transform: uppercase;
+}
+
+.pdf-header-kicker span {
+    font-size: 7.4pt;
+    line-height: 1.1;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #c9d4e2;
+    border-radius: 999px;
+    padding: 0.04cm 0.18cm;
+    color: var(--caixa-azul);
+}
+
+.pdf-header-title {
+    font-size: 21pt;
+    line-height: 1.02;
+    font-weight: 700;
+    color: var(--caixa-azul);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.print-page-header--cover .pdf-header-title {
+    font-size: 21pt;
+}
+
+.pdf-header-subtitle {
+    margin-top: 0.05cm;
+    font-size: 10.4pt;
+    line-height: 1.15;
+    color: #30465d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================================================
+   RODAPÉ EXECUTIVO
+   ========================================================= */
+
+.print-page-footer {
+    height: 0.75cm;
+    flex: 0 0 auto;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.pdf-footer,
+.pdf-footer-executive {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-body);
+    display: block;
+    color: #fff;
+    overflow: hidden;
+}
+
+.pdf-footer-bg {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+.pdf-footer-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0 1.15cm;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 7.8pt;
+    font-weight: 700;
+}
+
+.pdf-footer-left {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.pdf-footer-center {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pdf-footer-right {
+    justify-self: end;
+    text-align: right;
+    white-space: nowrap;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 7.8pt;
+    font-weight: 700;
+}
+
+.print-page-number {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}

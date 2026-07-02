@@ -1,0 +1,182 @@
+/* =========================================================
+   PÁGINA 2 - PROGRESSO DAS METAS
+   ========================================================= */
+
+.progresso-metas {
+    width: 62%;
+    margin: 0.35cm auto 0.55cm auto;
+}
+
+.progresso-item {
+    display: grid;
+    grid-template-columns: 1cm 1fr;
+    align-items: center;
+    gap: 0.22cm;
+    height: 0.42cm;
+    margin-bottom: 0.12cm;
+}
+
+.meta-label {
+    font-size: 8.6pt;
+    font-weight: 700;
+    color: var(--caixa-azul);
+    text-align: right;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    gap: 0.12cm;
+    width: 80%;
+    overflow: visible;
+}
+
+.preenchimento {
+    height: 0.22cm;
+    background: var(--caixa-azul);
+    border-radius: 999px;
+    min-width: 0.14cm;
+    flex: 0 0 auto;
+}
+
+.percentual {
+    font-size: 8pt;
+    font-weight: 600;
+    color: var(--caixa-azul);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   PÁGINA 2 - TABELA SITUAÇÃO CONSOLIDADA
+   ========================================================= */
+
+.tabela-indicadores table,
+.painel-consolidado table {
+    width: 72%;
+    min-width: 0;
+    max-width: 72%;
+    margin: 0.20cm auto 0.30cm auto;
+    table-layout: fixed;
+    font-size: 9pt;
+    line-height: 1.30;
+}
+
+.tabela-indicadores table,
+.painel-consolidado table {
+    width: 72%;
+    min-width: 0;
+    max-width: 72%;
+    margin: 0.20cm auto 0.30cm auto;
+    table-layout: fixed;
+    font-size: 9pt;
+    line-height: 1.30;
+}
+
+.tabela-indicadores table th,
+.tabela-indicadores table td,
+.painel-consolidado table th,
+.painel-consolidado table td {
+    padding: 0.16cm 0.20cm;
+    vertical-align: middle;
+    line-height: 1.30;
+}
+
+.tabela-indicadores table th,
+.painel-consolidado table th {
+    text-align: center;
+}
+
+.tabela-indicadores table th:first-child,
+.painel-consolidado table th:first-child {
+    width: 72%;
+    text-align: center;
+}
+
+.tabela-indicadores table td:first-child,
+.painel-consolidado table td:first-child {
+    width: 72%;
+    text-align: left;
+}
+
+.tabela-indicadores table th:last-child,
+.painel-consolidado table th:last-child {
+    width: 28%;
+    text-align: center;
+}
+
+.tabela-indicadores table td:last-child,
+.painel-consolidado table td:last-child {
+    width: 28%;
+    text-align: center;
+}
+
+/* =========================================================
+   DASHBOARD OPCIONAL EM DUAS COLUNAS
+   Use se envolver o conteúdo com .pagina-dashboard.
+   ========================================================= */
+
+.pagina-dashboard {
+    display: grid;
+    grid-template-columns: 54% 46%;
+    gap: 0.85cm;
+    align-items: start;
+    height: 100%;
+}
+
+.dashboard-esquerda,
+.dashboard-direita {
+    min-width: 0;
+}
+
+.pagina-dashboard h1,
+.pagina-dashboard h2 {
+    margin-top: 0;
+}
+
+.pagina-dashboard .progresso-metas {
+    width: 100%;
+    margin: 0.18cm 0 0;
+}
+
+.pagina-dashboard .progresso-item {
+    grid-template-columns: 0.75cm 1fr;
+    height: 0.42cm;
+    margin-bottom: 0.13cm;
+}
+
+.pagina-dashboard .barra {
+    height: 0.23cm;
+}
+
+.pagina-dashboard .meta-label {
+    font-size: 8.2pt;
+}
+
+.pagina-dashboard .percentual {
+    font-size: 7.8pt;
+}
+
+.pagina-dashboard .tabela-indicadores,
+.pagina-dashboard .painel-consolidado {
+    display: block;
+}
+
+.pagina-dashboard .tabela-indicadores table,
+.pagina-dashboard .painel-consolidado table {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0.18cm 0 0.45cm;
+    font-size: 8.4pt;
+}
+
+.pagina-dashboard ul {
+    font-size: 8.7pt;
+    line-height: 1.32;
+    margin-top: 0.15cm;
+}
+
+.pagina-dashboard li {
+    margin-bottom: 0.10cm;
+}

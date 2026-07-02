@@ -1,0 +1,159 @@
+/* =========================================================
+   CADERNO EXECUTIVO - REGRAS GERAIS
+   Usado por caderno-template.html.
+   ========================================================= */
+
+.caderno-content h1 {
+    font-size: 18pt;
+    margin: 0 0 0.42cm;
+}
+
+.caderno-content h2 {
+    font-size: 14.5pt;
+    margin: 0.38cm 0 0.28cm;
+}
+
+.caderno-content p {
+    font-size: 9.8pt;
+    line-height: 1.55;
+    margin: 0 0 0.28cm;
+}
+
+.caderno-content table {
+    font-size: 8.9pt;
+    line-height: 1.32;
+    margin: 0.22cm 0 0.45cm;
+}
+
+.caderno-content th,
+.caderno-content td {
+    padding: 0.17cm 0.22cm;
+    line-height: 1.32;
+}
+
+.caderno-content table th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+/* =========================================================
+   PÁGINA 1 - APRESENTAÇÃO
+   ========================================================= */
+
+.apresentacao-executiva {
+    margin-bottom: 0.70cm;
+}
+
+.apresentacao-executiva p {
+    font-size: 12pt;
+    line-height: 1.75;
+    margin-bottom: 0.35cm;
+    text-align: justify;
+}
+
+.apresentacao-executiva h1 {
+    margin-bottom: 0.45cm;
+}
+
+/* =========================================================
+   PÁGINA 1 - TABELA VISÃO GERAL DAS METAS
+   ========================================================= */
+
+.tabela-visao-metas table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 9pt;
+    line-height: 1.35;
+    margin: 0.30cm 0 0.35cm;
+}
+
+.tabela-visao-metas table th,
+.tabela-visao-metas table td {
+    padding: 0.16cm 0.20cm;
+    vertical-align: middle;
+}
+
+.tabela-visao-metas table th {
+    text-align: center !important;
+}
+
+.tabela-visao-metas table th:nth-child(1),
+.tabela-visao-metas table td:nth-child(1) {
+    width: 8%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tabela-visao-metas table th:nth-child(2),
+.tabela-visao-metas table td:nth-child(2) {
+    width: 24%;
+}
+
+.tabela-visao-metas table td:nth-child(2) {
+    text-align: left;
+}
+
+.tabela-visao-metas table th:nth-child(3),
+.tabela-visao-metas table td:nth-child(3) {
+    width: 13%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tabela-visao-metas table th:nth-child(4),
+.tabela-visao-metas table td:nth-child(4) {
+    width: 55%;
+}
+
+.tabela-visao-metas table td:nth-child(4) {
+    text-align: left;
+}
+
+/* =========================================================
+   PÁGINA 2 - SITUAÇÃO CONSOLIDADA / INDICADORES
+   Alinhada visualmente ao gráfico de progresso.
+   ========================================================= */
+
+.tabela-indicadores table,
+.painel-consolidado table {
+    width: 82%;
+    max-width: 82%;
+    min-width: 0;
+    margin: 0.18cm auto 0.32cm;
+    table-layout: fixed;
+    font-size: 9.2pt;
+    line-height: 1.35;
+}
+
+.tabela-indicadores table th,
+.tabela-indicadores table td,
+.painel-consolidado table th,
+.painel-consolidado table td {
+    padding: 0.18cm 0.22cm;
+    line-height: 1.35;
+    vertical-align: middle;
+}
+
+.tabela-indicadores table th:first-child,
+.painel-consolidado table th:first-child {
+    width: 72%;
+    text-align: center !important;
+}
+
+.tabela-indicadores table td:first-child,
+.painel-consolidado table td:first-child {
+    width: 72%;
+    text-align: left !important;
+}
+
+.tabela-indicadores table th:last-child,
+.painel-consolidado table th:last-child {
+    width: 28%;
+    text-align: center !important;
+}
+
+.tabela-indicadores table td:last-child,
+.painel-consolidado table td:last-child {
+    width: 28%;
+    text-align: center !important;
+}

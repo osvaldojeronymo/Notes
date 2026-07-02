@@ -1,73 +1,14 @@
 ---
 title: Caderno Executivo
 subtitle: Síntese Executiva das Metas do Convênio CAIXA-UnB
-report_date: 29 de junho de 2026
-footer_left: "#INTERNO.TODOS | CADERNO EXECUTIVO"
-footer_center: "Convênio CAIXA-UnB"
+date: auto
+footer_left: "#INTERNO.TODOS | Convênio CAIXA-UnB"
+footer_center: "Caderno Executivo - Visão das Metas"
 ---
-
-# Apresentação
-
-A CAIXA firmou convênio com a Universidade de Brasília (UnB) com o propósito de apoiar o aprimoramento de sua governança da informação, da gestão documental e da preservação digital. Por meio desse acordo, pesquisadores da UnB realizam diagnósticos institucionais destinados a elaborar instrumentos e uma arquitetura que deem suporte à estrutura organizacional da CAIXA na governança arquivística.
-
-Este caderno reúne uma leitura executiva das metas do projeto, elaborada a partir dos resumos encaminhados pela equipe.
-
-## Situação consolidada do painel
-
-| Indicador                         | Situação observada |
-| --------------------------------- | ------------------ |
-| Metas previstas no painel         | 11                 |
-| Produtos planejados               | 64                 |
-| Produtos entregues / planejados   | 17 / 64            |
-| Metas concluídas                  | 0 / 11             |
-| Produtos em atraso                | 0                  |
-| Prazos próximos em 30 dias        | 1                  |
-| Repasses liberados / previstos    | 4 / 12             |
-| Execução global exibida no painel | 32%                |
-
-## Leitura executiva
-
-O projeto apresenta execução distribuída entre as frentes de diagnóstico, normatização, arquitetura, monitoramento e institucionalização. A fase metodológica inicial já gerou entregas relevantes em várias metas, e as frentes mais maduras apontam para a formação de um modelo integrado de governança arquivística digital.
-
-As metas devem ser lidas como partes de uma mesma cadeia de valor: diagnosticar sistemas e documentos, organizar tipologias, avaliar conformidade, reduzir dependência do papel, criar políticas, estruturar sistemas e repositórios, capacitar pessoas, medir resultados, demonstrar sustentabilidade e propor estrutura organizacional permanente.
-
-## Principais entregas recentes observadas
-
-- Registro de Lições Aprendidas, vinculado à Meta 1.
-- Inventário Institucional dos Sistemas de Negócio da CAIXA, vinculado à Meta 2.
-- Mapeamento Analítico dos Tipos Documentais e Matriz de Redundâncias, vinculados à Meta 3.
-- Diagnóstico Técnico de Conformidade e RIPD, vinculado à Meta 4.
-- Mapeamento dos Documentos em Suporte Físico e Diagnóstico Técnico da Produção Documental Física, vinculados à Meta 5.
-- Conjunto de normativos da Meta 6, incluindo gestão, preservação, acesso, digitalização, descarte e conformidade arquivística para sistemas informatizados.
-- Diagnóstico de Aderência, Pareceres Técnicos, Arquitetura de Referência e Proposta Técnica para Evolução do SIGAD, vinculados à Meta 7.
-- Levantamento de Necessidades de Capacitação, vinculado à Meta 8.
-- Instrumentos de Coleta, Matriz Institucional de Indicadores e Plataforma de Governança Arquivística, vinculados à Meta 9.
-- Diagnóstico do Impacto Ambiental da Gestão Documental, vinculado à Meta 10.
-- Diagnóstico da Estrutura Organizacional Atual, vinculado à Meta 11.
-
-<div class="newpage"></div>
-
-# Visão Geral das Metas
-
-|  Meta   | Tema                                | Situação executiva | Valor institucional                                                                                                    |
-| :-----: | ----------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| Meta 1  | Gerenciamento do Projeto            | Em execução        | Organizar a gestão, os registros, as lições aprendidas e a governança de acompanhamento do convênio.                   |
-| Meta 2  | Diagnóstico dos Sistemas de Negócio | Em execução        | Conhecer o parque de sistemas, priorizar riscos e apoiar decisões de evolução institucional.                           |
-| Meta 3  | Tipologia Documental                | Em execução        | Organizar os tipos documentais produzidos pela CAIXA e reduzir redundâncias, variações e inconsistências.              |
-| Meta 4  | Conformidade LGPD/LAI               | Em execução        | Avaliar aderência regulatória e reduzir riscos jurídicos, informacionais e de privacidade.                             |
-| Meta 5  | Redução do Papel                    | Em execução        | Mapear documentos físicos e apoiar estratégias de desmaterialização, digitalização e racionalização.                   |
-| Meta 6  | Políticas e Preservação Digital     | Em execução        | Estabelecer arcabouço normativo para gestão, preservação, acesso, digitalização, descarte e conformidade arquivística. |
-| Meta 7  | SIGAD, RDC-Arq e Interoperabilidade | Em execução        | Orientar a arquitetura arquivística digital e a integração entre sistemas, SIGAD e preservação digital.                |
-| Meta 8  | Capacitação                         | Em execução        | Preparar pessoas e unidades para adoção dos novos processos, políticas e instrumentos.                                 |
-| Meta 9  | Indicadores e Monitoramento         | Em execução        | Implantar mecanismos de acompanhamento, gestão de riscos e melhoria contínua.                                          |
-| Meta 10 | Sustentabilidade                    | Em execução        | Demonstrar valor econômico, operacional, ambiental e institucional da governança documental.                           |
-| Meta 11 | Estruturação Organizacional         | Em execução        | Propor estrutura, papéis e responsabilidades para sustentar a governança documental no longo prazo.                    |
-
-<div class="newpage"></div>
 
 # Meta 1 - Gerenciamento do Projeto
 
-Organizar a governança de execução do convênio, os registros de acompanhamento, as lições aprendidas, a comunicação entre equipes e os instrumentos de controle necessários para manter a execução coordenada.
+**Objetivo**: Organizar a governança de execução do convênio, os registros de acompanhamento, as lições aprendidas, a comunicação entre equipes e os instrumentos de controle necessários para manter a execução coordenada do convênio.
 
 ## Benefícios
 
@@ -96,7 +37,7 @@ Organizar a governança de execução do convênio, os registros de acompanhamen
 
 # Meta 2 - Diagnóstico dos Sistemas de Negócio
 
-Construir um diagnóstico institucional dos sistemas de negócio da CAIXA, identificando características, riscos, criticidade documental, aderência arquivística e oportunidades de evolução.
+**Objetivo**: Construir um diagnóstico institucional dos sistemas de negócio da CAIXA, identificando características, riscos, criticidade documental, aderência arquivística e oportunidades de evolução.
 
 ## Benefícios
 
@@ -126,7 +67,7 @@ Construir um diagnóstico institucional dos sistemas de negócio da CAIXA, ident
 
 # Meta 3 - Tipologia Documental
 
-Organizar e analisar os tipos documentais produzidos pela CAIXA, identificando redundâncias, variações, inconsistências e oportunidades de padronização.
+**Objetivo**: Organizar e analisar os tipos documentais produzidos pela CAIXA, identificando redundâncias, variações, inconsistências e oportunidades de padronização.
 
 ## Benefícios
 
@@ -155,7 +96,7 @@ Organizar e analisar os tipos documentais produzidos pela CAIXA, identificando r
 
 # Meta 4 - Conformidade LGPD/LAI
 
-Avaliar a conformidade documental e informacional da CAIXA frente a requisitos legais, regulatórios e de governança, com atenção à LGPD, à LAI e à proteção de dados pessoais.
+**Objetivo**: Avaliar a conformidade documental e informacional da CAIXA frente a requisitos legais, regulatórios e de governança, com atenção à LGPD, à LAI e à proteção de dados pessoais.
 
 ## Benefícios
 
@@ -184,7 +125,7 @@ Avaliar a conformidade documental e informacional da CAIXA frente a requisitos l
 
 # Meta 5 - Redução do Papel
 
-Mapear a produção documental física e propor caminhos para reduzir dependência de papel, racionalizar fluxos, apoiar a digitalização e diminuir custos e riscos associados ao acervo físico.
+**Objetivo**: Mapear a produção documental física e propor caminhos para reduzir dependência de papel, racionalizar fluxos, apoiar a digitalização e diminuir custos e riscos associados ao acervo físico.
 
 ## Benefícios
 
@@ -213,7 +154,7 @@ Mapear a produção documental física e propor caminhos para reduzir dependênc
 
 # Meta 6 - Políticas e Preservação Digital
 
-Estabelecer o arcabouço normativo que orienta a gestão, preservação, acesso, digitalização, conformidade e destinação de documentos arquivísticos físicos e digitais da CAIXA.
+**Objetivo**: Estabelecer o arcabouço normativo que orienta a gestão, preservação, acesso, digitalização, conformidade e destinação de documentos arquivísticos físicos e digitais da CAIXA.
 
 ## Benefícios
 
@@ -247,7 +188,7 @@ Estabelecer o arcabouço normativo que orienta a gestão, preservação, acesso,
 
 # Meta 7 - SIGAD, RDC-Arq e Interoperabilidade
 
-Definir uma arquitetura de referência para gestão arquivística digital, interoperabilidade entre sistemas, preservação digital e evolução institucional do SIGAD.
+**Objetivo**: Definir uma arquitetura de referência para gestão arquivística digital, interoperabilidade entre sistemas, preservação digital e evolução institucional do SIGAD.
 
 ## Benefícios
 
@@ -277,7 +218,7 @@ Definir uma arquitetura de referência para gestão arquivística digital, inter
 
 # Meta 8 - Capacitação
 
-Preparar equipes, áreas gestoras e unidades envolvidas para compreender, adotar e sustentar os instrumentos de governança arquivística digital produzidos pelo convênio.
+**Objetivo**: Preparar equipes, áreas gestoras e unidades envolvidas para compreender, adotar e sustentar os instrumentos de governança arquivística digital produzidos pelo convênio.
 
 ## Benefícios
 
@@ -306,7 +247,7 @@ Preparar equipes, áreas gestoras e unidades envolvidas para compreender, adotar
 
 # Meta 9 - Indicadores e Monitoramento
 
-Implantar um sistema institucional de indicadores e monitoramento contínuo da governança documental, da preservação digital e da maturidade em gestão de documentos.
+**Objetivo**: Implantar um sistema institucional de indicadores e monitoramento contínuo da governança documental, da preservação digital e da maturidade em gestão de documentos.
 
 ## Benefícios
 
@@ -336,7 +277,7 @@ Implantar um sistema institucional de indicadores e monitoramento contínuo da g
 
 # Meta 10 - Sustentabilidade
 
-Desenvolver instrumentos para demonstrar o valor econômico, operacional, ambiental e institucional da informação, apoiando a sustentabilidade das iniciativas de governança documental e preservação digital.
+**Objetivo**: Desenvolver instrumentos para demonstrar o valor econômico, operacional, ambiental e institucional da informação, apoiando a sustentabilidade das iniciativas de governança documental e preservação digital.
 
 ## Benefícios
 
@@ -366,7 +307,7 @@ Desenvolver instrumentos para demonstrar o valor econômico, operacional, ambien
 
 # Meta 11 - Estruturação Organizacional
 
-Propor uma estrutura organizacional capaz de sustentar a governança documental, a gestão dos documentos físicos e digitais, os processos de preservação e os mecanismos de monitoramento de forma permanente.
+**Objetivo**: Propor uma estrutura organizacional capaz de sustentar a governança documental, a gestão dos documentos físicos e digitais, os processos de preservação e os mecanismos de monitoramento de forma permanente.
 
 ## Benefícios
 
@@ -392,6 +333,8 @@ Propor uma estrutura organizacional capaz de sustentar a governança documental,
 - Redução de riscos de fragmentação e descontinuidade.
 - Base para implantação gradual de um modelo permanente de governança documental.
 
+<!-- Este texto é um comentário e ficará escondido.
+
 <div class="newpage"></div>
 
 # Pontos de Atenção
@@ -408,3 +351,6 @@ Propor uma estrutura organizacional capaz de sustentar a governança documental,
 O Convênio CAIXA-UnB evoluiu de um conjunto de diagnósticos técnicos para uma estratégia integrada de governança arquivística digital. As entregas já observadas formam uma base consistente para conhecer os sistemas e documentos da CAIXA, estabelecer regras institucionais, orientar a evolução tecnológica, medir resultados, demonstrar valor e propor uma estrutura organizacional permanente.
 
 A prioridade executiva passa a ser integrar os produtos das metas em uma agenda coordenada de implementação, com responsáveis, indicadores, prazos e mecanismos de validação institucional.
+CONFIGURAÇÃO GLOBAL E VARIÁVEIS
+
+ -->

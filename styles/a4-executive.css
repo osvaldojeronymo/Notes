@@ -1,0 +1,150 @@
+/* =========================================================
+   LAYOUT EXECUTIVO AUTOMÁTICO EM DUAS COLUNAS
+   Usado por pdf-template.html / informes executivos.
+   ========================================================= */
+
+.executive-grid {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    gap: 0.65cm;
+    align-items: start;
+    height: 100%;
+}
+
+.executive-left,
+.executive-right {
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.executive-left h2:first-child {
+    margin-top: 0;
+}
+
+.executive-left p {
+    font-size: 9.25pt;
+    line-height: 1.38;
+    margin-bottom: 0.20cm;
+}
+
+.executive-left ol,
+.executive-left ul {
+    font-size: 9.05pt;
+    line-height: 1.33;
+    margin-left: 0.28cm;
+    padding-left: 0.18cm;
+}
+
+.executive-left li {
+    margin-bottom: 0.16cm;
+}
+
+.executive-left ol {
+    list-style: none;
+    counter-reset: item;
+}
+
+.executive-left ol > li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 0.55cm;
+}
+
+.executive-left ol > li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0.02cm;
+    width: 0.33cm;
+    height: 0.33cm;
+    border-radius: 50%;
+    background: var(--caixa-laranja);
+    color: #fff;
+    font-size: 7.4pt;
+    font-weight: 700;
+    line-height: 0.33cm;
+    text-align: center;
+}
+
+/* Coluna direita: tabelas compactas com ícones */
+.executive-right {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.executive-right .abnt-table-title {
+    font-size: 8pt;
+    line-height: 1.1;
+    margin: 0 0 0.07cm;
+    font-weight: 700;
+}
+
+.executive-right table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 7.1pt;
+    line-height: 1.16;
+    margin: 0.08cm 0 0.36cm;
+    border-collapse: collapse;
+}
+
+.executive-right th,
+.executive-right td {
+    padding: 0.085cm 0.10cm;
+    line-height: 1.16;
+}
+
+.executive-right th {
+    font-size: 6.7pt;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.executive-right tbody td:first-child {
+    position: relative;
+    padding-left: 0.62cm !important;
+    vertical-align: top;
+}
+
+.executive-right tbody td:first-child::before {
+    position: absolute;
+    left: 0.13cm;
+    top: 0.11cm;
+    width: 0.30cm;
+    height: 0.30cm;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 8.2pt;
+    line-height: 1;
+    color: var(--caixa-azul);
+    background: transparent;
+    transform: none;
+}
+
+/* Ícones por linha - Tabela 1 */
+.executive-right table:first-of-type tbody tr:nth-child(1) td:first-child::before { content: "\f0ca"; }
+.executive-right table:first-of-type tbody tr:nth-child(2) td:first-child::before { content: "\f46c"; }
+.executive-right table:first-of-type tbody tr:nth-child(3) td:first-child::before { content: "\f080"; }
+.executive-right table:first-of-type tbody tr:nth-child(4) td:first-child::before { content: "\f140"; }
+.executive-right table:first-of-type tbody tr:nth-child(5) td:first-child::before { content: "\f071"; }
+.executive-right table:first-of-type tbody tr:nth-child(6) td:first-child::before { content: "\f0c1"; }
+.executive-right table:first-of-type tbody tr:nth-child(7) td:first-child::before { content: "\f3ed"; }
+.executive-right table:first-of-type tbody tr:nth-child(8) td:first-child::before { content: "\f201"; }
+
+/* Ícones por linha - Tabela 2 */
+.executive-right table:nth-of-type(2) tbody td:first-child::before {
+    color: var(--caixa-laranja);
+    font-size: 8pt;
+}
+
+.executive-right table:nth-of-type(2) tbody tr:nth-child(1) td:first-child::before { content: "\f0c0"; }
+.executive-right table:nth-of-type(2) tbody tr:nth-child(2) td:first-child::before { content: "\f15c"; }
+.executive-right table:nth-of-type(2) tbody tr:nth-child(3) td:first-child::before { content: "\f0b0"; }
+.executive-right table:nth-of-type(2) tbody tr:nth-child(4) td:first-child::before { content: "\f2f1"; }
+.executive-right table:nth-of-type(2) tbody tr:nth-child(5) td:first-child::before { content: "\f542"; }

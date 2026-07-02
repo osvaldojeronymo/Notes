@@ -1,0 +1,50 @@
+/* =========================================================
+   AJUSTES DE QUEBRA E IMPRESSÃO
+   ========================================================= */
+
+section,
+blockquote,
+figure {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+p + table,
+table + p,
+ol + table,
+ul + table,
+table + ol,
+table + ul {
+    margin-top: 0.2cm;
+}
+
+.newpage {
+    display: block;
+    page-break-before: always;
+    break-before: page;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+@media print {
+    html,
+    body {
+        width: 29.7cm;
+        height: 21cm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .print-page {
+        page-break-after: always;
+        break-after: page;
+    }
+}
