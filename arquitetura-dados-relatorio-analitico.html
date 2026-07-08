@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório Analítico</title>
+
+    <link rel="stylesheet" href="styles/a4.css">
+
+    <style>
+        /* =====================================================
+           AJUSTES ESPECÍFICOS DO CADERNO EXECUTIVO
+           ===================================================== */
+
+        .print-page-content {
+            padding: 0.65cm 1.25cm 0.45cm 1.25cm;
+            overflow: hidden;
+        }
+
+        .caderno-content {
+            display: block;
+            width: 100%;
+        }
+
+        .caderno-content h1 {
+            font-size: 18pt;
+            margin: 0 0 0.35cm;
+            color: var(--caixa-azul);
+            border-left: 5px solid var(--caixa-laranja);
+            padding-left: 0.25cm;
+        }
+
+        .caderno-content h2 {
+            font-size: 14pt;
+            margin: 0.35cm 0 0.18cm;
+            color: var(--caixa-azul);
+            border-left: 4px solid var(--caixa-laranja);
+            padding-left: 0.22cm;
+        }
+
+        .caderno-content h3 {
+            font-size: 11.5pt;
+            margin: 0.25cm 0 0.12cm;
+            color: #14375a;
+        }
+
+        .caderno-content p {
+            font-size: 9.4pt;
+            line-height: 1.42;
+            margin: 0 0 0.22cm;
+            text-align: justify;
+        }
+
+        .caderno-content ul,
+        .caderno-content ol {
+            font-size: 9.2pt;
+            line-height: 1.35;
+            margin-top: 0.08cm;
+            margin-bottom: 0.28cm;
+        }
+
+        .caderno-content li {
+            margin-bottom: 0.10cm;
+        }
+
+        .caderno-content table {
+            font-size: 8.2pt;
+            line-height: 1.18;
+            margin: 0.16cm 0 0.35cm;
+            table-layout: fixed;
+        }
+
+        .caderno-content th,
+        .caderno-content td {
+            padding: 0.10cm 0.13cm;
+            vertical-align: top;
+        }
+
+        .caderno-content th {
+            font-size: 7.4pt;
+            text-align: center;
+        }
+
+        .caderno-content blockquote {
+            margin: 0.35cm 0;
+            padding: 0.28cm 0.35cm;
+            background: #f8fafc;
+            border-left: 4px solid var(--caixa-laranja);
+        }
+
+        .caderno-content blockquote p {
+            font-weight: 700;
+            color: #30465d;
+        }
+
+        .caderno-section-break {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        .newpage {
+            display: block;
+            page-break-before: always;
+            break-before: page;
+            height: 0;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<main id="pdf-source" class="pdf-body">
+<h1 id="relatório-analítico">Relatório Analítico</h1>
+<p>Este relatório consolida os resultados da entrega <em>Arquitetura de
+Dados</em> elaborada por intermédio do convênio CAIXA-UnB.</p>
+<h2 id="apresentação">Apresentação</h2>
+<p>A cadeia analítica adotada: Problema -&gt; Metodologia -&gt; Produtos
+-&gt; Benefícios -&gt; Próximos passos.</p>
+<p class="abnt-table-title">
+Quadro 1 - Escopo do relatório
+</p>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Pergunta de gestão</th>
+<th style="text-align: left;">Resposta do relatório</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Qual problema a entrega resolve?</td>
+<td style="text-align: left;">Fragmentação documental e baixa integração
+arquivística</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Como a solução foi construída?</td>
+<td style="text-align: left;">Arquitetura de dados orientada por
+princípios arquivísticos e interoperabilidade</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O que foi efetivamente entregue?</td>
+<td style="text-align: left;">Catálogo, modelo de dados, regras e pacote
+de intercâmbio</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Qual valor institucional esperado?</td>
+<td style="text-align: left;">Governança, conformidade, rastreabilidade
+e eficiência operacional</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O que precisa ser decidido agora?</td>
+<td style="text-align: left;">Priorização, governança de implantação e
+cronograma faseado</td>
+</tr>
+</tbody>
+</table>
+<p class="abnt-table-source">
+Fonte: Elaboração própria.
+</p>
+<div class="newpage">
+
+</div>
+<h2 id="objetivo-da-entrega">1. Objetivo da entrega</h2>
+<p>O documento foi estruturado para dar uma resposta ao problema de
+lacuna institucional de governança documental em ambiente digital.</p>
+<h3 id="qual-problema-motivou-esta-entrega">1.1 Qual problema motivou
+esta entrega?</h3>
+<p>A entrega foi motivada por um desafio institucional de integração e
+governança documental em ambiente digital. Em termos práticos, a CAIXA
+convive com produção e armazenamento de documentos em múltiplos sistemas
+e repositórios, com diferentes graus de padronização e
+interoperabilidade.</p>
+<p>A consequência desse cenário é a fragmentação do ciclo de vida
+documental, com impactos diretos em:</p>
+<ul>
+<li>qualidade e consistência da informação arquivística;</li>
+<li>rastreabilidade da cadeia de custódia;</li>
+<li>confiabilidade para auditoria, controle e prova institucional;</li>
+<li>capacidade de aplicar classificação, temporalidade e destinação de
+forma uniforme;</li>
+<li>maturidade para evolução de SIGAD e preservação digital de longo
+prazo.</li>
+</ul>
+<h3 id="formulação-do-problema">1.2 Formulação do problema</h3>
+<p>Antes da proposta:</p>
+<ul>
+<li>sistemas corporativos produzem e mantêm documentos de forma
+distribuída;</li>
+<li>integrações não asseguram, por si só, coerência arquivística ponta a
+ponta;</li>
+<li>classificação e temporalidade nem sempre estão estruturadas no
+contexto funcional do documento;</li>
+<li>metadados essenciais de governança podem ficar incompletos,
+heterogêneos ou não reconciliados;</li>
+<li>a cadeia de custódia torna-se suscetível a rupturas operacionais e
+semânticas.</li>
+</ul>
+<p>A questão central, portanto, não é apenas tecnológica; é de
+governança da informação arquivística em escala corporativa.</p>
+<div class="newpage">
+
+</div>
+<h2 id="escopo">2. Escopo</h2>
+<p>Os sistemas corporativos da CAIXA que se utilizam da Gestão
+Eletrônica de Documentos (GED) CAIXA.</p>
+<h3 id="o-que-foi-analisado">2.1 O que foi analisado?</h3>
+<p>A entrega abrangeu a definição de uma arquitetura de dados para
+suportar integração documental, classificação arquivística,
+temporalidade, conformidade e preparo para configuração no SIGAD.</p>
+<p>O escopo considerou:</p>
+<ul>
+<li>conceitos arquivísticos necessários para modelagem de dados;</li>
+<li>estrutura de metadados e contexto funcional;</li>
+<li>instrumentos de classificação e temporalidade (CCD e TTD);</li>
+<li>critérios de conformidade LGPD/LAI;</li>
+<li>estratégia de normalização de bases legadas e coletas novas;</li>
+<li>camadas de integração e formato de exportação para intercâmbio.</li>
+</ul>
+<h3 id="limites-do-escopo">2.2 Limites do escopo</h3>
+<p>Não faz parte desta entrega:</p>
+<ul>
+<li>executar implantação tecnológica completa dos conectores;</li>
+<li>substituir decisões institucionais de governança por desenho
+técnico;</li>
+<li>encerrar, por si só, a agenda de SIGAD e RDC-Arq.</li>
+</ul>
+<p>A arquitetura entregue constitui base de referência para decisões e
+implantação faseada.</p>
+<p class="abnt-table-title">
+Quadro 2 - Delimitação de escopo
+</p>
+<table>
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Inclui</th>
+<th style="text-align: left;">Não inclui</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Modelo de dados e integração</td>
+<td style="text-align: left;">Implantação tecnológica completa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Regras de classificação e
+temporalidade</td>
+<td style="text-align: left;">Substituição de deliberação
+institucional</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Critérios de conformidade e
+interoperabilidade</td>
+<td style="text-align: left;">Encerramento da agenda SIGAD/RDC-Arq</td>
+</tr>
+</tbody>
+</table>
+<p class="abnt-table-source">
+Fonte: Elaboração própria.
+</p>
+<div class="newpage">
+
+</div>
+<h2 id="fundamentação-técnica">3. Fundamentação Técnica</h2>
+<p>A proposta foi construída com base em princípios e referenciais
+arquivísticos e de interoperabilidade já consolidados no contexto
+público brasileiro.</p>
+<h3 id="referências-estruturantes">3.1 Referências estruturantes</h3>
+<ul>
+<li>e-ARQ Brasil (requisitos para sistemas informatizados de gestão
+arquivística);</li>
+<li>diretrizes de gestão arquivística e preservação digital aplicáveis à
+evolução SIGAD/RDC-Arq;</li>
+<li>princípios de autenticidade, integridade, rastreabilidade e contexto
+de produção documental;</li>
+<li>padrões de interoperabilidade e formatos abertos para intercâmbio de
+dados.</li>
+</ul>
+<h3 id="princípios-aplicados-na-modelagem">3.2 Princípios aplicados na
+modelagem</h3>
+<ul>
+<li>Classificação funcional: o documento deve ser compreendido no
+contexto da atividade que o gerou.</li>
+<li>Temporalidade vinculada ao contexto: prazos e destinação decorrem do
+enquadramento arquivístico, não apenas do nome do documento.</li>
+<li>Separação entre camada operacional e camada de exportação: evita
+contaminação do contrato formal de dados por inconsistências de
+coleta.</li>
+<li>Evidência e auditabilidade: os dados devem ser entregues de forma
+verificável e rastreável para uso institucional.</li>
+</ul>
+<div class="newpage">
+
+</div>
+<h2 id="solução-proposta">4. Solução Proposta</h2>
+<p>Foi elaborada uma arquitetura de integração documental baseada em
+camadas lógicas e em instrumentos arquivísticos de referência, com foco
+em interoperabilidade e qualidade dos dados para configuração no
+SIGAD.</p>
+<h3 id="síntese-da-arquitetura">4.1 Síntese da arquitetura</h3>
+<p>Em síntese, a solução:</p>
+<ul>
+<li>organiza o fluxo de transformação de dados, da coleta ao pacote de
+entrega;</li>
+<li>estabiliza a semântica arquivística por meio de conceitos e
+relacionamentos explícitos;</li>
+<li>associa tipos documentais a classificação (CCD), temporalidade (TTD)
+e conformidade (LGPD/LAI);</li>
+<li>disponibiliza saída em formato de intercâmbio para integração
+sistêmica.</li>
+</ul>
+<h3 id="lógica-de-transformação-do-ativo-técnico">4.2 Lógica de
+transformação do ativo técnico</h3>
+<p>A página técnica descreve o funcionamento detalhado do modelo. O
+relatório analítico, por sua vez, responde ao nível decisório:</p>
+<ul>
+<li>qual problema institucional está sendo endereçado;</li>
+<li>por que esta abordagem foi escolhida;</li>
+<li>quais capacidades a CAIXA passa a ter;</li>
+<li>quais decisões ainda precisam ser tomadas para implementação.</li>
+</ul>
+<p class="abnt-table-title">
+Quadro 3 - Síntese da solução
+</p>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Eixo</th>
+<th style="text-align: left;">Síntese</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Arquitetura</td>
+<td style="text-align: left;">Integração em camadas para estabilizar
+qualidade e semântica dos dados</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Governança arquivística</td>
+<td style="text-align: left;">Vinculação entre tipo documental, CCD, TTD
+e contexto funcional</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conformidade</td>
+<td style="text-align: left;">Parametrização LGPD/LAI no nível de
+metadados documentais</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Implementação</td>
+<td style="text-align: left;">Pacote de intercâmbio em formato aberto
+para configuração no SIGAD</td>
+</tr>
+</tbody>
+</table>
+<p class="abnt-table-source">
+Fonte: Elaboração própria.
+</p>
+<div class="newpage">
+
+</div>
+<h2 id="componentes-da-solução">5. Componentes da Solução</h2>
+<p>Esta seção consolida os elementos efetivamente produzidos e
+demonstrados na arquitetura.</p>
+<h3 id="produto-final-orientador">5.1 Produto final orientador</h3>
+<ul>
+<li>Catálogo Institucional de Tipos Documentais, preparado para
+configuração no SIGAD.</li>
+</ul>
+<h3 id="componentes-estruturantes">5.2 Componentes estruturantes</h3>
+<ul>
+<li>Arquitetura lógica de integração por camadas (coleta, integração,
+exportação).</li>
+<li>Modelo de dados consolidado (tabelas, campos, relacionamentos e
+mapeamentos SIGAD).</li>
+<li>Estrutura de tipos documentais com base em espécie, atividade e
+contexto de negócio.</li>
+<li>Mecanismos de distinção entre objeto arquivístico e variante
+operacional.</li>
+<li>Regras para documento simples, documento composto e unidade de
+arquivamento.</li>
+</ul>
+<h3 id="instrumentos-arquivísticos-incorporados">5.3 Instrumentos
+arquivísticos incorporados</h3>
+<ul>
+<li>Código de Classificação de Documentos (CCD).</li>
+<li>Tabela de Temporalidade e Destinação (TTD).</li>
+<li>Vinculação de classificação e temporalidade ao contexto
+funcional.</li>
+</ul>
+<h3 id="componentes-de-conformidade-e-segurança">5.4 Componentes de
+conformidade e segurança</h3>
+<ul>
+<li>Parâmetros LGPD/LAI por tipo/variante quando aplicável.</li>
+<li>Definição de metadados de acesso e tratamento de dados
+pessoais.</li>
+</ul>
+<h3 id="componentes-de-implementação">5.5 Componentes de
+implementação</h3>
+<ul>
+<li>Estratégia de normalização para legado e coleta nova.</li>
+<li>Formato de exportação em padrões abertos.</li>
+<li>Pacote de intercâmbio com artefatos de conferência e
+integridade.</li>
+</ul>
+<h3 id="conteúdo-de-apoio-para-equipes-técnicas">5.6 Conteúdo de apoio
+para equipes técnicas</h3>
+<ul>
+<li>Guia conceitual para implementação (ponte entre teoria arquivística
+e modelagem de sistemas).</li>
+<li>Referência técnica em perguntas e respostas para reduzir
+ambiguidades de execução.</li>
+</ul>
+<div class="newpage">
+
+</div>
+<h2 id="benefícios-esperados">6. Benefícios esperados</h2>
+<p>A arquitetura proposta habilita capacidades institucionais que
+extrapolam a dimensão de uma página técnica.</p>
+<h3 id="o-que-isso-permite-à-caixa">6.1 O que isso permite à CAIXA?</h3>
+<p>Benefícios diretos:</p>
+<ul>
+<li>manutenção de autenticidade e integridade documental;</li>
+<li>fortalecimento da cadeia de custódia digital;</li>
+<li>padronização de classificação e temporalidade no contexto
+funcional;</li>
+<li>redução de duplicidades e inconsistências entre sistemas;</li>
+<li>melhoria de recuperação da informação e rastreabilidade para
+auditoria;</li>
+<li>preparação estruturada para evolução SIGAD e preservação digital
+(RDC-Arq).</li>
+</ul>
+<p>Benefícios gerenciais:</p>
+<ul>
+<li>base objetiva para priorização de investimentos em integração;</li>
+<li>aumento da previsibilidade de implantação por fases;</li>
+<li>redução de risco regulatório e operacional associado a documentos
+digitais.</li>
+</ul>
+<h3 id="valor-institucional">6.2 Valor institucional</h3>
+<p>A entrega transforma conhecimento técnico disperso em referência
+corporativa de decisão. Isso permite que áreas de negócio, tecnologia e
+governança documental atuem sobre um mesmo contrato informacional.</p>
+<p class="abnt-table-title">
+Quadro 4 - Benefícios institucionais esperados
+</p>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dimensão</th>
+<th style="text-align: left;">Benefício para a CAIXA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Governança</td>
+<td style="text-align: left;">Padronização de critérios e maior
+coerência institucional</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Operação</td>
+<td style="text-align: left;">Ganho de eficiência e redução de
+retrabalho</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Controle</td>
+<td style="text-align: left;">Rastreabilidade qualificada para auditoria
+e conformidade</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Estratégia</td>
+<td style="text-align: left;">Base técnica para implantação progressiva
+de SIGAD/RDC-Arq</td>
+</tr>
+</tbody>
+</table>
+<p class="abnt-table-source">
+Fonte: Elaboração própria.
+</p>
+<div class="newpage">
+
+</div>
+<h2 id="riscos-e-premissas">7. Riscos e premissas</h2>
+<p>Riscos identificados e as premissas elecandas à partir da entrega
+<em>Arquitetura de Dados</em> elaborada por intermédio do convênio
+CAIXA-UnB.</p>
+<h3 id="riscos-de-não-implantação">7.1 Riscos de não implantação</h3>
+<ul>
+<li>permanência de fragmentação documental entre sistemas;</li>
+<li>manutenção de heterogeneidade semântica e de metadados;</li>
+<li>aumento de esforço manual para reconciliação e conferência;</li>
+<li>atraso na maturidade institucional para SIGAD/RDC-Arq;</li>
+<li>maior exposição a inconsistências em auditorias e controles.</li>
+</ul>
+<h3 id="riscos-de-implantação-parcial">7.2 Riscos de implantação
+parcial</h3>
+<ul>
+<li>adotar apenas integração técnica sem governança de dados
+arquivísticos;</li>
+<li>tratar classificação e temporalidade como etapa acessória, e não
+estruturante;</li>
+<li>executar conectores sem critérios de qualidade e validação
+institucional.</li>
+</ul>
+<h3 id="premissas-críticas">7.3 Premissas críticas</h3>
+<ul>
+<li>patrocínio institucional e governança transversal (negócio, TI,
+arquivo, jurídico/compliance);</li>
+<li>definição formal de papéis e responsabilidades;</li>
+<li>priorização por criticidade documental e impacto de negócio;</li>
+<li>capacidade de validação contínua dos metadados e regras de
+negócio.</li>
+</ul>
+<p class="abnt-table-title">
+Quadro 5 - Matriz executiva de riscos
+</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 41%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Risco</th>
+<th style="text-align: left;">Efeito principal</th>
+<th style="text-align: left;">Mitigação recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Não implantação</td>
+<td style="text-align: left;">Persistência da fragmentação
+documental</td>
+<td style="text-align: left;">Institucionalizar priorização e
+cronograma</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Implantação parcial</td>
+<td style="text-align: left;">Integração técnica sem governança
+arquivística</td>
+<td style="text-align: left;">Vincular TI a critérios de curadoria
+documental</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Governança difusa</td>
+<td style="text-align: left;">Baixa accountability</td>
+<td style="text-align: left;">Definir instância decisória formal</td>
+</tr>
+</tbody>
+</table>
+<p class="abnt-table-source">
+Fonte: Elaboração própria.
+</p>
+<div class="newpage">
+
+</div>
+<h2 id="sugestões">8. Sugestões</h2>
+<p>As sugestões descritas a seguir buscam resolver um problema real de
+fragmentação, oferecer método para superá-lo, entregar produtos
+aplicáveis e abrir caminho estruturado para implantação
+institucional.</p>
+<h3 id="próximos-passos-de-curto-prazo">8.1 Próximos passos de curto
+prazo</h3>
+<ol type="1">
+<li>Instituir a arquitetura de dados como referência oficial para
+decisões de integração documental.</li>
+<li>Definir governança de implantação com comitê e rito de
+validação.</li>
+<li>Selecionar casos prioritários para implantação piloto por
+criticidade.</li>
+<li>Especificar conectores, contratos de dados e critérios de
+qualidade.</li>
+<li>Formalizar plano de transição para operação assistida.</li>
+</ol>
+<h3 id="próximos-passos-de-médio-prazo">8.2 Próximos passos de médio
+prazo</h3>
+<ol type="1">
+<li>Expandir implantação para novos sistemas conforme priorização.</li>
+<li>Implantar indicadores de maturidade arquivística e
+conformidade.</li>
+<li>Consolidar trilha de evolução para SIGAD e estratégia RDC-Arq.</li>
+<li>Institucionalizar ciclo de revisão contínua de catálogo, CCD e
+TTD.</li>
+</ol>
+<h3 id="governança-recomendada">8.3 Governança recomendada</h3>
+<ul>
+<li>Patrocinador executivo para priorização e desbloqueio de
+decisões.</li>
+<li>Coordenação técnica de dados/integridade da integração.</li>
+<li>Curadoria arquivística para classificação, temporalidade e contexto
+funcional.</li>
+<li>Instância de conformidade para LGPD/LAI e evidência
+regulatória.</li>
+</ul>
+<div class="newpage">
+
+</div>
+<h2 id="conclusão">9. Conclusão</h2>
+<p>A entrega de Arquitetura de Dados demonstra que a CAIXA já dispõe de
+base metodológica consistente para enfrentar seu principal desafio:
+transformar produção documental distribuída em governança arquivística
+integrada.</p>
+<p>O ponto central é reconhecer a capacidade institucional criada:</p>
+<ul>
+<li>um modelo comum para classificar, contextualizar e integrar
+documentos;</li>
+<li>um contrato de dados auditável para interoperabilidade com
+SIGAD;</li>
+<li>uma trilha concreta para reduzir risco e aumentar confiabilidade
+documental.</li>
+</ul>
+<div class="newpage">
+
+</div>
+<h2 id="anexos">10. Anexos</h2>
+<p>A página técnica elaborada pelos pesquisadores da UnB, relatório e
+resumo executivo elaborado pelos representantes da CAIXA no convênio
+CAIXA-UnB.</p>
+<h3 id="anexo-a---referência-técnica-primária">Anexo A - Referência
+técnica primária</h3>
+<ul>
+<li>Página de Arquitetura de Dados da plataforma de Governança
+Arquivística: https://governancaarquivistica.org/arquitetura-dados</li>
+</ul>
+<h3 id="anexo-b---função-do-anexo-no-processo-decisório">Anexo B -
+Função do anexo no processo decisório</h3>
+<p>Fluxo de derivação recomendado: Página Técnica -&gt; Relatório
+Analítico -&gt; Resumo Executivo.</p>
+</main>
+
+<template id="pdf-header-template">
+    <div class="pdf-header pdf-header-executive">
+        <img
+            class="pdf-header-bg"
+            src="assets/cabecalho-caixa.png"
+            alt="Cabeçalho CAIXA"
+        >
+
+        <div class="pdf-header-overlay">
+            <div class="pdf-header-kicker">
+                <span>07 de julho de 2026</span>
+            </div>
+
+            <div class="pdf-header-title">
+                Relatório Analítico
+            </div>
+
+            <div class="pdf-header-subtitle">
+                Arquitetura de Dados para Governança Arquivística
+                Digital da CAIXA
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="pdf-footer-template">
+    <div class="pdf-footer pdf-footer-executive">
+        <img
+            class="pdf-footer-bg"
+            src="assets/rodape-caixa.png"
+            alt="Rodapé CAIXA"
+        >
+
+        <div class="pdf-footer-overlay">
+            <div class="pdf-footer-left">
+                #PUBLICO | Convênio CAIXA-UnB
+            </div>
+
+            <div class="pdf-footer-center">
+                Relatório Analítico - Arquitetura de Dados
+            </div>
+            <div class="pdf-footer-right print-page-number"> 
+                
+            </div>            
+        </div>
+    </div>
+</template>
+
+<script>
+(function () {
+    const source = document.getElementById("pdf-source");
+    const headerTemplate = document.getElementById("pdf-header-template");
+    const footerTemplate = document.getElementById("pdf-footer-template");
+
+    if (!source || !headerTemplate || !footerTemplate) {
+        return;
+    }
+
+    const sourceNodes = Array.from(source.children);
+
+    const pagesRoot = document.createElement("div");
+    pagesRoot.id = "pdf-pages";
+    document.body.appendChild(pagesRoot);
+    source.style.display = "none";
+
+    function createPage() {
+        const page = document.createElement("section");
+        page.className = "print-page";
+
+        const pageNumber = pagesRoot.children.length + 1;
+
+        const inner = document.createElement("div");
+        inner.className = "print-page-inner";
+
+        const header = document.createElement("div");
+        header.className = "print-page-header";
+        header.appendChild(headerTemplate.content.firstElementChild.cloneNode(true));
+
+        if (pageNumber === 1) {
+            header.classList.add("print-page-header--cover");
+        }
+
+        const content = document.createElement("div");
+        content.className = "print-page-content";
+
+        const cadernoContent = document.createElement("div");
+        cadernoContent.className = "caderno-content";
+        content.appendChild(cadernoContent);
+
+        const footer = document.createElement("div");
+        footer.className = "print-page-footer";
+        footer.appendChild(footerTemplate.content.firstElementChild.cloneNode(true));
+
+        inner.appendChild(header);
+        inner.appendChild(content);
+        inner.appendChild(footer);
+
+        page.appendChild(inner);
+        pagesRoot.appendChild(page);
+
+        return cadernoContent;
+    }
+
+    function overflows(element) {
+        return element.scrollHeight > element.clientHeight + 1;
+    }
+
+    function getContentBox(content) {
+        return content.closest(".print-page-content");
+    }
+
+    function cloneTableShell(table) {
+        const clone = table.cloneNode(false);
+        const thead = table.querySelector("thead");
+
+        if (thead) {
+            clone.appendChild(thead.cloneNode(true));
+        }
+
+        const tbody = document.createElement("tbody");
+        clone.appendChild(tbody);
+
+        return { table: clone, tbody: tbody };
+    }
+
+    function placeBlock(node, content) {
+        const pageBox = getContentBox(content);
+        const clone = node.cloneNode(true);
+
+        content.appendChild(clone);
+
+        if (!overflows(pageBox)) {
+            return content;
+        }
+
+        content.removeChild(clone);
+
+        content = createPage();
+        content.appendChild(clone);
+
+        return content;
+    }
+
+    function placeTable(table, content) {
+        const pageBox = getContentBox(content);
+        const rows = Array.from(table.querySelectorAll("tbody > tr"));
+
+        if (rows.length === 0) {
+            return placeBlock(table, content);
+        }
+
+        let shell = cloneTableShell(table);
+        content.appendChild(shell.table);
+
+        for (const row of rows) {
+            shell.tbody.appendChild(row.cloneNode(true));
+
+            if (!overflows(pageBox)) {
+                continue;
+            }
+
+            if (shell.tbody.children.length === 1) {
+                continue;
+            }
+
+            shell.tbody.removeChild(shell.tbody.lastElementChild);
+
+            content = createPage();
+            shell = cloneTableShell(table);
+            content.appendChild(shell.table);
+            shell.tbody.appendChild(row.cloneNode(true));
+        }
+
+        return content;
+    }
+
+    function isManualPageBreak(node) {
+        return node.classList && node.classList.contains("newpage");
+    }
+
+    let content = createPage();
+
+    for (const node of sourceNodes) {
+        if (isManualPageBreak(node)) {
+            content = createPage();
+            continue;
+        }
+
+        if (node.tagName === "TABLE") {
+            content = placeTable(node, content);
+            continue;
+        }
+
+        content = placeBlock(node, content);
+    }
+
+    const totalPages = pagesRoot.children.length;
+
+    pagesRoot.querySelectorAll(".print-page-number").forEach(function (label, index) {
+        label.textContent = "Página " + (index + 1) + " de " + totalPages;
+    });
+}());
+</script>
+
+</body>
+</html>

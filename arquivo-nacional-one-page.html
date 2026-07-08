@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>$if(title)$$title$$else$Caderno Executivo$endif$</title>
+    <title>Resumo de reunião</title>
 
     <link rel="stylesheet" href="styles/a4.css">
 
@@ -142,7 +142,135 @@
 <body>
 
 <main id="pdf-source" class="pdf-body">
-$body$
+<h2 id="objetivo">1. Objetivo</h2>
+<p>Estruturar cooperação técnica entre CAIXA e Arquivo Nacional para
+digitalização, preservação e disponibilização de documentos do Arquivo
+Histórico, iniciando pelas cadernetas de poupança.</p>
+<h2 id="contexto">2. Contexto</h2>
+<p>O Ministério Público Federal (MPF) tem demandado acesso a documentos
+históricos da CAIXA de interesse público e social. Diante desta
+solicitação do MPF foi discutido modelo de cooperação com o Arquivo
+Nacional.</p>
+<h2 id="principais-deliberações">3. Principais deliberações</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Tema</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Instrumento jurídico</td>
+<td>Acordo de Cooperação Técnica — ACT</td>
+</tr>
+<tr class="even">
+<td>Plano de execução</td>
+<td>Plano de Trabalho vinculado ao ACT</td>
+</tr>
+<tr class="odd">
+<td>Prioridade</td>
+<td>Cadernetas de poupança</td>
+</tr>
+<tr class="even">
+<td>Segunda etapa</td>
+<td>Livros históricos</td>
+</tr>
+<tr class="odd">
+<td>Custos</td>
+<td>Sem cobrança do Arquivo Nacional</td>
+</tr>
+<tr class="even">
+<td>Transporte</td>
+<td>Responsabilidade da CAIXA</td>
+</tr>
+<tr class="odd">
+<td>Local</td>
+<td>Arquivo Nacional — Brasília</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modelo-operacional">4. Modelo operacional</h2>
+<figure>
+<img
+src="assets/mermaid/arquivo-nacional-one-page-diagram-1-c7809cd846.svg"
+alt="Figura 1 - Fluxograma do modelo operacional" />
+<figcaption aria-hidden="true">Figura 1 - Fluxograma do modelo
+operacional</figcaption>
+</figure>
+<p class="abnt-table-source">
+Fonte: Elaboração própria.
+</p>
+<div class="newpage">
+
+</div>
+<h2 id="responsabilidades">5. Responsabilidades</h2>
+<table>
+<thead>
+<tr class="header">
+<th>CAIXA</th>
+<th>Arquivo Nacional</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Disponibilizar documentação</td>
+<td>Enviar modelo de ACT</td>
+</tr>
+<tr class="even">
+<td>Transportar acervo</td>
+<td>Avaliar estado físico</td>
+</tr>
+<tr class="odd">
+<td>Indicar pontos focais</td>
+<td>Higienizar documentos</td>
+</tr>
+<tr class="even">
+<td>Apoiar logística</td>
+<td>Digitalizar acervo</td>
+</tr>
+<tr class="odd">
+<td>Preservar e disponibilizar</td>
+<td>Elaborar ACT em conjunto</td>
+</tr>
+</tbody>
+</table>
+<h2 id="próximos-passos">6. Próximos passos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Ação</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enviar modelo padrão de ACT</td>
+<td>Arquivo Nacional</td>
+</tr>
+<tr class="even">
+<td>Agendar visita técnica</td>
+<td>Arquivo Nacional</td>
+</tr>
+<tr class="odd">
+<td>Dimensionar livros históricos</td>
+<td>CAIXA</td>
+</tr>
+<tr class="even">
+<td>Indicar pontos focais</td>
+<td>CAIXA</td>
+</tr>
+<tr class="odd">
+<td>Elaborar plano de trabalho</td>
+<td>CAIXA + Arquivo Nacional</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mensagem-chave">Mensagem-chave</h2>
+<p>A reunião estabeleceu as bases técnicas e jurídicas para uma
+cooperação entre CAIXA e Arquivo Nacional, com início pela digitalização
+das cadernetas de poupança. O próximo marco é a formalização do ACT e a
+visita técnica para dimensionamento dos livros históricos.</p>
 </main>
 
 <template id="pdf-header-template">
@@ -155,15 +283,15 @@ $body$
 
         <div class="pdf-header-overlay">
             <div class="pdf-header-kicker">
-                <span>$report_date$</span>
+                <span>08 de julho de 2026</span>
             </div>
 
             <div class="pdf-header-title">
-                $title$
+                Resumo de reunião
             </div>
 
             <div class="pdf-header-subtitle">
-                $subtitle$
+                CAIXA e Arquivo Nacional
             </div>
         </div>
     </div>
@@ -179,14 +307,14 @@ $body$
 
         <div class="pdf-footer-overlay">
             <div class="pdf-footer-left">
-                $footer_left$
+                #INTERNO.TODOS | GELOS
             </div>
 
             <div class="pdf-footer-center">
-                $footer_center$
+                Resumo de reunião - Visão Geral
             </div>
             <div class="pdf-footer-right print-page-number"> 
-                $footer_right$
+                
             </div>            
         </div>
     </div>

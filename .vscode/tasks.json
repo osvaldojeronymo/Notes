@@ -22,6 +22,32 @@
         "cwd": "${workspaceFolder}"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Gerar PDFs Arquitetura de Dados",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_pdf.py",
+        "arquitetura-dados"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Gerar Todos os PDFs",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_pdf.py",
+        "todos"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
     }
   ]
 }

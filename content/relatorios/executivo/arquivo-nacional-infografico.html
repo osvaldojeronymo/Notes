@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infográfico Executivo - CAIXA e Arquivo Nacional</title>
+<style>
+    :root {
+      --caixa-blue: #005ca9;
+      --caixa-blue-dark: #003b73;
+      --caixa-yellow: #f8b400;
+      --ink-1: #10233a;
+      --ink-2: #38516b;
+      --line: #d7e0e8;
+      --bg: #edf2f7;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(0, 92, 169, 0.14), transparent 36%),
+        radial-gradient(circle at 82% 90%, rgba(248, 180, 0, 0.16), transparent 30%),
+        var(--bg);
+      color: var(--ink-1);
+      font-family: "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
+      padding: 24px;
+    }
+
+    .page {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 14px 34px rgba(6, 28, 52, 0.12);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 24px 30px;
+      background: linear-gradient(110deg, var(--caixa-blue-dark), var(--caixa-blue));
+      color: var(--white);
+    }
+
+    .title {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      margin: 8px 0 0;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .objective {
+      margin: 0;
+      padding: 16px 30px;
+      border-top: 4px solid var(--caixa-yellow);
+      background: #fff8e6;
+      color: #554116;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .layout {
+      padding: 22px 26px 26px;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1.15fr 1fr;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #fcfdff;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: var(--caixa-blue-dark);
+      border-bottom: 2px solid #e8eef5;
+      padding-bottom: 8px;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink-2);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .flow {
+      padding: 10px 4px 2px;
+      display: grid;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .step {
+      background: #eaf3fc;
+      border: 1px solid #bdd7ef;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #17395d;
+    }
+
+    .arrow {
+      color: #7a8ca0;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .bottom {
+      grid-column: 1 / -1;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .matrix {
+      grid-column: 1 / -1;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    thead th {
+      background: #0a497f;
+      color: #fff;
+      text-align: left;
+      padding: 10px 12px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    tbody td {
+      border-top: 1px solid #e3eaf1;
+      padding: 9px 12px;
+      color: var(--ink-2);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f8fbff;
+    }
+
+    .footer-note {
+      grid-column: 1 / -1;
+      border-top: 1px dashed #bfd0e1;
+      padding-top: 10px;
+      font-size: 12px;
+      color: #5d7187;
+    }
+
+    @media (max-width: 960px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+
+      .page {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <h1 class="title">Infográfico Executivo - CAIXA e Arquivo Nacional</h1>
+    <p class="subtitle">Digitalização, preservação e disponibilização do acervo histórico</p>
+  </header>
+
+  <p class="objective">
+    Objetivo: estruturar cooperação técnica para digitalização, preservação e acesso público de documentos históricos da CAIXA,
+    com início pelas cadernetas de poupanca e formalização por Acordo de Cooperacao Tecnica (ACT).
+  </p>
+
+  <section class="layout">
+    <article class="card">
+      <h2>Responsabilidades da CAIXA</h2>
+      <ul>
+        <li>Disponibilizar documentacao e acervo para avaliacao tecnica.</li>
+        <li>Transportar os documentos para o Arquivo Nacional.</li>
+        <li>Indicar pontos focais e apoiar a coordenacao operacional.</li>
+        <li>Participar da elaboracao e formalizacao do ACT.</li>
+        <li>Contribuir para o Plano de Trabalho e cronograma.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Fluxo executivo da iniciativa</h2>
+      <div class="flow">
+        <div class="step">Demandas do MPF e interesse publico</div>
+        <div class="arrow">↓</div>
+        <div class="step">Cooperacao tecnica CAIXA + Arquivo Nacional</div>
+        <div class="arrow">↓</div>
+        <div class="step">Formalizacao do ACT e Plano de Trabalho</div>
+        <div class="arrow">↓</div>
+        <div class="step">Visita tecnica para dimensionamento do acervo</div>
+        <div class="arrow">↓</div>
+        <div class="step">Higienizacao e digitalizacao em etapas</div>
+        <div class="arrow">↓</div>
+        <div class="step">Preservacao digital e acesso institucional/publico</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Responsabilidades do Arquivo Nacional</h2>
+      <ul>
+        <li>Encaminhar modelo juridico padrao da AGU para o ACT.</li>
+        <li>Realizar avaliacao tecnica e orientacao de tratamento do acervo.</li>
+        <li>Executar higienizacao e digitalizacao dos documentos.</li>
+        <li>Conduzir procedimentos de preservacao digital.</li>
+        <li>Apoiar a estruturacao tecnica da disponibilizacao.</li>
+      </ul>
+    </article>
+
+    <section class="bottom">
+      <article class="card">
+        <h2>Deliberacoes consolidadas</h2>
+        <ul>
+          <li>Instrumento juridico definido: ACT.</li>
+          <li>Plano de Trabalho vinculado ao ACT.</li>
+          <li>Prioridade inicial: cadernetas de poupanca.</li>
+          <li>Segunda etapa: livros historicos.</li>
+          <li>Custos: sem cobranca do Arquivo Nacional a CAIXA.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Proximos passos imediatos</h2>
+        <ul>
+          <li>Receber o modelo padrao de ACT.</li>
+          <li>Agendar visita tecnica ao acervo.</li>
+          <li>Dimensionar quantitativo e estado fisico dos livros.</li>
+          <li>Formalizar pontos focais das instituicoes.</li>
+          <li>Concluir e aprovar Plano de Trabalho.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="matrix" aria-label="Matriz de encaminhamentos">
+      <table>
+        <thead>
+          <tr>
+            <th>Acao</th>
+            <th>Responsavel</th>
+            <th>Resultado esperado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Envio do modelo de ACT</td>
+            <td>Arquivo Nacional</td>
+            <td>Base juridica para formalizacao da cooperacao</td>
+          </tr>
+          <tr>
+            <td>Visita tecnica e dimensionamento do acervo</td>
+            <td>CAIXA e Arquivo Nacional</td>
+            <td>Estimativa de volume, faseamento e capacidade operacional</td>
+          </tr>
+          <tr>
+            <td>Definicao de pontos focais e governanca</td>
+            <td>CAIXA</td>
+            <td>Canal de coordenacao e tomada de decisao</td>
+          </tr>
+          <tr>
+            <td>Aprovacao do Plano de Trabalho</td>
+            <td>CAIXA e Arquivo Nacional</td>
+            <td>Cronograma e entregas pactuadas</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p class="footer-note">
+      Mensagem-chave: a reuniao estabeleceu base tecnica e juridica para cooperacao institucional de preservacao documental.
+      O marco seguinte e formalizar o ACT e iniciar a visita tecnica para execucao faseada.
+    </p>
+  </section>
+</div>
+</body>
+</html>

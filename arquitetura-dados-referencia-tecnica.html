@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>$if(title)$$title$$else$Caderno Executivo$endif$</title>
+    <title>Referência Técnica</title>
 
     <link rel="stylesheet" href="styles/a4.css">
 
@@ -92,37 +92,6 @@
             color: #30465d;
         }
 
-        .caderno-content figure {
-            margin: 0.16cm 0 0.24cm;
-            text-align: center;
-            break-inside: avoid;
-            page-break-inside: avoid;
-        }
-
-        .caderno-content img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .caderno-content img[src*="assets/mermaid/"] {
-            max-height: 2.6cm;
-            width: 100%;
-            object-fit: contain;
-            border: 1px solid #d9e2ec;
-            background: #ffffff;
-        }
-
-        .caderno-content figcaption {
-            margin-top: 0.06cm;
-            font-size: 7pt;
-            color: #6b7f93;
-        }
-
-        .caderno-content h2 {
-            break-after: avoid-page;
-            page-break-after: avoid;
-        }
-
         .caderno-section-break {
             page-break-before: always;
             break-before: page;
@@ -142,7 +111,81 @@
 <body>
 
 <main id="pdf-source" class="pdf-body">
-$body$
+<section id="referência-técnica" class="apresentacao-executiva">
+<h1>Referência Técnica</h1>
+<h2 id="finalidade">Finalidade</h2>
+<p>Este documento formaliza a fonte técnica integral da Arquitetura de
+Dados utilizada no Convênio CAIXA-UnB, para consulta de equipes de
+implementação, governança e validação institucional.</p>
+<p>Esta referência possui caráter complementar e não substitui
+documentos de decisão executiva.</p>
+</section>
+<p class="abnt-table-title">
+Quadro 1 - Papel de cada artefato
+</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Artefato</th>
+<th style="text-align: left;">Função institucional</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mensagem executiva</td>
+<td style="text-align: left;">Orientar deliberação de gestão</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Relatório analítico</td>
+<td style="text-align: left;">Fundamentar decisão e encaminhamentos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Referência técnica</td>
+<td style="text-align: left;">Apoiar desenho detalhado e
+implantação</td>
+</tr>
+</tbody>
+</table>
+<p class="abnt-table-source">
+Fonte: Elaboração própria.
+</p>
+<h2 id="fonte-técnica-primária">Fonte técnica primária</h2>
+<ul>
+<li>Plataforma Governança Arquivística - Arquitetura de Dados:
+https://governancaarquivistica.org/arquitetura-dados</li>
+</ul>
+<div class="newpage">
+
+</div>
+<h1 id="diretriz-de-uso">Diretriz de uso</h1>
+<h2 id="sequência-recomendada-de-leitura">Sequência recomendada de
+leitura</h2>
+<ol type="1">
+<li>Mensagem executiva para decisão gerencial.</li>
+<li>Relatório analítico para entendimento de problema, método,
+benefícios e riscos.</li>
+<li>Página técnica para detalhamento de implementação.</li>
+</ol>
+<h2 id="conteúdo-técnico-principal-da-página">Conteúdo técnico principal
+da página</h2>
+<ul>
+<li>modelo de dados e relacionamentos para integração com SIGAD;</li>
+<li>conceitos arquivísticos operacionalizados em estruturas de
+dados;</li>
+<li>instrumentos de classificação, temporalidade e conformidade;</li>
+<li>regras de interoperabilidade e pacote de intercâmbio;</li>
+<li>guia de implementação e referência técnica em perguntas e
+respostas.</li>
+</ul>
+<h2 id="cadeia-de-derivação-documental">Cadeia de derivação
+documental</h2>
+<p>Página Técnica -&gt; Relatório Analítico -&gt; Resumo Executivo -&gt;
+Apresentação</p>
+<h2 id="observação-de-governança">Observação de governança</h2>
+<p>A referência técnica deve ser tratada como documento vivo, com
+versionamento, histórico de atualização e validação institucional, em
+alinhamento com a governança do convênio e com a evolução da arquitetura
+arquivística digital da CAIXA.</p>
 </main>
 
 <template id="pdf-header-template">
@@ -155,15 +198,15 @@ $body$
 
         <div class="pdf-header-overlay">
             <div class="pdf-header-kicker">
-                <span>$report_date$</span>
+                <span>07 de julho de 2026</span>
             </div>
 
             <div class="pdf-header-title">
-                $title$
+                Referência Técnica
             </div>
 
             <div class="pdf-header-subtitle">
-                $subtitle$
+                Arquitetura de Dados - Material Complementar
             </div>
         </div>
     </div>
@@ -179,14 +222,14 @@ $body$
 
         <div class="pdf-footer-overlay">
             <div class="pdf-footer-left">
-                $footer_left$
+                #INTERNO.TODOS | Convênio CAIXA-UnB
             </div>
 
             <div class="pdf-footer-center">
-                $footer_center$
+                Referência Técnica - Arquitetura de Dados
             </div>
             <div class="pdf-footer-right print-page-number"> 
-                $footer_right$
+                
             </div>            
         </div>
     </div>
