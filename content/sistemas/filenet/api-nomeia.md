@@ -56,7 +56,11 @@ A imagem a seguir mostra o tipo de nomenclatura dos arquivos que serão recebido
 <p class="abnt-figure-title">Figura 1 - Exemplo ilustrativo do padrão de nomenclatura dos arquivos recebidos pela API</p>
 
 <figure class="illustrative-figure">
-<img src="file:///home/osvaldo/%C3%81rea%20de%20Trabalho/CAIXA/Notes/assets/nomeia.png" alt="Exemplo ilustrativo do padrão de nomenclatura dos arquivos recebidos pela API">
+<img src="assets/nomeia.png" alt="Exemplo ilustrativo do padrão de nomenclatura dos arquivos recebidos pela API">
 </figure>
 
 <p class="abnt-figure-source">Fonte: Extraído do site do app 'Nomeia'.</p>
+
+# Considerações finais
+
+Essa iniciativa é apresentada como uma contribuição exploratória, em articulação com as coordenações das Metas 2 e 7, sem pretensão de alterar o escopo já delimitado do projeto. Seu objetivo é oferecer um caso concreto, baseado nos documentos técnicos da GEINF, que possa subsidiar o diagnóstico do universo arquivístico e a reflexão sobre interoperabilidade entre sistemas, especialmente no fluxo _Nomeia_, SharePoint e FileNet/GED.
