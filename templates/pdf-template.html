@@ -243,6 +243,60 @@ if (pagesRoot.children.length === 1) {
     grid.appendChild(right);
     content.appendChild(grid);
 
+    const hasTableContent = sourceNodes.some((node) => {
+        return (
+            node.tagName === "TABLE" ||
+            (node.classList && node.classList.contains("abnt-table-title")) ||
+            (node.classList && node.classList.contains("abnt-table-source"))
+        );
+    });
+
+    if (!hasTableContent) {
+        content.removeChild(grid);
+
+        for (let i = 0; i < sourceNodes.length; i++) {
+            const node = sourceNodes[i];
+
+            if (
+                node.classList &&
+                node.classList.contains("newpage")
+            ) {
+                content = createPage();
+                continue;
+            }
+
+            if (isHeading(node) && i + 1 < sourceNodes.length) {
+                const nextNode = sourceNodes[i + 1];
+
+                if (!(nextNode.classList && nextNode.classList.contains("newpage"))) {
+                    const result = placeHeadingWithFollower(node, nextNode, content);
+                    content = result.content;
+
+                    if (result.consumedFollower) {
+                        i += 1;
+                    }
+
+                    continue;
+                }
+            }
+
+            if (node.tagName === "TABLE") {
+                content = placeTable(node, content);
+                continue;
+            }
+
+            content = placeBlock(node.cloneNode(true), content);
+        }
+
+        const totalPages = pagesRoot.children.length;
+
+        pagesRoot.querySelectorAll(".print-page-number").forEach(function (label, index) {
+            label.textContent = "Página " + (index + 1) + " de " + totalPages;
+        });
+
+        return;
+    }
+
     let currentSide = left;
 
     for (let i = 0; i < sourceNodes.length; i++) {

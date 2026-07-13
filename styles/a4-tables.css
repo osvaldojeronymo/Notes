@@ -68,6 +68,13 @@ tbody tr:nth-child(even) td {
     text-align: left;
 }
 
+.abnt-figure-title,
+.abnt-figure-source {
+    line-height: 1.35;
+    color: #24374a;
+    text-align: left;
+}
+
 .abnt-table-title {
     font-size: 8pt;
     font-weight: 700;
@@ -75,7 +82,21 @@ tbody tr:nth-child(even) td {
     line-height: 1.1;
 }
 
+.abnt-figure-title {
+    font-size: 8pt;
+    font-weight: 700;
+    margin: 0 0 0.08cm 0;
+    line-height: 1.1;
+}
+
 .abnt-table-source {
+    font-size: 8pt;
+    font-style: italic;
+    margin: 0.05cm 0 0.30cm;
+    color: var(--caixa-subtexto);
+}
+
+.abnt-figure-source {
     font-size: 8pt;
     font-style: italic;
     margin: 0.05cm 0 0.30cm;

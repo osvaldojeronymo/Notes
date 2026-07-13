@@ -162,7 +162,15 @@
 
 .print-page-number {
     display: block;
+    position: absolute;
+    right: 1.15cm;
+    bottom: 0.10cm;
+    z-index: 3;
+    text-align: right;
     line-height: 1;
     margin: 0;
     padding: 0;
+    color: #fff;
+    font-size: 7.8pt;
+    font-weight: 700;
 }

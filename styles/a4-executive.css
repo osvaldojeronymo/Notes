@@ -22,6 +22,48 @@
     margin-top: 0;
 }
 
+.executive-grid--textual {
+    grid-template-columns: 50% 50%;
+    gap: 0.55cm;
+}
+
+.executive-grid--textual .executive-left,
+.executive-grid--textual .executive-right {
+    overflow: hidden;
+}
+
+.executive-grid--textual .executive-left h1,
+.executive-grid--textual .executive-left h2,
+.executive-grid--textual .executive-left h3,
+.executive-grid--textual .executive-right h1,
+.executive-grid--textual .executive-right h2,
+.executive-grid--textual .executive-right h3 {
+    margin-top: 0;
+    margin-bottom: 0.18cm;
+}
+
+.executive-grid--textual .executive-left p,
+.executive-grid--textual .executive-right p {
+    font-size: 10.6pt;
+    line-height: 1.48;
+    margin-bottom: 0.22cm;
+}
+
+.executive-grid--textual .executive-left ol,
+.executive-grid--textual .executive-left ul,
+.executive-grid--textual .executive-right ol,
+.executive-grid--textual .executive-right ul {
+    font-size: 10.25pt;
+    line-height: 1.42;
+    margin-left: 0.34cm;
+    padding-left: 0.18cm;
+}
+
+.executive-grid--textual .executive-left li,
+.executive-grid--textual .executive-right li {
+    margin-bottom: 0.14cm;
+}
+
 .executive-left p {
     font-size: 9.25pt;
     line-height: 1.38;
